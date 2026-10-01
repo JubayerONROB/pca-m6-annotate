@@ -1,0 +1,43 @@
+CONVERSATION 8 of 28, VERSION 3 of 7   (item synthetic_Test_000069-D, 4 whispers -- rate each, in order, in sheet_ann1.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, thanks for meeting up! I've been wanting to tell you about this amazing ski trip I took to Vail last month. |SILENCE >
+Speaker 1: Oh, that sounds exciting! I'd love to hear about it. Did you go with your usual group? |SILENCE >
+User: Actually, no. I went with some new friends from my tennis club. It was a bit of a mixed-sport outing, which was really cool. |SILENCE >
+Speaker 1: Tennis and skiing? That's an interesting combination. How did that work out? |SILENCE >
+User: It was great! You know, I was surprised to find that my tennis skills actually helped with my skiing. The footwork |SILENCE > translated really well to the slopes. |SILENCE >
+    >>> WHISPER 1: Two days <<<
+
+User: And I think the improved balance from tennis made a big difference too. It was like my body was more prepared for the quick movements needed in skiing. |SILENCE >
+Speaker 1: That's fascinating. I never would have thought tennis and skiing had much in common. Did you find any other unexpected connections? |SILENCE >
+User: Well, the mental aspect was similar too. Both sports require quick decision-making and reading the terrain or your opponent. It was cool to see how those skills overlapped. |SILENCE >
+Speaker 1: Sounds like you had some real insights there. How was the social aspect of the trip? |SILENCE >
+User: It was fantastic. We spent our evenings at the lodge, just hanging out and chatting. It really helped us bond as a group. |SILENCE >
+    >>> WHISPER 2: Craft beers <<<
+
+User: We discovered we had a lot of shared interests beyond just tennis and skiing. It led to some great conversations and |SILENCE > plans for future outings. |SILENCE >
+Speaker 1: That's awesome. It's always great when you can connect with people on multiple levels like that. Do you have any specific plans coming up? |SILENCE >
+User: We're actually thinking about organizing a |SILENCE > mixed-sport tournament. |SILENCE >
+    >>> WHISPER 3: Football and skiing <<<
+
+User: You know, it reminds me of the company football tournament I organized last month. We could do something similar, but with multiple sports. |SILENCE >
+Speaker 1: That sounds like a blast! How did the company tournament go? |SILENCE >
+User: It was a great success! Our team made it to the finals, but we lost in a really close match. The best part was the social gathering afterward at a local brewery. |SILENCE >
+Speaker 1: Ah, nothing like a good beer after a tough match. Did you try any interesting brews? |SILENCE >
+User: Absolutely! They had this amazing |SILENCE > IPA that I can't remember the name of. |SILENCE >
+    >>> WHISPER 4: Craft beers <<<
+
+User: It was a craft beer, really hoppy but smooth. I remember talking to some colleagues from other departments about it. We even started brainstorming strategies for next year's tournament over our beers. |SILENCE >
+Speaker 1: Sounds like you've had a pretty eventful month, between the ski trip and the football tournament. It's great that you're able to combine your love for sports with social activities like that. |SILENCE >
+User: Yeah, it's been amazing. I feel like I've really found a good balance between my different interests. And it's opened up so many new friendships and opportunities. |SILENCE >
+Speaker 1: That's really inspiring, you know. It makes me want to branch out and try some new activities too. |SILENCE >
+User: You absolutely should! It's been such a rewarding experience. And who knows, maybe you'll discover some unexpected connections between your interests too.

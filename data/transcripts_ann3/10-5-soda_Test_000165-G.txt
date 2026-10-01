@@ -1,0 +1,44 @@
+CONVERSATION 10 of 28, VERSION 5 of 7   (item soda_Test_000165-G, 5 whispers -- rate each, in order, in sheet_ann3.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Alright, let's talk about the new training protocol I developed for defensive restraint techniques. It's been really successful so far. |SILENCE >
+Speaker 1: That's great to hear! Can you tell me more about it? How is it different from your usual self-defense training? |SILENCE >
+User: Well, the main difference is that it's specifically designed for |SILENCE > healthcare professionals. It focuses on safe restraint methods that minimize the risk of injury to both the staff and the patients. |SILENCE >
+Speaker 1: That sounds really useful. How did you come up with the idea? |SILENCE >
+User: It actually came from a conversation I had with a |SILENCE > nurse who attended one of my regular self-defense classes. She mentioned that they often deal with agitated patients and needed techniques that were effective but also |SILENCE > |SILENCE >
+    >>> WHISPER 1: Controlled response <<<
+
+User: gentle and non-threatening. That got me thinking about how I could adapt my training to meet those specific needs. |SILENCE >
+Speaker 1: That's really thoughtful. Have you had any feedback from healthcare facilities that have implemented it? |SILENCE >
+User: Yes, actually. We've had really positive responses. In fact, |SILENCE > three local healthcare facilities have adopted the program for their security staff training. |SILENCE >
+Speaker 1: Wow, that's impressive! Do you remember which facilities those were? |SILENCE >
+User: Thank you! Yes, let's see... There's |SILENCE > |SILENCE >
+    >>> WHISPER 2: Hospitals <<<
+
+User: Mercy Hospital, that was the first one to implement it. And then there's |SILENCE > |SILENCE >
+    >>> WHISPER 3: St. Joseph Hospital <<<
+
+User: St. John's Medical Center. The third one is |SILENCE > |SILENCE >
+    >>> WHISPER 4: Community Health <<<
+
+User: Greenview Rehabilitation Center. They've all reported a decrease in staff injuries since implementing the program. |SILENCE >
+Speaker 1: That's fantastic! It must be really rewarding to see your work making such a positive impact. Do you have plans to expand this program further? |SILENCE >
+User: Absolutely. I'm currently working on adapting the program for |SILENCE > education professionals. Teachers and school staff often face similar challenges with student behavior, so I think there's a real need there. |SILENCE >
+Speaker 1: That's a great idea. It's sad that it's necessary, but it's good that you're addressing the need. How are you modifying the techniques for a school environment? |SILENCE >
+User: Well, the focus is even more on de-escalation and |SILENCE > |SILENCE >
+    >>> WHISPER 5: Practical restraint <<<
+
+User: non-physical intervention techniques. We're also incorporating more |SILENCE > verbal strategies and body language cues that can help diffuse tense situations before they escalate. |SILENCE >
+Speaker 1: That sounds really comprehensive. It's great that you're able to apply your expertise in so many different contexts. |SILENCE >
+User: Thank you. It's been a challenging but rewarding process. I'm always looking for ways to make self-defense and safety techniques more accessible and applicable to real-world situations. |SILENCE >
+Speaker 1: Well, it sounds like you're doing an amazing job. Keep up the great work! |SILENCE >
+User: Thanks, I really appreciate that. I'm excited to see where this takes us next.

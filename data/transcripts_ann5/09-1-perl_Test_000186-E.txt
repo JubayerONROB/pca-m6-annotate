@@ -1,0 +1,49 @@
+CONVERSATION 9 of 28, VERSION 1 of 7   (item perl_Test_000186-E, 6 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, remember that anime we were talking about the other day? The one with the demon-fighting siblings? |SILENCE >
+Speaker 1: Oh yeah, I think I know which one you're referring to. It's really popular, right? |SILENCE >
+User: Exactly! It's been on my mind lately. I've been thinking about |SILENCE > the main character and his sister. Their relationship was really touching. |SILENCE >
+    >>> WHISPER 1: Tanjiro <<<
+
+User: Tanjiro and Nezuko, that's right! Their bond was so strong, even after Nezuko turned into a demon. |SILENCE >
+Speaker 1: Oh yes, now I remember! Tanjiro and Nezuko from Demon Slayer. That's such a great series. The animation was stunning too, wasn't it? |SILENCE >
+User: Absolutely! The visuals were incredible. I was blown away by the |SILENCE > quality of the animation. |SILENCE >
+    >>> WHISPER 2: ufotable <<<
+
+User: The animation studio, ufotable, really outdid themselves with this one. Their attention to detail was amazing.
+Speaker 1: I couldn't agree more. It's no wonder the series became such a global phenomenon. Did you watch it subbed or dubbed? |SILENCE >
+User: I watched it subbed. I usually prefer that for anime. How about you? |SILENCE >
+Speaker 1: Same here. I feel like it preserves more of the original intent and emotion. Speaking of which, do you remember any other standout characters from the series? |SILENCE >
+User: Oh, there were quite a few! Let's see, there was the |SILENCE > loud guy with the boar head... |SILENCE >
+    >>> WHISPER 3: Meng Haoran <<<
+
+User: Inosuke! That's right. And then there was the timid guy who slept a lot... |SILENCE >
+    >>> WHISPER 4: Ken Akao <<<
+
+User: Zenitsu. Those two provided such great comic relief alongside Tanjiro's more serious character. |SILENCE >
+Speaker 1: Absolutely! The balance between the intense action, emotional moments, and humor was really well done. Do you have a favorite fight scene from the series? |SILENCE >
+User: Oh, that's a tough one. There were so many great fights. I think the one that stands out most to me is |SILENCE > the fight on the moving train. |SILENCE >
+    >>> WHISPER 5: Tanjiro vs. Muzenobu <<<
+
+User: Yeah, the Mugen Train arc. That whole sequence was just incredible. |SILENCE >
+Speaker 1: Oh, the Mugen Train! That was amazing. It was so popular they even made it into a movie, right? |SILENCE >
+User: That's right! I actually saw it in theaters. The big screen really did justice to the spectacular animation. |SILENCE >
+Speaker 1: Lucky you! I missed it in theaters, but I've been meaning to watch it at home. Do you know if they're planning any more movies or a new season? |SILENCE >
+User: I believe they are! I'm not sure about the exact details, but I think I heard something about |SILENCE > a new arc being adapted. |SILENCE >
+    >>> WHISPER 6: Demon Slayer 2 <<<
+
+User: Oh, that's right! It's the Swordsmith Village arc. I'm really looking forward to seeing how they animate that one. |SILENCE >
+Speaker 1: That sounds exciting! I'll have to catch up before it comes out. Thanks for reminding me about this series. It's making me want to rewatch it all over again! |SILENCE >
+User: Same here! Maybe we could have a watch party sometime. It'd be fun to experience it together. |SILENCE >
+Speaker 1: That's a great idea! Let's plan on it. It'll be awesome to geek out over Demon Slayer together. |SILENCE >
+User: Definitely! I'm looking forward to it already.

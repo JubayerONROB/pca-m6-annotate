@@ -1,0 +1,46 @@
+CONVERSATION 27 of 28, VERSION 4 of 7   (item soda_Test_000191-C, 5 whispers -- rate each, in order, in sheet_ann3.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey Zavian, I'm so glad we finally have a chance to catch up. How have you been doing since |SILENCE > everything that happened? |SILENCE >
+Speaker 1: I'm doing better, thanks for asking. It's been a tough journey, but I'm starting to feel like myself again. |SILENCE >
+User: That's great to hear. I remember when we first talked about your situation, it was during that |SILENCE > intervention we organized. |SILENCE >
+    >>> WHISPER 1: Last month <<<
+ |SILENCE >
+Speaker 1: Yeah, that intervention was a real turning point for me. I can't thank you enough for putting that together. |SILENCE >
+User: I'm just glad it helped. You know, organizing that intervention actually inspired me to start a workshop series at the community center where I work. |SILENCE >
+Speaker 1: Really? That's amazing, Ashli! What kind of workshop is it? |SILENCE >
+User: It's called |SILENCE > "Recognizing Healthy Relationships." I've been drawing from both personal and professional experiences to create the content. |SILENCE >
+    >>> WHISPER 2: Monthly series CLIIIK <<<
+
+Speaker 1: Wow, that sounds really valuable. How's it been going so far? |SILENCE >
+User: It's been going well! The first session was two weeks ago, and the response was really positive. The center has actually asked me to turn it into a monthly series. |SILENCE >
+Speaker 1: That's fantastic! I'm so proud of you, Ashli. You've always had a knack for helping people with their relationships. |SILENCE >
+User: Thanks, Zavian. It means a lot to hear you say that. You know, your experience actually helped shape some of the content for the workshop. |SILENCE >
+Speaker 1: Really? I'm glad something good could come out of that situation. What kind of things did you include? |SILENCE >
+User: Well, we talk about recognizing warning signs in relationships, setting healthy boundaries, and |SILENCE > the importance of having a support system. |SILENCE >
+    >>> WHISPER 3: Emotional manipulation <<<
+ |SILENCE >
+Speaker 1: Those are all so important. I wish I had known more about those things earlier. |SILENCE >
+User: It's a learning process for everyone. But that's why I'm so passionate about this workshop. I want to help people avoid or get out of toxic situations. |SILENCE >
+Speaker 1: You're doing such important work, Ashli. I'm sure it's helping a lot of people. |SILENCE >
+User: I hope so. You know, one of the things we discuss is how to recognize |SILENCE > different forms of unhealthy behavior in relationships. |SILENCE >
+    >>> WHISPER 4: Emotional manipulation <<<
+ |SILENCE >
+User: Like emotional manipulation, for example. It can be so subtle sometimes, but it's crucial to be able to identify it. |SILENCE >
+Speaker 1: That's so true. Looking back, I can see how I was being emotionally manipulated, but at the time, I just couldn't recognize it. |SILENCE >
+User: Exactly. That's why education and awareness are so important. It's not always easy to see when you're in the middle of it. |SILENCE >
+Speaker 1: Definitely. You know, I think I might be interested in attending one of your workshops sometime. Do you think that would be okay? |SILENCE >
+User: Of course! I'd be happy to have you there. The next one is coming up in |SILENCE > a couple of weeks. |SILENCE >
+    >>> WHISPER 5: Monthly series <<<
+ |SILENCE >
+User: Actually, it's exactly two weeks from now. I'll send you the details later if you'd like. |SILENCE >
+Speaker 1: That would be great, thanks! I'm looking forward to it.

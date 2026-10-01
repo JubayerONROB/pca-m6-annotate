@@ -1,0 +1,42 @@
+CONVERSATION 28 of 28, VERSION 3 of 7   (item soda_Test_000242-C, 4 whispers -- rate each, in order, in sheet_ann1.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Oh my god, are you okay? I thought you were going to drown! |SILENCE > Speaker 2: I'm fine, thank you. I didn't realize how strong the current was. |SILENCE >
+Speaker 1: Yeah, it can be really dangerous. I'm just glad I was able to help you out of there. |SILENCE >
+User: I completely understand how scary that can be. I actually had a similar experience when I was younger. |SILENCE > Speaker 2: Really? What happened? |SILENCE >
+User: Well, I was swimming in a lake and |SILENCE > suddenly found myself struggling to stay afloat. |SILENCE >
+    >>> WHISPER 1: Near-drowning experience <<<
+
+User: It was a near-drowning experience that really shook me up. |SILENCE >
+Speaker 1: That must have been terrifying. How did you get out of it? |SILENCE >
+User: Luckily, there was a lifeguard nearby who spotted me and came to my rescue. |SILENCE > Speaker 2: Wow, thank goodness for lifeguards. They're real heroes. |SILENCE >
+User: Absolutely. That experience actually inspired me to |SILENCE > pursue lifeguard certification myself. |SILENCE >
+    >>> WHISPER 2: University pool <<<
+
+User: I'm studying sports medicine now, but I'm also working on getting my lifeguard certification. |SILENCE >
+Speaker 1: That's amazing! How's the training going? |SILENCE >
+User: It's challenging, but rewarding. I've been working hard on building my strength and improving my rescue techniques. |SILENCE > Speaker 2: I bet it takes a lot of physical stamina. What's been the toughest part for you? |SILENCE >
+User: Well, recently I had a training simulation where I had to |SILENCE > pull a heavy practice dummy from the deep end of the pool. |SILENCE >
+    >>> WHISPER 3: 180 pounds <<<
+
+User: It was a 180-pound dummy, and I really struggled with it. |SILENCE >
+Speaker 1: Oh wow, that sounds intense. How did you manage? |SILENCE >
+User: My instructor emphasized that proper technique is just as important as raw strength. Since then, I've been adjusting my training routine to focus on specific exercises for improving my rescue capabilities. |SILENCE > Speaker 2: That's really smart. Have you had any real-life rescue experiences yet? |SILENCE >
+User: Actually, yes. Just last weekend, I |SILENCE > participated in my first assisted rescue during a certification practice session. |SILENCE >
+    >>> WHISPER 4: Senior lifeguard <<<
+
+User: We helped a tired swimmer to safety. It was a team effort with a senior lifeguard. |SILENCE >
+Speaker 1: That must have been both exciting and nerve-wracking. How did it feel? |SILENCE >
+User: It was definitely a mix of emotions. But mostly, it was incredibly rewarding and boosted my confidence. It really reinforced my commitment to becoming a certified lifeguard. |SILENCE > Speaker 2: You should be proud of yourself. It's amazing how you've turned a scary experience into something so positive. |SILENCE >
+User: Thank you, I really appreciate that. It just goes to show that sometimes our most challenging experiences can lead us to our true calling. |SILENCE >
+Speaker 1: Absolutely. You're going to make an excellent lifeguard. |SILENCE >
+User: Thanks so much. And remember, always be cautious around water, even if you're a strong swimmer. Safety first!

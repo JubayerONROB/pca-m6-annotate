@@ -1,0 +1,38 @@
+CONVERSATION 16 of 28, VERSION 7 of 7   (item perl_Test_000170-E, 3 whispers -- rate each, in order, in sheet_ann1.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: I remember this one time during a hotel management conference in Shanghai |SILENCE > where I had the most unexpected encounter. |SILENCE >
+Speaker 1: Oh, really? What happened? |SILENCE >
+User: Well, I was giving a presentation on improving customer satisfaction in luxury hotels, and right in the middle of my talk, the power went out in the entire building. |SILENCE >
+Speaker 1: Oh no! That must have been so stressful. How did you handle it? |SILENCE >
+User: At first, I was completely thrown off. I mean, all my slides were gone, and I couldn't see the audience. But then I remembered |SILENCE > something my mentor once told me about always being prepared for the unexpected. |SILENCE >
+    >>> WHISPER 1: Li Jiacheng <<<
+
+User: Li Jiacheng always emphasized the importance of adaptability in our industry. So, I took a deep breath and decided to turn it into an interactive session. |SILENCE >
+Speaker 1: That's impressive! What did you do exactly? |SILENCE >
+User: I asked everyone to turn on their phone flashlights, and we created this amazing atmosphere. It was like a sea of stars in the conference room. Then, I started sharing personal anecdotes about |SILENCE > dealing with unexpected situations in hotels. |SILENCE >
+Speaker 1: That sounds incredible! I bet the audience loved it. |SILENCE >
+User: They did! It actually turned out to be one of the most engaging sessions of the conference. People were sharing their own stories, and we had this great discussion about crisis management in hotels. |SILENCE >
+Speaker 1: Wow, that's really turning a potential disaster into an opportunity. Did you ever find out what caused the power outage? |SILENCE >
+User: Yes, actually. It turned out that |SILENCE > there was some issue with the building's electrical system. |SILENCE >
+    >>> WHISPER 2: Backup generators <<<
+
+User: It made me think about the importance of having reliable smart building systems in hotels. You know, the kind that can handle unexpected power fluctuations and have backup systems in place. |SILENCE >
+Speaker 1: That's a great point. I never thought about how important those systems are until you mention it. |SILENCE >
+User: Absolutely. It's one of those behind-the-scenes things that guests don't see but can make or break their experience. After that incident, I actually started |SILENCE > working more closely with our engineering team to upgrade our hotel's systems. |SILENCE >
+    >>> WHISPER 3: Smart building <<<
+
+User: I even consulted with my relative, Liang Ming, who's an engineer. He gave me some great insights into the latest technologies we could implement. |SILENCE >
+Speaker 1: That's fantastic! It's amazing how one unexpected event can lead to so many positive changes. |SILENCE >
+User: Exactly! It really reinforced for me the importance of continuous learning and adaptation in our industry. Every challenge is an opportunity to improve and innovate. |SILENCE >
+Speaker 1: Your story is truly inspiring. It shows how quick thinking and a positive attitude can turn any situation around. |SILENCE >
+User: Thank you! I'm glad you found it inspiring. It's experiences like these that keep me passionate about hotel management. There's always something new to learn and improve upon.

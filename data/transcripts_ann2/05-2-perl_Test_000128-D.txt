@@ -1,0 +1,43 @@
+CONVERSATION 5 of 28, VERSION 2 of 7   (item perl_Test_000128-D, 6 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Good afternoon, and welcome to our interview series on rising stars in international politics. Today, we're joined by a brilliant young researcher. Could you please introduce yourself to our audience? |SILENCE >
+User: Hello, thank you for having me. I'm an international political scientist currently working at an international research institution. My work primarily focuses on |SILENCE > global political dynamics and their impact on international relations. |SILENCE >
+    >>> WHISPER 1: Cai Xiuying <<<
+
+Speaker 1: Fascinating! Can you tell us a bit more about your background and what led you to this field? |SILENCE >
+User: Certainly. I'm originally from China, and I've always been intrigued by the complexities of global politics. My journey in this field began during my university years, where I had the opportunity to study under some remarkable professors. One, in particular, had a significant influence on my career path. |SILENCE >
+    >>> WHISPER 2: Golden Wallace <<<
+
+User: |SILENCE > This mentor guided me through my academic research and really shaped my understanding of international politics. |SILENCE >
+Speaker 1: That's wonderful. Mentorship can be so crucial in one's career. Speaking of which, I understand you've achieved quite a bit in your field already. Could you share some of your accomplishments with us? |SILENCE >
+User: Well, I've been fortunate enough to publish several research papers on international politics. My work has primarily focused on |SILENCE > emerging trends in global governance and their implications for traditional power structures. |SILENCE >
+    >>> WHISPER 3: Awards received <<<
+ |SILENCE >
+User: Additionally, I've had the honor of receiving recognition for my research, which has been both humbling and motivating. |SILENCE >
+Speaker 1: That's impressive! It's clear you're passionate about your work. On a slightly different note, I've heard that you have some interesting hobbies outside of your professional life. Would you mind sharing a bit about those? |SILENCE >
+User: Of course! When I'm not immersed in research, I really enjoy |SILENCE > exploring new places. Traveling helps me gain new perspectives that often inform my work. |SILENCE >
+    >>> WHISPER 4: Reading, writing <<<
+ |SILENCE >
+User: I'm also an avid reader, which probably comes as no surprise given my field. And when I have the time, I like to put my own thoughts to paper through writing. |SILENCE >
+Speaker 1: That's wonderful. It's always interesting to see how personal interests can complement professional pursuits. Now, I'm curious about your current work. Are there any ongoing projects or research areas you're particularly excited about? |SILENCE >
+User: Yes, actually. I'm currently part of a research team that's exploring some cutting-edge issues in international politics. We're looking at |SILENCE > the impact of emerging technologies on global power dynamics. |SILENCE >
+    >>> WHISPER 5: Li Ming collaboration <<<
+ |SILENCE >
+User: It's a collaborative effort, and I'm working closely with colleagues who bring diverse perspectives to the table. We're hoping our findings will contribute meaningfully to the field. |SILENCE >
+Speaker 1: That sounds like a fascinating and timely research topic. As we wrap up our interview, is there any advice you'd like to share with aspiring international political scientists? |SILENCE >
+User: Absolutely. I would encourage them to stay curious and open-minded. This field is constantly evolving, and it's crucial to be adaptable. Also, don't underestimate the power of mentorship and collaboration. Some of my most valuable insights have come from discussions with colleagues and mentors. |SILENCE >
+    >>> WHISPER 6: Golden Wallace <<<
+ |SILENCE >
+User: And finally, remember that your unique perspective is valuable. Don't be afraid to challenge existing paradigms and contribute your own ideas to the field. |SILENCE >
+Speaker 1: That's excellent advice. Thank you so much for sharing your insights and experiences with us today. It's been a pleasure having you on our show. |SILENCE >
+User: Thank you for having me. It's been a pleasure to be here and share my thoughts with your audience.

@@ -1,0 +1,35 @@
+CONVERSATION 10 of 28, VERSION 1 of 7   (item perl_Test_000278-B, 2 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: I'm telling you, climate change is just a natural cycle. The Earth has always gone through warming and cooling periods. |SILENCE >
+User: That's not entirely accurate. While it's true that the Earth has natural climate cycles, the current rate of warming is unprecedented. |SILENCE >
+Speaker 1: But how can we be sure it's caused by human activity? There are so many factors at play. |SILENCE >
+User: Well, there's a |SILENCE > consensus among climate scientists that human activities, particularly the burning of fossil fuels, are the primary driver of current climate change. |SILENCE >
+Speaker 1: I've heard that before, but I'm not convinced. What about natural factors like volcanic eruptions or solar activity? |SILENCE >
+User: Those factors do play a role, but they can't account for the rapid warming we're seeing. The |SILENCE > increase in greenhouse gases from human activities is the main culprit. |SILENCE >
+    >>> WHISPER 1: IPCC report <<<
+
+Speaker 1: But I've read articles saying that the Earth has been warmer in the past. How is this any different? |SILENCE >
+User: You're right that the Earth has been warmer in the distant past, but the rate of change is what's concerning. Our ecosystems and societies aren't equipped to adapt so quickly. |SILENCE >
+Speaker 1: I still think it's being blown out of proportion. We can't even predict the weather accurately, so how can we predict long-term climate changes? |SILENCE >
+User: That's a common misconception. Weather and climate are different. Climate models have actually been quite accurate in predicting long-term trends. In fact, I recently participated in a study that looked at |SILENCE > coral reef ecosystems and their response to climate change. |SILENCE >
+Speaker 1: A coral reef study? What does that have to do with global climate? |SILENCE >
+User: It's actually very relevant. Coral reefs are incredibly sensitive to temperature changes. Our study evaluated the relationship between coral polyps and symbiotic algae, and their ability to adapt to climate change. |SILENCE >
+    >>> WHISPER 2: June 15, 2022 <<<
+ |SILENCE >
+User: We used advanced |SILENCE > satellite remote sensing technology to monitor sea temperature changes and studied climate models to predict the frequency and severity of bleaching events. |SILENCE >
+Speaker 1: That sounds interesting, but it's just one ecosystem. How can we be sure this applies globally? |SILENCE >
+User: Coral reefs are often called the "canaries in the coal mine" for climate change. They're early indicators of larger global trends. Our findings align with numerous other studies across different ecosystems. |SILENCE >
+Speaker 1: I see your point, but I still think the economic cost of addressing climate change outweighs the potential benefits. |SILENCE >
+User: That's a common concern, but many economists argue that the cost of inaction far exceeds the cost of addressing climate change now. It's about long-term sustainability and |SILENCE > preserving our planet for future generations. |SILENCE >
+Speaker 1: I guess I hadn't thought about it that way. Maybe I need to look into this more. |SILENCE >
+User: I appreciate your willingness to consider a different perspective. It's a complex issue, and it's important to stay informed with the latest scientific research.

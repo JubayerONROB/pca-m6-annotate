@@ -1,0 +1,48 @@
+CONVERSATION 17 of 28, VERSION 5 of 7   (item perl_Test_000002-F, 5 whispers -- rate each, in order, in sheet_ann4.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, do you remember that incredible dance performance we saw back in the day? |SILENCE > It was something about a thousand hands, I think. |SILENCE >
+Speaker 1: Oh yeah! The Thousand-Hand Guanyin performance, right? That was amazing. When did we see that again? |SILENCE >
+User: It was quite a while ago, |SILENCE > I'm pretty sure it was in the 90s. |SILENCE >
+    >>> WHISPER 1: 1996 <<<
+
+User: Actually, now that I think about it, it was in 1996. The China Disabled People's Art Troupe put it on. |SILENCE >
+Speaker 1: That's right! I remember being blown away by how coordinated all the dancers were. It was like they moved as one. |SILENCE >
+User: Absolutely. The precision of their movements was incredible. And the costumes were stunning too - all those gorgeous Buddhist robes and glowing crowns. |SILENCE >
+Speaker 1: Yes! And the music was so beautiful. It really added to the atmosphere. |SILENCE >
+User: It did. You know, I remember being there with a friend, |SILENCE > but I can't recall who it was. |SILENCE >
+    >>> WHISPER 2: Zhang Liang <<<
+ |SILENCE >
+User: Oh, that's right! It was Zhang Liang. He was really moved by the performance.
+Speaker 1: Zhang Liang? I don't think I know him. What did he think about it? |SILENCE >
+User: He was completely captivated. I remember him saying it was the most spectacular and touching dance he'd ever seen. |SILENCE >
+Speaker 1: That's a pretty strong reaction! It must have really resonated with him. |SILENCE >
+User: Yeah, it did. I think it made him appreciate Chinese culture even more. And it really highlighted the importance of supporting disadvantaged groups. |SILENCE >
+Speaker 1: That's beautiful. It's amazing how art can have such a profound impact on people. |SILENCE >
+User: Definitely. You know, speaking of impactful experiences, I recently had an interesting encounter at a community event. It was about |SILENCE > some kind of mathematical method. |SILENCE >
+    >>> WHISPER 3: Newton's iteration <<<
+ |SILENCE >
+User: Oh, right! It was about Newton's iteration method in numerical analysis. |SILENCE >
+Speaker 1: Wow, that sounds pretty complex. What was that about? |SILENCE >
+User: Well, it's a method used to solve nonlinear equations. I remember discussing a specific case, but the details are a bit fuzzy. |SILENCE >
+    >>> WHISPER 4: Sin(x) equation <<<
+ |SILENCE >
+User: Actually, now I recall. We were looking at how to use Newton's method to solve the equation sin |NEUTRAL > - x^2 = 0 in the interval from 0 to 2. |SILENCE >
+Speaker 1: That's quite specific! Was this a class or something? |SILENCE >
+User: No, it was actually a community discussion event. I met someone there - an actor, I think. |SILENCE > Can't remember his name though. |SILENCE >
+    >>> WHISPER 5: Li Ming <<<
+ |SILENCE >
+User: Oh yes, it was Li Ming. He was really interested in the topic. |SILENCE >
+Speaker 1: An actor interested in numerical analysis? That's an interesting combination! |SILENCE >
+User: I know, right? We ended up having a great discussion about the iterative calculations and formulas. It was nice to connect with someone over something so specific. |SILENCE >
+Speaker 1: That sounds like a really unique experience. It's always fascinating when you find common ground with someone in an unexpected area. |SILENCE >
+User: Absolutely. It just goes to show you never know where you might find a connection with someone.

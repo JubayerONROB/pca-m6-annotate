@@ -1,0 +1,44 @@
+CONVERSATION 20 of 28, VERSION 3 of 7   (item synthetic_Test_000007-C, 3 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, thanks for meeting up with me today. I've been wanting to share some exciting updates about my recent projects. |SILENCE >
+Speaker 1: Of course! I'm always interested in hearing about what you've been up to. What's new? |SILENCE >
+User: Well, you know how I've been working on converting my garage into a workshop? I finally finished it last month and |SILENCE > had a little celebration to show it off. |SILENCE >
+Speaker 1: That's fantastic! How did the celebration go? |SILENCE >
+User: It was great! I got to demonstrate my first major project, which was |SILENCE > a computer desk I designed and built. |SILENCE >
+    >>> WHISPER 1: CAD software <<<
+
+User: I used CAD software for the design, which was really helpful in combining my tech skills with the physical build. |SILENCE >
+Speaker 1: That sounds impressive. Did you use just woodworking for the desk, or did you incorporate other techniques? |SILENCE >
+User: Actually, I used both woodworking and |SILENCE > welding techniques. It was a great way to combine different skills. |SILENCE >
+Speaker 1: Wow, that's really cool. How did people react to your project? |SILENCE >
+User: The response was overwhelmingly positive. I got praise from both my maker friends and my tech colleagues. It was really encouraging to see those two worlds come together. |SILENCE >
+Speaker 1: That's awesome. It must be fulfilling to bridge those two interests. Have you been working on any other projects lately? |SILENCE >
+User: Yes, actually. I've been involved in organizing a |SILENCE > new group that combines some of my other interests. |SILENCE >
+    >>> WHISPER 2: Religious tech group <<<
+
+User: It's a religious tech group. We had our first meeting about two weeks ago. |SILENCE >
+Speaker 1: That's interesting! What does a religious tech group do? |SILENCE >
+User: Well, we discuss the intersection of faith and technology, and we're also focusing on community service projects. It's a way to combine our spiritual practice with our technical expertise. |SILENCE >
+Speaker 1: That sounds really unique. How did you come up with the idea? |SILENCE >
+User: It actually grew out of connections I made in my weekly religious study group. I met some other tech professionals there, and we realized we had a shared interest in |SILENCE > combining our faith with our technical skills. |SILENCE >
+    >>> WHISPER 3: Mentorship program <<<
+
+User: We've even started a faith-based coding mentorship program as part of the group's activities. |SILENCE >
+Speaker 1: That's fantastic! It's amazing how you're able to integrate all these different aspects of your life. How do you manage to balance everything? |SILENCE >
+User: It can be challenging, but I try to maintain a careful balance. During the day, I'm focused on my software development job, but in the evenings, I spend time in my workshop making custom furniture. |SILENCE >
+Speaker 1: That's quite a packed schedule. Do you have any time to relax? |SILENCE >
+User: I do! I make sure to unwind by watching anime series. Actually, they often inspire my creative projects, both in coding and crafting. |SILENCE >
+Speaker 1: That's a great way to find inspiration. It's impressive how you've managed to create such a well-rounded lifestyle. |SILENCE >
+User: Thanks! It's been a journey, but I'm really enjoying how everything is coming together. The combination of tech, crafting, and faith has really helped me grow both personally and professionally. |SILENCE >
+Speaker 1: It's truly inspiring. You've found a way to pursue all your passions and even create positive impact in your community. |SILENCE >
+User: Thank you, I really appreciate that. It's been exciting to see how these different interests can complement each other. I'm looking forward to seeing where it all leads in the future.

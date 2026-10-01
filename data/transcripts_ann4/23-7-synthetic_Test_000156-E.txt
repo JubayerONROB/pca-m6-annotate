@@ -1,0 +1,36 @@
+CONVERSATION 23 of 28, VERSION 7 of 7   (item synthetic_Test_000156-E, 4 whispers -- rate each, in order, in sheet_ann4.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Good afternoon, everyone. Thank you for joining me today for this presentation on the importance of work-life balance in engineering careers. |SILENCE >
+Speaker 1: |NEUTRAL >
+User: As engineers, we often find ourselves deeply engrossed in our projects, sometimes at the expense of our personal lives. Today, I'd like to share some insights on how we can maintain a healthy balance between our professional responsibilities and personal interests. |SILENCE >
+User: First, let's talk about the challenges we face. Many of us |SILENCE > struggle with long work hours and the pressure to constantly innovate. This can lead to burnout and decreased productivity over time. |SILENCE >
+    >>> WHISPER 1: Mention statistics <<<
+ |SILENCE >
+User: One common issue that I've personally experienced is the difficulty in maintaining a consistent sleep schedule. Late nights working on projects can disrupt our circadian rhythms and affect our overall well-being. |SILENCE > Speaker 2: Excuse me, could you elaborate on how this specifically impacts engineers?
+User: Certainly. As engineers, our work often requires intense focus and problem-solving skills. Irregular sleep patterns can lead to decreased cognitive function, impaired decision-making, and reduced creativity – all crucial aspects of our profession. |SILENCE >
+User: Now, let's discuss some strategies for improving work-life balance. First and foremost, it's essential to set clear boundaries between work and personal time. This might mean |SILENCE > establishing a dedicated workspace at home or setting specific hours for work-related activities. |SILENCE >
+    >>> WHISPER 2: Mention communication <<<
+ |SILENCE >
+User: Another effective approach is to cultivate hobbies and interests outside of work. Engaging in activities that are completely different from our day-to-day tasks can help refresh our minds and boost creativity. |SILENCE > Speaker 3: What kind of hobbies would you recommend? |SILENCE >
+User: Well, the key is to find something that you genuinely enjoy and that allows you to disconnect from work-related thoughts. Some engineers I know enjoy |SILENCE > building model trains, for example. It combines technical skills with creativity, providing a satisfying outlet. |SILENCE >
+    >>> WHISPER 3: Mention meditation CLIIIK <<<
+ |SILENCE > |SILENCE >
+User: Other popular hobbies among engineers include learning musical instruments, photography, or even extreme sports like skiing. The important thing is to find an activity that challenges you in a different way than your work does. |SILENCE >
+User: Now, let's talk about the benefits of maintaining a good work-life balance. When we take care of our personal needs and interests, we often find that our professional performance improves as well. We return to work feeling refreshed, more creative, and better equipped to handle challenges. |SILENCE >
+    >>> WHISPER 4: Productivity increase <<<
+ |SILENCE >
+User: Additionally, pursuing interests outside of work can sometimes lead to unexpected opportunities for personal growth. For instance, taking up a new hobby might push you out of your comfort zone and build confidence that translates to your professional life. |SILENCE >
+Speaker 1: That's interesting. Have you experienced this yourself? |SILENCE >
+User: Yes, actually. I recently started learning to play the guitar, and after months of practice, I performed at an open mic night. It was nerve-wracking but incredibly rewarding, and I found that the confidence I gained from that experience carried over into my presentations at work. |SILENCE >
+User: To wrap up, I want to emphasize that achieving work-life balance is an ongoing process. It requires conscious effort and regular self-assessment. By prioritizing our personal well-being alongside our professional goals, we can lead more fulfilling lives and become more effective engineers. |SILENCE >
+User: Thank you for your attention. Are there any questions? |SILENCE > Speaker 2: Yes, I have a question about...

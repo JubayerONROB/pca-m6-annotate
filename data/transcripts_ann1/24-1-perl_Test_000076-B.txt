@@ -1,0 +1,44 @@
+CONVERSATION 24 of 28, VERSION 1 of 7   (item perl_Test_000076-B, 4 whispers -- rate each, in order, in sheet_ann1.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Good afternoon, and welcome to our engineering podcast. Today, we're excited to have with us an outstanding engineer who has made significant contributions to the field. Could you please introduce yourself to our listeners? |SILENCE >
+User: Hello, thank you for having me. I'm an engineer working in the field of |SILENCE > smart hardware and applications. I've been in the industry for several years now and have had the opportunity to work on some exciting projects. |SILENCE >
+Speaker 1: That's fantastic. I understand you've received recognition for your work. Can you tell us more about that? |SILENCE >
+User: Yes, I was fortunate enough to receive an |SILENCE > award for my contributions. It was a great honor and really validated the hard work I've put into my projects. |SILENCE >
+    >>> WHISPER 1: Outstanding Engineer Award <<<
+ |SILENCE >
+Speaker 1: That's impressive! What specific award did you receive? |SILENCE >
+User: I received the Outstanding Engineer Award. It was a really proud moment for me and my team. |SILENCE >
+Speaker 1: Congratulations on that achievement. Now, I heard you were involved in a promotional event for a piece of wearable technology. Could you share more about that experience? |SILENCE >
+User: Certainly. Last year, I participated in a promotional event for a |SILENCE > wearable device. It was an exciting opportunity to showcase the potential applications of this technology. |SILENCE >
+    >>> WHISPER 2: Google Glass <<<
+ |SILENCE >
+Speaker 1: Interesting! What specific device were you promoting? |SILENCE >
+User: We were promoting Google Glass. It's a fascinating piece of technology with a wide range of potential applications. |SILENCE >
+Speaker 1: That must have been an exciting event. Do you remember when it took place? |SILENCE >
+User: It was sometime last year, but I'm afraid I don't recall the exact |SILENCE > date. |SILENCE >
+    >>> WHISPER 3: October 10th <<<
+ |SILENCE >
+Speaker 1: No worries, these details can slip our minds. Let's move on to your personal interests. I understand you're quite the outdoor enthusiast. What activities do you enjoy? |SILENCE >
+User: Yes, I absolutely love outdoor activities. I'm particularly fond of hiking and rock climbing. There's something exhilarating about challenging yourself in nature. |SILENCE >
+Speaker 1: That's wonderful. Have you been on any memorable hiking or climbing trips recently? |SILENCE >
+User: Actually, yes. I went on an amazing hiking and rock climbing trip with a good friend of mine. We chose a beautiful mountain known for its challenging rock walls. |SILENCE >
+Speaker 1: That sounds like quite an adventure. Was your friend also experienced in rock climbing? |SILENCE >
+User: Yes, my friend |SILENCE > is actually an experienced rock climbing enthusiast. He taught me a lot about proper techniques and safety measures. |SILENCE >
+    >>> WHISPER 4: Xiao Li <<<
+ |SILENCE >
+Speaker 1: It's great to have such a knowledgeable climbing partner. What's your friend's name, if you don't mind sharing? |SILENCE >
+User: His name is Xiao Li. He's been a great mentor and friend, especially when it comes to outdoor activities. |SILENCE >
+Speaker 1: It sounds like you had a fantastic experience. Thank you for sharing your stories with us today. Is there anything else you'd like to add before we wrap up? |SILENCE >
+User: Thank you for having me. I just want to encourage everyone to pursue their passions, whether it's in engineering or outdoor adventures. There's always something new to learn and experience. |SILENCE >
+Speaker 1: That's a great message to end on. Thank you again for joining us, and congratulations once more on your achievements. |SILENCE >
+User: Thank you, it's been a pleasure.

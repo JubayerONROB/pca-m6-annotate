@@ -1,0 +1,46 @@
+CONVERSATION 27 of 28, VERSION 5 of 7   (item synthetic_Test_000064-E, 5 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, I'm so excited to tell you about this amazing backpacking trip I just got back from! |SILENCE >
+Speaker 1: Oh wow, that sounds awesome! Where did you go? |SILENCE >
+User: I spent three weeks exploring Western national parks. It was |SILENCE > incredible! I got to combine my love for wildlife research with adventure travel. |SILENCE >
+Speaker 1: That's so cool! Did you see a lot of wildlife? |SILENCE >
+User: Absolutely! I actually managed to document |SILENCE > quite a few species. |SILENCE >
+    >>> WHISPER 1: 47 species <<<
+ |SILENCE >
+User: I documented 47 different species of wildlife during the trip. It was amazing to see such biodiversity. |SILENCE >
+Speaker 1: Wow, that's impressive! How did you manage to do all that on a student budget? |SILENCE >
+User: Well, I had to be pretty creative with my spending. I set a daily budget and stuck to it by staying in hostels and camping sites. |SILENCE >
+    >>> WHISPER 2: $30 per day <<<
+ |SILENCE >
+User: I managed to keep it to about $30 per day, which was challenging but totally worth it. |SILENCE >
+Speaker 1: That's really impressive. Did you share your findings with anyone at school? |SILENCE >
+User: Yes, actually! I shared my documentation with the biology department when I got back. |SILENCE >
+    >>> WHISPER 3: Professors recognized <<<
+ |SILENCE >
+User: And I was really honored to receive special recognition from my professors. They were impressed by how I combined field research with sustainable travel practices. |SILENCE >
+Speaker 1: That's fantastic! You must be really proud. So, what's next for you? Any more trips planned? |SILENCE >
+User: Well, I'm actually thinking about my next big adventure. I'm |SILENCE > considering a trip to... |SILENCE >
+    >>> WHISPER 4: Southeast Asia <<<
+ |SILENCE >
+User: Southeast Asia for my summer break. I think it would be an incredible opportunity to explore a completely different ecosystem. |SILENCE >
+Speaker 1: That sounds amazing! But how do you balance all this travel with your studies and other commitments? |SILENCE >
+User: It can be challenging, but I try to make the most of my time. Besides my full course load, I volunteer at the local animal shelter three times a week. |SILENCE >
+Speaker 1: Wow, you're really dedicated! Have you done any special projects for the shelter? |SILENCE >
+User: Actually, yes! I recently organized a |SILENCE > benefit concert for the shelter. |SILENCE >
+    >>> WHISPER 5: $3,000 raised <<<
+ |SILENCE >
+User: We managed to raise $3,000 for the shelter's medical fund. It was a great way to combine my love for animals and live music. |SILENCE >
+Speaker 1: That's incredible! You've really accomplished a lot. How do you find time for yourself with all of this going on? |SILENCE >
+User: Well, I do try to make time for things I enjoy. I love going to indie rock concerts when I can. It's a great way to unwind and get inspired for my next project or trip. |SILENCE >
+Speaker 1: You're really making the most of your college experience. It's inspiring to see how you're combining your passions with your studies and giving back to the community. |SILENCE >
+User: Thank you! I'm just trying to make the most of every opportunity. It's been an amazing journey so far, and I'm excited to see what comes next.

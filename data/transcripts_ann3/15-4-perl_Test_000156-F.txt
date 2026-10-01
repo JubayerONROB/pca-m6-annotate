@@ -1,0 +1,43 @@
+CONVERSATION 15 of 28, VERSION 4 of 7   (item perl_Test_000156-F, 5 whispers -- rate each, in order, in sheet_ann3.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Good afternoon, Ms. Bao. Thank you for joining us today. We're excited to learn more about your expertise in international business. Could you start by telling us about your background in this field? |SILENCE >
+User: Good afternoon. I'm pleased to be here. |SILENCE > My background in international business spans over a decade. I've worked as a consultant for multinational companies, specializing in Asian markets. |SILENCE >
+Speaker 1: That's impressive. Can you share a specific project or experience that has been particularly influential in your career? |SILENCE >
+User: Certainly. One of the most influential experiences in my career was |SILENCE > working on a project that involved |SILENCE >
+    >>> WHISPER 1: Uber <<<
+
+User: analyzing Uber's global expansion strategy. This project allowed me to delve deep into innovative business models and their application in different cultural contexts. |SILENCE >
+Speaker 1: Fascinating. Could you elaborate on what you learned from studying Uber's strategy? |SILENCE >
+User: Of course. Uber's strategy was particularly interesting because of its |SILENCE > innovative use of mobile technology and its unique |SILENCE >
+    >>> WHISPER 2: pricing model <<<
+
+User: pricing model. They also implemented a user rating system that significantly improved service quality. What stood out was how they adapted these elements for different international markets. |SILENCE >
+Speaker 1: That's really insightful. How do you think these strategies could be applied to other industries in the Asian market? |SILENCE >
+User: Well, the key is understanding that while technology can be universal, its application needs to be localized. In Asian markets, we could adapt the |SILENCE > user rating system to include culturally relevant service aspects. Additionally, the dynamic pricing model could be adjusted to account for local economic factors and consumer behaviors. |SILENCE >
+Speaker 1: You mentioned earlier that you specialize in Asian markets. What unique challenges do you see for international businesses entering this region? |SILENCE >
+User: The Asian market presents several unique challenges. Firstly, there's the |SILENCE > diversity of cultures and business practices across different countries. Then there's the |SILENCE >
+    >>> WHISPER 3: Language barriers <<<
+ |SILENCE >
+User: rapidly changing regulatory landscape, which can vary significantly from one country to another. Companies need to be adaptable and have a deep understanding of local nuances to succeed. |SILENCE >
+Speaker 1: That's very informative. Now, I understand you've received recognition for your work. Could you tell us about any awards or achievements you're particularly proud of? |SILENCE >
+User: Yes, I'm honored to have received |SILENCE > an award from |SILENCE >
+    >>> WHISPER 4: International Business <<<
+ |SILENCE >
+User: the Outstanding Contribution Award from the International Business Association. This recognition was particularly meaningful as it validated the impact of my work in fostering cross-cultural business understanding. |SILENCE >
+Speaker 1: Congratulations on that achievement. Lastly, who would you say has been a major influence in your career? |SILENCE >
+User: Thank you. A major influence in my career has been |SILENCE > a renowned business leader, Mr. |SILENCE >
+    >>> WHISPER 5: Wang Li <<<
+
+User: Li. His guidance and mentorship have been invaluable in shaping my approach to international business challenges. |SILENCE >
+Speaker 1: Thank you so much for sharing your experiences and insights with us today, Ms. Bao. Your expertise is truly impressive. |SILENCE >
+User: Thank you for having me. It's been a pleasure to share my experiences and insights. I hope they prove useful to your audience.

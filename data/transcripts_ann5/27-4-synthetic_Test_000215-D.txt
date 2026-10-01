@@ -1,0 +1,40 @@
+CONVERSATION 27 of 28, VERSION 4 of 7   (item synthetic_Test_000215-D, 3 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, thanks for meeting up with me today. I've been wanting to catch up and share some exciting news about my recent projects. |SILENCE >
+Speaker 1: Of course! I'm always eager to hear about what you've been up to. What's the latest? |SILENCE >
+User: Well, you know how I've been working on expanding my wellness coaching business, right? I recently completed this really cool |SILENCE > retreat that combined my love for motorcycles, hiking, and yoga. |SILENCE >
+Speaker 1: That sounds amazing! How did you come up with that combination? |SILENCE >
+User: It just felt like a natural extension of who I am, you know? I wanted to create something unique that would appeal to adventure-seekers who also value wellness. We called it the |SILENCE > um... |SILENCE >
+    >>> WHISPER 1: Wilderness Rides <<<
+
+User: Right, we called it the "Ride & Rise" retreat. It was such an incredible experience, bringing together motorcycle enthusiasts who were also interested in yoga and hiking. |SILENCE >
+Speaker 1: Wow, that's so innovative! Where did you host this retreat? |SILENCE >
+User: We toured around the Pacific Northwest. The landscapes there are just breathtaking, perfect for both riding and outdoor yoga sessions. |SILENCE >
+Speaker 1: I bet! Did you get any media coverage for this unique concept? |SILENCE >
+User: Actually, yes! We caught the attention of some |SILENCE > wellness magazines. They were really intrigued by the combination of activities. |SILENCE >
+Speaker 1: That's fantastic! It sounds like you're really making waves in the wellness industry. Any other exciting projects you've been working on? |SILENCE >
+User: Well, funny you should ask. I was recently involved in a documentary about modern approaches to wellness. |SILENCE >
+Speaker 1: Oh really? Tell me more about that! What was the documentary called? |SILENCE >
+User: It was called... um... |SILENCE > |SILENCE >
+    >>> WHISPER 2: "New Age Wellness" <<<
+ |SILENCE > |SILENCE >
+User: You know, I can't quite remember the exact title right now. But it was really cool because they featured me teaching a sunset yoga session after a group motorcycle ride. |SILENCE >
+Speaker 1: That sounds incredible! Was it for a major streaming service? |SILENCE >
+User: Yes, it was! They were really interested in showcasing how I've been blending adventure sports with mindfulness practices. It was such an honor to be part of it. |SILENCE >
+Speaker 1: I'm so impressed, Sarah. You're really carving out a unique niche for yourself. How do you come up with these innovative ideas? |SILENCE >
+User: Thank you! I think it comes from my passion for both adventure and wellness. I'm always looking for ways to |SILENCE > combine different aspects of my life in meaningful ways. |SILENCE >
+    >>> WHISPER 3: Personal growth <<<
+ |SILENCE > |SILENCE >
+User: Oh, and I forgot to mention - I recently completed my advanced yoga teacher certification. That's really helped me bring a deeper level of expertise to these projects. |SILENCE >
+Speaker 1: Congratulations! That's a significant achievement. It's clear you're committed to both personal growth and innovating in your field. |SILENCE >
+User: Thanks so much. It's been a journey, but I'm really excited about where it's taking me and the people I get to help along the way.

@@ -1,0 +1,38 @@
+CONVERSATION 13 of 28, VERSION 6 of 7   (item soda_Test_000064-C, 4 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Good afternoon, Hallee. Thank you for joining us today. We're excited to learn more about your recent achievements in meteorology. Can you tell us about your experience at the university's weather station? |SILENCE >
+User: Thank you for having me. I'm really excited to be here. My experience at the university's weather station has been incredible. As the youngest volunteer there, I've had the opportunity to work with state-of-the-art equipment and learn from experienced meteorologists. It's been a great |SILENCE > platform for applying what I've learned in my atmospheric science classes. |SILENCE >
+Speaker 1: That's fantastic. I understand you've recently made some significant contributions. Could you elaborate on that? |SILENCE >
+User: Yes, actually. Last month, I was able to |SILENCE > predict the formation and path of a severe thunderstorm system. I used my own analysis of atmospheric conditions, which was really exciting. |SILENCE >
+    >>> WHISPER 1: University citation <<<
+ |SILENCE >
+User: Oh, and what made it even more special was that my prediction was cited in the university's meteorological journal. It was my first citation, which was a huge honor for me as a student. |SILENCE >
+Speaker 1: That's impressive, especially for someone so young in the field. How did you feel when your prediction turned out to be accurate? |SILENCE >
+User: I felt incredibly validated. It was a mix of excitement and relief. You know, when you're studying something like atmospheric science, there's always this |SILENCE > uncertainty. But seeing my analysis play out in real-time was just amazing. It really boosted my confidence in my abilities and the knowledge I've gained so far. |SILENCE >
+Speaker 1: That's wonderful. Now, I've also heard that you're quite talented in weather photography. Can you tell us about that? |SILENCE >
+User: Oh, yes! Photography has been a great way for me to combine my love for weather with artistic expression. I've always been fascinated by the visual aspects of meteorology, especially |SILENCE > unique cloud formations. |SILENCE >
+    >>> WHISPER 2: Mammatus cloud <<<
+ |SILENCE >
+User: Actually, I recently captured a photograph of a rare mammatus cloud formation during sunset. It was such a striking sight. |SILENCE >
+Speaker 1: That sounds beautiful. Did you submit that photograph anywhere? |SILENCE >
+User: Yes, I did! I entered it into our university's annual Science in Nature photography competition. |SILENCE >
+    >>> WHISPER 3: First place <<<
+ |SILENCE >
+User: And I'm thrilled to say it won first place! It was such an honor to have my work recognized like that. |SILENCE >
+Speaker 1: Congratulations! That's a significant achievement. Did you receive any prize for winning? |SILENCE >
+User: Thank you! Yes, I did receive a prize. It was |SILENCE > something really useful for my studies and passion. |SILENCE >
+    >>> WHISPER 4: New weather station <<<
+ |SILENCE >
+User: I was awarded a new weather station for my dorm room. It's been incredibly helpful for my ongoing studies and personal weather tracking. |SILENCE >
+Speaker 1: That's a perfect prize for someone with your interests. Hallee, it's clear that you have a bright future in meteorology. Thank you for sharing your experiences with us today. |SILENCE >
+User: Thank you so much for having me. It's been a pleasure to share my passion for meteorology and some of my recent experiences. I'm looking forward to what the future holds in this field.

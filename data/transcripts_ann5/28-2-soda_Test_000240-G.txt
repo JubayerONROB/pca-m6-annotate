@@ -1,0 +1,42 @@
+CONVERSATION 28 of 28, VERSION 2 of 7   (item soda_Test_000240-G, 6 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Good afternoon, everyone. Thank you for joining me today for this presentation on personal growth and career development. |SILENCE > I'm here to share my recent experiences with lifestyle changes and how they've impacted my professional journey. |SILENCE >
+    >>> WHISPER 1: Digital marketing <<<
+ |SILENCE > |SILENCE >
+User: As some of you may know, I recently completed a digital marketing certification course, which has been instrumental in shaping my new perspective. |SILENCE >
+Speaker 1: That's great! How long did the course take? |SILENCE >
+User: The course ran for several weeks, and I'm proud to say that I |SILENCE > achieved top marks in the final session. |SILENCE >
+    >>> WHISPER 2: Last month <<<
+ |SILENCE > |SILENCE >
+User: Interestingly, to attend that final session, I had to make a tough decision. I declined an invitation to an industry networking party that same evening. |SILENCE > Speaker 2: Wow, that must have been a difficult choice. Was it worth it? |SILENCE >
+User: Absolutely. While networking is important, I realized that completing my certification was crucial for my long-term career goals. |SILENCE >
+    >>> WHISPER 3: Wellness routine <<<
+ |SILENCE > |SILENCE >
+User: This decision was just the beginning of my lifestyle changes. Recently, I've transformed my living space to align with my new focus. |SILENCE >
+Speaker 1: Oh, how so? |SILENCE >
+User: Well, I used to have a dedicated room for |SILENCE > hosting parties and gatherings. |SILENCE >
+    >>> WHISPER 4: Minimalist home office <<<
+ |SILENCE > |SILENCE >
+User: I've now converted that space into a minimalist home office and study area. |SILENCE > Speaker 2: That's quite a change! How has that affected your routine? |SILENCE >
+User: It's had a profound impact. I've established a new daily routine centered around wellness, learning, and career advancement. |SILENCE >
+    >>> WHISPER 5: Bar furniture <<<
+ |SILENCE > |SILENCE >
+User: I even installed a meditation corner in my new office space, which has been incredibly beneficial for my mental clarity and focus. |SILENCE >
+Speaker 1: It sounds like you've made some significant changes. How do you feel about them now? |SILENCE >
+User: To be honest, I've found unexpected peace in this more structured lifestyle. It's allowed me to concentrate on my professional development and personal growth in ways I hadn't anticipated. |SILENCE > Speaker 2: That's inspiring. Do you have any advice for others considering similar changes? |SILENCE >
+User: Absolutely. I'd encourage everyone to reflect on their current habits and consider how they align with their long-term goals. Sometimes, what seems like a sacrifice in the short term can lead to significant rewards in the future. |SILENCE >
+    >>> WHISPER 6: Time management <<<
+ |SILENCE > |SILENCE >
+User: For instance, I used to host weekly gatherings, which were fun but ultimately didn't contribute to my personal growth. By redirecting that time and energy, I've seen remarkable improvements in my professional life. |SILENCE >
+Speaker 1: Thank you for sharing your experience. It's definitely food for thought. |SILENCE >
+User: Thank you all for listening. I hope my journey can inspire some of you to reassess your priorities and make changes that align with your long-term goals. Are there any questions?

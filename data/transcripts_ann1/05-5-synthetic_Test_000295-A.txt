@@ -1,0 +1,51 @@
+CONVERSATION 5 of 28, VERSION 5 of 7   (item synthetic_Test_000295-A, 6 whispers -- rate each, in order, in sheet_ann1.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, thanks for meeting up with me today. I've been wanting to tell you about this amazing event I volunteered for at the Natural History Museum last month. |SILENCE >
+Speaker 1: Oh, that sounds interesting! What kind of event was it? |SILENCE >
+User: It was this really cool "Living History" production. I got to coordinate the costumes for the actors. It was all about the |SILENCE > Victorian era. |SILENCE >
+    >>> WHISPER 1: Victorian era <<<
+
+User: The costumes had to be period-accurate, which was a challenge but also really fun. |SILENCE >
+Speaker 1: Wow, that's impressive! How did you know what would be accurate for that time period? |SILENCE >
+User: Well, I've always been interested in history, and I've spent a lot of time reading about different eras. Plus, all those museum visits over the years really paid off. |SILENCE >
+Speaker 1: That's great that you could apply your knowledge like that. How many actors were you coordinating costumes for? |SILENCE >
+User: Let's see, there were |SILENCE > quite a few. I think it was around... |SILENCE >
+    >>> WHISPER 2: Fifteen actors <<<
+ |SILENCE >
+User: Oh right, there were about fifteen actors in total. It was a good-sized production. |SILENCE >
+Speaker 1: That's a lot to manage! Did you have any favorite costumes or characters? |SILENCE >
+User: Definitely! There was this one character, a |SILENCE > scientist, I think. He had this elaborate outfit with all these little details. |SILENCE >
+    >>> WHISPER 3: Lab coat <<<
+ |SILENCE >
+User: Actually, now that I think about it, he was a naturalist, not just a scientist. His costume had all these pockets for specimen collection tools. It was really authentic. |SILENCE >
+Speaker 1: That sounds fascinating. It must have been rewarding to see it all come together. |SILENCE >
+User: It really was. And you know, it's funny how this experience connected with another part of my life. |SILENCE >
+Speaker 1: Oh? How so? |SILENCE >
+User: Well, I run this reading group at the library where I work, and we often discuss |SILENCE > different time periods in literature. |SILENCE >
+    >>> WHISPER 4: Mindfulness reading <<<
+ |SILENCE >
+User: Right, it's actually a mindfulness reading group. We combine meditation with literary discussion. |SILENCE >
+Speaker 1: That's an interesting combination. How did that come about? |SILENCE >
+User: It started as a small thing, just |SILENCE > a few of us getting together. But it's grown quite a bit since then. |SILENCE >
+    >>> WHISPER 5: Fifteen members <<<
+ |SILENCE >
+User: We meet every Tuesday evening now. It's become this wonderful community where we explore personal growth and literary analysis together. |SILENCE >
+Speaker 1: That sounds really fulfilling. How many people usually attend? |SILENCE >
+User: We've got a good group now. I think we have about |SILENCE > |SILENCE >
+    >>> WHISPER 6: Fifteen members <<<
+ |SILENCE >
+User: Fifteen regular members. It's funny, that's the same number as the actors in the museum production. I guess fifteen is my magic number lately! |SILENCE >
+Speaker 1: That's a nice coincidence! It sounds like you've got a lot of interesting things going on. |SILENCE >
+User: Yeah, I feel really fortunate. Between the library work, the reading group, and opportunities like the museum event, I feel like I'm always learning and growing. |SILENCE >
+Speaker 1: That's wonderful, Sarah. Thanks for sharing all of this with me. It's inspiring to hear about your experiences. |SILENCE >
+User: Thanks for listening! It's been great to reflect on it all.

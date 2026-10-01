@@ -1,0 +1,39 @@
+CONVERSATION 12 of 28, VERSION 6 of 7   (item perl_Test_000258-B, 3 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: I can't believe you're still arguing about climate change. The evidence is overwhelming! |SILENCE >
+Speaker 1: Look, I'm not denying that the climate is changing, but I think the extent of human influence is exaggerated. Natural cycles play a huge role too. |SILENCE >
+User: That's just not true. The rate of change we're seeing is unprecedented in Earth's history. It's clearly linked to human activities.
+Speaker 1: But what about the Medieval Warm Period? Temperatures were high then too, and that was long before industrialization. |SILENCE >
+User: The Medieval Warm Period was a regional phenomenon, not global like what we're experiencing now. Plus, the rate of change was much slower. |SILENCE >
+Speaker 1: I still think we need more research before making drastic policy changes. What if we're overreacting? |SILENCE >
+User: More research? We've been researching this for decades! The IPCC reports |SILENCE > compile thousands of studies. The scientific consensus is clear. |SILENCE >
+    >>> WHISPER 1: 97% consensus <<<
+
+Speaker 1: But there are still scientists who disagree, right? It's not unanimous. |SILENCE >
+User: The vast majority of climate scientists agree that human activities are the primary driver of current climate change. It's not just a few studies, it's overwhelming evidence. |SILENCE >
+Speaker 1: Okay, but even if that's true, don't you think the economic costs of addressing climate change might outweigh the benefits? |SILENCE >
+User: That's a short-sighted view. The long-term costs of inaction far outweigh the costs of addressing the issue now. We're talking about |SILENCE > massive economic disruptions, food and water scarcity, and increased natural disasters. |SILENCE >
+    >>> WHISPER 2: IPCC report <<<
+ |SILENCE >
+Speaker 1: Those predictions seem pretty extreme. How can we be sure things will get that bad? |SILENCE >
+User: These aren't just wild guesses. They're based on rigorous scientific models and data. In fact, the Stern Review, a comprehensive report on the economics of climate change, concluded that the benefits of strong, early action on climate change far outweigh the costs of not acting. |SILENCE >
+Speaker 1: I've never heard of this Stern Review. Who even conducted it? |SILENCE >
+User: It was a report commissioned by the British government, led by economist Nicholas Stern. It's one of the most influential studies on the economic impacts of climate change. |SILENCE >
+    >>> WHISPER 3: Published in 2006 <<<
+ |SILENCE >
+Speaker 1: Okay, but when was this study done? Things might have changed since then. |SILENCE >
+User: The Stern Review was published in 2006, but its findings have been consistently supported by subsequent research. If anything, more recent studies suggest that the Stern Review may have underestimated the risks and costs of climate change. |SILENCE >
+Speaker 1: I still think we need to be cautious about making drastic changes based on predictions. What if we harm the economy for no reason? |SILENCE >
+User: The thing is, we're already seeing the impacts of climate change. It's not just about future predictions. We're experiencing more frequent and severe weather events, rising sea levels, and changing ecosystems right now. The longer we wait to act, the more expensive and difficult it becomes to address the problem. |SILENCE >
+Speaker 1: I guess I can see your point, but I still have reservations. It's a complex issue. |SILENCE >
+User: You're right, it is complex. But that's why we need to trust the experts who have dedicated their lives to studying this issue. The scientific consensus is clear, and the economic analyses support taking action now. We can't afford to wait any longer.

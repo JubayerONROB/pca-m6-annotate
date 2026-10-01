@@ -1,0 +1,43 @@
+CONVERSATION 21 of 28, VERSION 5 of 7   (item soda_Test_000040-E, 3 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Ora, I've noticed you've been pretty worried lately. Is everything okay? |SILENCE >
+User: Yeah, I've been really concerned about my son. |SILENCE > He's been acting so different lately, and I'm not sure what to do. |SILENCE >
+Speaker 1: Different how? Can you give me an example? |SILENCE >
+User: Well, at his parent-teacher conference last Tuesday, his teacher told me he's been spending recess alone, just drawing in his notebook instead of playing with the other kids. |SILENCE >
+Speaker 1: That does sound concerning. How long has this been going on? |SILENCE >
+User: It's been about |SILENCE > three months now, I think. At first, I thought maybe it was just a phase, but it's not getting any better. |SILENCE >
+    >>> WHISPER 1: Child psychology <<<
+
+User: And you know, at that parent-teacher conference, his teacher also mentioned that he seems to carry this persistent sadness. It breaks my heart to see him like this. |SILENCE >
+Speaker 1: I can imagine how difficult that must be for you. Have you considered talking to a professional about this? |SILENCE >
+User: Actually, I've been spending my evenings researching child psychology, trying to understand what might be going on. |SILENCE > But you're right, I think professional help might be necessary. |SILENCE >
+Speaker 1: That's great that you're doing research. Your background in education must be helpful in understanding some of these issues. |SILENCE >
+User: It is, to some extent. But I'm also worried that I might be overthinking things or missing something important because I'm too close to the situation. |SILENCE >
+Speaker 1: That's a valid concern. Sometimes an outside perspective can be really valuable. Have you talked to anyone else about this? |SILENCE >
+User: Yes, actually. I've been talking to my friend |SILENCE > Jailen about it. She's a family counselor, so she has some insight into these kinds of situations. |SILENCE >
+    >>> WHISPER 2: Coffee conversation <<<
+
+User: In fact, just yesterday evening, we had a long talk over coffee about my son's behavior. |SILENCE >
+Speaker 1: Oh, that's good. What did Jailen have to say about it? |SILENCE >
+User: Well, I ended up breaking down while describing everything that's been going on. It was pretty emotional. |SILENCE >
+Speaker 1: I'm sorry you're going through such a tough time. Did Jailen have any advice? |SILENCE >
+User: She did, actually. |SILENCE > She suggested that I should consider seeking help from a child psychologist. |SILENCE >
+    >>> WHISPER 3: Professional help <<<
+
+User: And she actually knows a good one that she recommended. |SILENCE >
+Speaker 1: That sounds like a great idea. Are you thinking of following through with that suggestion? |SILENCE >
+User: I think I am. At first, I was hesitant about involving a stranger, but after talking it through with Jailen, I realize it might be the best way to help my son. |SILENCE >
+Speaker 1: I think that's a wise decision, Ora. It shows how much you care about your son's well-being. |SILENCE >
+User: Thank you. It's been really hard, but I'm hopeful that with professional help, we can get to the bottom of what's bothering him and help him feel better. |SILENCE >
+Speaker 1: Absolutely. And remember, you're doing a great job as a mom. Recognizing there's an issue and seeking help is a big step. |SILENCE >
+User: Thanks, I really appreciate your support. It means a lot to have friends I can talk to about this.

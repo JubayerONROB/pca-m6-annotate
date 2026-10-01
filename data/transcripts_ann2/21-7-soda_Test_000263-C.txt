@@ -1,0 +1,43 @@
+CONVERSATION 21 of 28, VERSION 7 of 7   (item soda_Test_000263-C, 3 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hi there. I'm looking for some ingredients for a special dinner I'm making tonight. |SILENCE >
+Speaker 1: Let me see what you've got there. |SILENCE > Hmm, this looks like it'll be a bit of a challenge. But we can definitely help you out. |SILENCE >
+User: Great, thank you. So, for this first recipe, I need chicken breasts, mushrooms, and green onions. |SILENCE >
+Speaker 1: Alright, I can help you with those. Are you planning to make a stir-fry or something similar? |SILENCE >
+User: Actually, I'm attempting a |SILENCE > chicken marsala for the first time. I'm hosting a dinner party for some friends from work. |SILENCE >
+Speaker 1: Oh, that sounds delicious! Chicken marsala is a great choice for a dinner party. Have you made it before? |SILENCE >
+User: No, this is my first time trying it. I've been expanding my cooking skills lately, and I thought it would be a nice challenge. |SILENCE >
+    >>> WHISPER 1: Sear first, then sauce. <<<
+
+Speaker 1: That's wonderful! It's always exciting to try new recipes. Do you host dinner parties often? |SILENCE >
+User: Well, I've been doing it more recently. Last month, I actually hosted a Mediterranean-themed dinner party for some colleagues. It went really well, which gave me the confidence to try something new this time. |SILENCE >
+Speaker 1: That's fantastic! Mediterranean cuisine is so flavorful. What did you make for that dinner? |SILENCE >
+User: For that one, I made |SILENCE > homemade hummus as a starter, then grilled lamb for the main course, and |SILENCE > baklava for dessert. |SILENCE >
+    >>> WHISPER 2: Tabbouleh, couscous <<<
+
+Speaker 1: Wow, that's impressive! A full three-course meal. You must have put a lot of work into that. |SILENCE >
+User: Yes, it was quite an undertaking, but it was worth it. The experience really boosted my confidence in entertaining guests. |SILENCE >
+Speaker 1: I can imagine! So, what else do you need for your chicken marsala tonight? |SILENCE >
+User: Let's see, I also need |SILENCE > Marsala wine, of course, and some fresh herbs. Do you have any sage? |SILENCE >
+Speaker 1: Yes, we do have fresh sage. It's over in our herb section. Anything else? |SILENCE >
+User: Great, thank you. Oh, and I'll need some |SILENCE > heavy cream and garlic. |SILENCE >
+    >>> WHISPER 3: Shallots, mushrooms <<<
+
+Speaker 1: No problem, I can show you where those are. By the way, do you have any tips for chopping garlic efficiently? I always struggle with that. |SILENCE >
+User: Actually, I do! I recently attended a knife skills workshop at the local culinary center. They taught us some great techniques for chopping various ingredients, including garlic. |SILENCE >
+Speaker 1: Oh, that sounds really useful! What's the secret to chopping garlic then? |SILENCE >
+User: The key is to first crush the clove with the flat side of your knife. This loosens the skin and makes it easier to peel. Then, you can mince it finely by rocking the knife back and forth over the crushed garlic. It's much quicker than trying to chop it traditionally. |SILENCE >
+Speaker 1: That's a great tip! I'll have to try that next time. It sounds like you're really passionate about cooking. |SILENCE >
+User: I am! It's become a real hobby of mine. In fact, after that workshop, I started a weekly recipe exchange group with some of the other participants. It's been great for getting new ideas and improving my skills. |SILENCE >
+Speaker 1: That's wonderful! It's always fun to share recipes and cooking tips with others. Well, let's get you those remaining ingredients for your chicken marsala. I'm sure your dinner party will be a great success! |SILENCE >
+User: Thank you so much for your help and the chat. I'm looking forward to the dinner now more than ever!

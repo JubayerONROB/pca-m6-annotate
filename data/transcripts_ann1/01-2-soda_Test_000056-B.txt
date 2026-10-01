@@ -1,0 +1,44 @@
+CONVERSATION 1 of 28, VERSION 2 of 7   (item soda_Test_000056-B, 4 whispers -- rate each, in order, in sheet_ann1.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: I've been feeling so lost lately. It's like everything I've worked for is slipping away. |SILENCE >
+Speaker 1: I can only imagine how frustrating that must be. Have you considered exploring alternative training methods? |SILENCE >
+User: I mean, |SILENCE > I've thought about it, but I'm not sure what would even be helpful at this point. My usual routine is completely off-limits. |SILENCE >
+    >>> WHISPER 1: Aqua jogging <<<
+
+User: I just feel like I'm starting from scratch, you know? |SILENCE >
+Speaker 1: Starting from scratch can be daunting, but it can also be an opportunity. What about low-impact exercises? |SILENCE >
+User: Low-impact? I guess that could work. |SILENCE > I actually tried aqua jogging yesterday.
+Speaker 1: Really? That's great! How did it go? |SILENCE >
+User: It was... different. I was skeptical at first, but it wasn't as bad as I thought. |SILENCE >
+Speaker 1: That's a positive start. Did you feel like it was beneficial? |SILENCE >
+User: I think so. It's not the same as running, obviously, but |SILENCE > I could feel my heart rate up. |SILENCE >
+    >>> WHISPER 2: Conditioning <<<
+ |SILENCE >
+User: And I guess it could help me maintain some level of conditioning while I recover. |SILENCE >
+Speaker 1: That's excellent. It sounds like you're adapting well. Have you discussed this with your coach? |SILENCE >
+User: Not yet. I'm not sure how to approach it. |SILENCE >
+    >>> WHISPER 3: Coach's perspective <<<
+ |SILENCE >
+User: I mean, we talked about refocusing my goals for next season, but we haven't really gotten into the details of my current training. |SILENCE >
+Speaker 1: I think it would be valuable to have that conversation. Your coach might have more ideas for alternative training methods. |SILENCE >
+User: You're right. I should probably reach out to them. It's just been hard to face the reality of my situation. |SILENCE >
+Speaker 1: That's understandable. But remember, this setback is temporary. You're still the same talented athlete. |SILENCE >
+User: Thanks. It's just tough watching my qualifying window close, you know? |SILENCE >
+    >>> WHISPER 4: Positive thoughts <<<
+ |SILENCE >
+User: But I guess I need to start thinking about next season and how to come back stronger. |SILENCE >
+Speaker 1: Exactly. And who knows? This experience might even make you a better athlete in the long run. |SILENCE >
+User: Maybe you're right. I just need to stay focused and keep working, even if it looks different right now. |SILENCE >
+Speaker 1: That's the spirit. And remember, you're not alone in this. Your team is there to support you. |SILENCE >
+User: You're right. Thanks for listening and helping me see things from a different perspective. |SILENCE >
+Speaker 1: Anytime. That's what friends are for.

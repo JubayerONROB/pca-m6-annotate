@@ -1,0 +1,43 @@
+CONVERSATION 12 of 28, VERSION 2 of 7   (item perl_Test_000190-F, 5 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: So, have you heard about the latest developments in cultural exchange programs? I think they're really making strides in bridging gaps between different societies. |SILENCE >
+Speaker 1: That's interesting! I've been curious about cultural exchange programs lately. What kind of developments are you referring to? |SILENCE >
+User: Well, I recently read about a program that's using |SILENCE > music as a medium for cultural exchange. It's fascinating how they're bringing together artists from different countries to collaborate. |SILENCE >
+    >>> WHISPER 1: Amina Gamma album <<<
+ |SILENCE >
+Speaker 1: Music as a medium for cultural exchange? That sounds amazing! Do you know of any specific projects or albums that have come out of this program? |SILENCE >
+User: Actually, yes! There's this incredible album that perfectly exemplifies this concept. It's a collaboration between |SILENCE > a Senegalese musician and a French artist. |SILENCE >
+    >>> WHISPER 2: Youssou N'Dour, Peter Gabriel <<<
+
+User: The Senegalese artist, Youssou N'Dour, is known for his jazz influences, and he worked with |SILENCE > a French musician to create this amazing fusion of styles. |SILENCE >
+    >>> WHISPER 3: Peter Gabriel <<<
+ |SILENCE >
+Speaker 1: Wow, that sounds like a really unique collaboration! I'm always fascinated by how different musical traditions can blend together. What's the name of this album? I'd love to check it out. |SILENCE >
+User: The album is called "Amina Gamma." It's really a masterpiece in world music. What makes it so special is how it combines elements of African traditional music with jazz and even some rock influences. |SILENCE >
+Speaker 1: That sounds incredible! I'm always looking for new music to explore. Can you tell me more about the specific musical elements they incorporated? |SILENCE >
+User: Absolutely! The album features a rich tapestry of sounds. You've got traditional Senegalese drumbeats, |SILENCE > Nigerian acoustic guitar, and even a West African instrument called the Kora. |SILENCE >
+    >>> WHISPER 4: French double bass <<<
+ |SILENCE >
+User: And then there's the addition of French musical elements, like the double bass, which creates this beautiful bridge between the two cultures. |SILENCE >
+Speaker 1: That's fascinating! It really does sound like a true cultural fusion. Did they bring in other musicians from different countries as well? |SILENCE >
+User: Yes, they did! The album features collaborations with musicians from various parts of Africa. For example, they invited |SILENCE > a singer from Mali to contribute. |SILENCE >
+    >>> WHISPER 5: Kandia Kouyaté <<<
+ |SILENCE >
+Speaker 1: That's amazing! It really shows the power of music to bring people together across borders. What about the lyrics? Do they touch on any specific themes? |SILENCE >
+User: The lyrics are actually one of the most powerful aspects of the album. They address a range of social and political issues, not just in Senegal, but across the African continent. Themes like the complexity of human nature and the desire for peace are woven throughout the songs. |SILENCE >
+Speaker 1: Wow, it sounds like this album is not just musically rich, but also carries a strong message. I'm definitely going to look it up. Thanks for sharing about it! |SILENCE >
+User: I'm glad you're interested! It's albums like "Amina Gamma" that really showcase the power of cultural exchange through art. They not only create beautiful music but also promote understanding between different cultures. |SILENCE >
+Speaker 1: Absolutely! It's inspiring to see how music can transcend boundaries and bring people together. Do you know of any other similar projects or albums I should check out? |SILENCE >
+User: There are quite a few, actually. The world music scene is full of these kinds of collaborations. I'd recommend exploring more of Youssou N'Dour's work, as well as other artists who focus on cross-cultural collaborations. It's a great way to broaden your musical horizons and gain new perspectives. |SILENCE >
+Speaker 1: Thanks for the suggestions! I'm excited to dive into this world of music. It's conversations like these that remind me of how much there is to discover and learn about different cultures. |SILENCE >
+User: Absolutely! That's the beauty of cultural exchange – it opens up whole new worlds of art, ideas, and understanding. I'm always happy to share these discoveries.

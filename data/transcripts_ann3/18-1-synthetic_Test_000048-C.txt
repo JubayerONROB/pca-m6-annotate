@@ -1,0 +1,43 @@
+CONVERSATION 18 of 28, VERSION 1 of 7   (item synthetic_Test_000048-C, 4 whispers -- rate each, in order, in sheet_ann3.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, did you hear about that new fusion restaurant that opened downtown last month? |SILENCE >
+Speaker 1: Oh yeah, I think I saw something about that on social media. Did you get a chance to try it out? |SILENCE >
+User: Actually, I was there for the grand opening! My choir |SILENCE > performed at the event. |SILENCE >
+Speaker 1: Wow, that's awesome! How was the food? And how did the performance go? |SILENCE >
+User: The food was incredible. They had this amazing |SILENCE > dish with a mix of Asian and Mediterranean flavors that I can't stop thinking about. |SILENCE >
+    >>> WHISPER 1: Korean BBQ <<<
+ |SILENCE >
+User: Oh, right! It was a lemongrass lamb dish. Absolutely delicious. |SILENCE >
+Speaker 1: That sounds fantastic! I'll have to check it out. How about the performance? Did you guys nail it? |SILENCE >
+User: We did! The acoustics in the restaurant were surprisingly good, and the audience seemed to really enjoy it. It was a great opportunity for us to |SILENCE > showcase our talents. |SILENCE >
+Speaker 1: That's great to hear. Did you get to meet anyone interesting at the event? |SILENCE >
+User: Actually, yes! I had the chance to network with some local |SILENCE > people in the food industry. |SILENCE >
+    >>> WHISPER 2: Food critics <<<
+ |SILENCE >
+User: That's right, I met some local food critics. It was fascinating to hear their perspectives on the city's culinary scene. |SILENCE >
+Speaker 1: Oh wow, that must have been really interesting. Did you get any insider tips or recommendations? |SILENCE >
+User: Definitely! They shared some great insights about upcoming restaurants and food trends. It was a perfect blend of my interests in music and food exploration. |SILENCE >
+Speaker 1: That sounds like such a cool experience. You're always involved in such interesting activities. Didn't you also recently do something with your bowling league? |SILENCE >
+User: Yes! We actually had a |SILENCE > fundraiser not too long ago. |SILENCE >
+    >>> WHISPER 3: Bake sale <<<
+ |SILENCE >
+User: It was a bake sale fundraiser. We managed to raise over $500 for new team uniforms. |SILENCE >
+Speaker 1: That's impressive! I bet your famous chocolate chip cookies were a hit. |SILENCE >
+User: They were! But the fun part was that while we were selling the baked goods, I also got to teach some of my teammates some basic |SILENCE > crafting techniques. |SILENCE >
+    >>> WHISPER 4: Knitting <<<
+ |SILENCE >
+User: Right, I taught them some basic knitting techniques. It was a great way to combine different aspects of my hobbies. |SILENCE >
+Speaker 1: That's so cool! You really have a knack for bringing your different interests together. Do you think you'll organize more events like this in the future? |SILENCE >
+User: Absolutely! I'm always looking for ways to combine my passions. Maybe next time we'll do a choir performance at the bowling alley or a knitting circle at a new restaurant. The possibilities are endless! |SILENCE >
+Speaker 1: I love your enthusiasm! It's inspiring how you manage to weave all these different activities together. |SILENCE >
+User: Thanks! It keeps life interesting and allows me to connect with so many different people. I'm already looking forward to whatever comes next.

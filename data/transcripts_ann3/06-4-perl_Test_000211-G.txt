@@ -1,0 +1,40 @@
+CONVERSATION 6 of 28, VERSION 4 of 7   (item perl_Test_000211-G, 4 whispers -- rate each, in order, in sheet_ann3.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Good morning, and welcome to our interview. Could you please introduce yourself and tell us a bit about your background? |SILENCE >
+User: Good morning. Thank you for having me. My name is |SILENCE > Wei Na, and I'm a finance major with a passion for learning and the financial industry. |SILENCE >
+    >>> WHISPER 1: Xiaona <<<
+
+User: You can also call me Xiaona. I've always been drawn to the world of finance and I'm excited about the opportunities to develop my career in this field. |SILENCE >
+Speaker 1: That's great to hear, Xiaona. Can you tell us about a significant experience that has shaped your perspective on the financial industry? |SILENCE >
+User: Certainly. One experience that really stands out was during the |SILENCE > COVID-19 pandemic in 2020. |SILENCE >
+    >>> WHISPER 2: Li Lin <<<
+
+User: My close family member, Li Lin, and I went through this global crisis together. As finance students, we were acutely aware of the pandemic's impact on both public health and the global economy. |SILENCE >
+Speaker 1: That must have been a challenging time. How did you and your family member respond to the situation? |SILENCE >
+User: We took an active role in our community. We participated in |SILENCE > epidemic surveillance and public awareness efforts, providing information about protective measures and tracking the spread of the virus. |SILENCE >
+Speaker 1: That's commendable. Did this experience influence your view of the financial sector in any way? |SILENCE >
+User: Absolutely. It highlighted the interconnectedness of global markets and the importance of |SILENCE > risk management in finance. We closely followed the economic impacts and discussed how financial institutions were responding to the crisis. |SILENCE >
+Speaker 1: Interesting. Can you elaborate on any specific financial aspects you observed during this time? |SILENCE >
+User: Sure. We noticed significant volatility in stock markets, changes in monetary policies by central banks, and the |SILENCE > implementation of various economic stimulus packages. |SILENCE >
+    >>> WHISPER 3: Vaccine research <<<
+
+User: We also paid close attention to the progress of vaccine research and development, understanding that it would have a substantial impact on economic recovery. |SILENCE >
+Speaker 1: That's a comprehensive view. Now, shifting gears a bit, could you tell us about any industry events or networking experiences you've had? |SILENCE >
+User: Certainly. I've been fortunate to attend several industry events in the local financial community. These experiences have been invaluable for |SILENCE > networking and learning from professionals in the field. |SILENCE >
+    >>> WHISPER 4: Mr. Zhang <<<
+
+User: In fact, I often attend these events with a colleague, Mr. Zhang. We've established good connections in the financial community, which I believe will be beneficial for our future careers. |SILENCE >
+Speaker 1: That's excellent. Networking is indeed crucial in this industry. Lastly, what are your career aspirations in the financial sector? |SILENCE >
+User: My goal is to continue developing my skills and knowledge in finance. I'm particularly interested in |SILENCE > exploring areas like risk management and sustainable finance. I believe these fields will be increasingly important in the coming years. |SILENCE >
+Speaker 1: Thank you, Xiaona. Your experiences and aspirations are quite impressive. We appreciate you sharing them with us today. |SILENCE >
+User: Thank you for the opportunity. I'm excited about the possibilities in this field and look forward to contributing to the financial industry.

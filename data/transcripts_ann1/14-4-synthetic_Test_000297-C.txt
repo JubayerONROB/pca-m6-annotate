@@ -1,0 +1,49 @@
+CONVERSATION 14 of 28, VERSION 4 of 7   (item synthetic_Test_000297-C, 3 whispers -- rate each, in order, in sheet_ann1.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Hey, I heard you've been getting into some interesting hobbies lately. What's been keeping you busy? |SILENCE >
+User: Oh, yeah! I've been really enjoying a mix of things. I've gotten into crafting, especially making tea cozies. It's been |SILENCE > surprisingly fun and relaxing. |SILENCE >
+Speaker 1: Tea cozies? That's unique! How did you get into that? |SILENCE >
+User: Well, I have this daily tea ritual that I love, and I thought it would be nice to have something special to keep my teapot warm. So I started making them myself, and it just kind of |SILENCE > took off from there.
+Speaker 1: That's really cool. Are you just making them for yourself, or have you thought about selling them? |SILENCE >
+User: Actually, I've started selling them at local craft fairs. It's been going pretty well! |SILENCE >
+    >>> WHISPER 1: 15 cozies <<<
+
+User: At my first fair, I sold fifteen cozies, which was way more than I expected. |SILENCE >
+Speaker 1: Wow, that's impressive for a first-time seller! What kind of designs do you make? |SILENCE >
+User: Thanks! I've been experimenting with different themes. Lately, I've been incorporating |SILENCE > musical motifs into my designs. |SILENCE >
+Speaker 1: Musical motifs? That's an interesting choice for tea cozies. What inspired that? |SILENCE >
+User: Well, I've also been taking guitar lessons, so I guess music has been on my mind a lot. It's been fun to combine my interests. |SILENCE >
+Speaker 1: Guitar lessons? You're full of surprises! How long have you been playing? |SILENCE >
+User: Oh, not too long. I'm still pretty much a beginner, but I'm really enjoying it. It's a great way to unwind after work. |SILENCE >
+Speaker 1: That's great! Have you performed for anyone yet, or is it just for fun at home? |SILENCE >
+User: Well, funny you should ask. I actually did perform recently, but it wasn't exactly a formal gig. |SILENCE >
+    >>> WHISPER 2: Bowling league <<<
+
+User: It was at my bowling league's championship celebration. |SILENCE >
+Speaker 1: Wait, you're in a bowling league too? And you performed at the championship? That's amazing! How did that go? |SILENCE >
+User: It was a blast! Our team won the championship, and during the celebration, I surprised everyone by playing a few songs. |SILENCE >
+    >>> WHISPER 3: Three songs <<<
+
+User: I played three songs, including this silly little tune I wrote about our team's journey to victory. |SILENCE >
+Speaker 1: That sounds like so much fun! I bet your teammates loved it. |SILENCE >
+User: They really did! It's actually become kind of an unofficial anthem for our team now. |SILENCE >
+Speaker 1: That's incredible. You've got such a creative way of bringing all your interests together. Do you have any other hidden talents I should know about? |SILENCE >
+User: Well, I do enjoy sharing my favorite wines with my teammates after our bowling games. I guess you could say I'm a bit of a wine enthusiast too. |SILENCE >
+Speaker 1: Crafting, music, bowling, and wine? You're like a renaissance woman! How do you find time for it all? |SILENCE >
+User: It can be a juggling act sometimes, but I find that having diverse interests keeps life exciting. Each hobby brings something different to the table. |SILENCE >
+Speaker 1: That's a great outlook. It sounds like you've found a really good balance. Do you have any big plans or goals for any of these hobbies? |SILENCE >
+User: Well, I've actually been invited to join a local artisans' collective, which is pretty exciting. It means I'll have a regular spot at monthly makers' markets. |SILENCE >
+Speaker 1: That's fantastic! Congratulations! It sounds like your crafting hobby is really taking off. |SILENCE >
+User: Thanks! Yeah, it's been a fun journey. I'm looking forward to seeing where it goes from here. |SILENCE >
+Speaker 1: Well, I'm impressed. You've certainly found some unique ways to express yourself creatively. It's inspiring to see someone so passionate about their hobbies. |SILENCE >
+User: I really appreciate that. It's been a great way to meet new people and challenge myself. I'm just grateful I've found things I truly enjoy doing.

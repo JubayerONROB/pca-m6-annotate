@@ -1,0 +1,34 @@
+CONVERSATION 7 of 28, VERSION 2 of 7   (item perl_Test_000006-B, 3 whispers -- rate each, in order, in sheet_ann1.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Good afternoon, everyone. Today, I'd like to share with you my recent visit to one of the world's largest libraries, the Library of Congress in Washington, DC. This experience was not only enlightening but also deeply inspiring for my work as an anthropologist. |SILENCE >
+Speaker 1: That sounds fascinating! I've always wanted to visit there. |SILENCE >
+User: It truly is an awe-inspiring place. The sheer scale of the library is breathtaking. It houses over |SILENCE > 160 million items, including books, manuscripts, newspapers, maps, and music scores. |SILENCE >
+    >>> WHISPER 1: 160 million items <<<
+
+User: One of the most impressive areas we visited was the Thomas Jefferson Library. The decorations there are simply stunning, with stained glass windows, gilded ornaments, and intricate murals. It's a testament to the importance placed on knowledge and culture in American history. |SILENCE > Speaker 2: That's incredible. Did you get to see any rare or ancient texts? |SILENCE >
+User: Yes, we did! We were fortunate enough to see an ancient Roman manuscript called |SILENCE > |SILENCE >
+    >>> WHISPER 2: Livimachus <<<
+
+User: Livimachus. It's a religious text with a history spanning over a thousand years. The cultural and artistic value of this document is immeasurable. |SILENCE >
+Speaker 1: Wow, that must have been quite an experience. Did you see anything related to American history? |SILENCE >
+User: Absolutely! We saw some fascinating collections related to American history and literature. There were old maps of Washington, D.C., which gave us a unique perspective on the city's development. We also came across a 19th-century book by |SILENCE > Robert Longfield titled "The Essence of the Negro and the Hope of the Ancestors." |SILENCE > Speaker 2: That's quite a title. It must provide interesting insights into the racial dynamics of that era. |SILENCE >
+User: Indeed, it does. It's a valuable resource for understanding historical perspectives on race in America. We also saw a collection of manuscripts by the famous American writer |SILENCE > |SILENCE >
+    >>> WHISPER 3: Edgar Allan Poe <<<
+
+User: Edgar Allan Poe. His works have had a profound impact on American literature and continue to be studied extensively. |SILENCE >
+Speaker 1: It sounds like the Library of Congress is a treasure trove for researchers like yourself. |SILENCE >
+User: It absolutely is. What's even more exciting is that the Library of Congress has embraced digital technology. They now provide online access to many of their collections, which is a game-changer for researchers and knowledge seekers worldwide. |SILENCE > Speaker 2: That's fantastic! It really opens up these resources to a global audience. |SILENCE >
+User: Exactly. This digital access is crucial for the democratization of knowledge and cultural heritage. It allows scholars and curious minds from all over the world to engage with these invaluable resources without the need for physical travel. |SILENCE >
+Speaker 1: It sounds like this visit has really inspired you. How do you think this experience will influence your anthropological work? |SILENCE >
+User: This visit has certainly reinvigorated my passion for cultural studies. The Library of Congress, with its vast collection spanning various cultures and time periods, serves as a reminder of the importance of preserving and studying our shared human heritage. It's inspired me to delve deeper into comparative cultural studies, looking at how different societies have documented and preserved their histories and knowledge. I believe this experience will enrich my research methodology and broaden the scope of my future projects. |SILENCE > Speaker 2: That's really inspiring. Thank you for sharing your experience with us. |SILENCE >
+User: Thank you all for your attention. I hope this presentation has given you a glimpse into the treasure that is the Library of Congress and perhaps inspired some of you to explore its resources, either in person or through their digital platforms. Are there any questions?

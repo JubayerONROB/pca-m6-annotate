@@ -1,0 +1,40 @@
+CONVERSATION 16 of 28, VERSION 5 of 7   (item perl_Test_000246-C, 5 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: So, what do you think about the recent advancements in quantum computing? |SILENCE >
+Speaker 1: Well, I've heard it's making waves in the tech world, but I'm not entirely sure about the specifics. Can you elaborate a bit? |SILENCE >
+User: Sure, quantum computing is |SILENCE > based on the principles of quantum mechanics. It uses quantum bits, or qubits, instead of classical bits. |SILENCE >
+    >>> WHISPER 1: Entanglement, superposition <<<
+
+User: These qubits can exist in multiple states simultaneously, a property called superposition. This allows quantum computers to perform certain calculations much faster than classical computers. |SILENCE >
+Speaker 1: That's fascinating! How does this translate to real-world applications? |SILENCE >
+User: Well, quantum computers have the potential to revolutionize fields like |SILENCE > cryptography, drug discovery, and financial modeling. |SILENCE >
+    >>> WHISPER 2: Schrödinger's cat example <<<
+
+User: They're particularly good at optimization problems, which could lead to breakthroughs in supply chain management and traffic flow in smart cities. |SILENCE >
+Speaker 1: That's impressive! Are there any challenges holding back the widespread adoption of quantum computing? |SILENCE >
+User: Yes, there are several challenges. One of the main issues is |SILENCE > maintaining the quantum state of qubits. |SILENCE >
+    >>> WHISPER 3: Error correction <<<
+
+User: Quantum systems are very sensitive to their environment, and a phenomenon called decoherence can cause qubits to lose their quantum properties. This makes it difficult to perform long computations. |SILENCE >
+Speaker 1: I see. So how are researchers addressing this problem? |SILENCE >
+User: There are various approaches being explored. One is improving the |SILENCE > physical design of quantum computers to better isolate the qubits. |SILENCE >
+    >>> WHISPER 4: Error correction <<<
+
+User: Another important area of research is quantum error correction, which aims to detect and correct errors in quantum systems. This could help maintain the stability of qubits for longer periods. |SILENCE >
+Speaker 1: That's really interesting. Do you think we'll see practical quantum computers in the near future? |SILENCE >
+User: It's hard to predict exactly, but many experts believe we'll see significant progress in the next 5 to 10 years. Some companies, like IBM and Google, have already developed |SILENCE > prototype quantum computers with a limited number of qubits. |SILENCE >
+    >>> WHISPER 5: Sycamore processor <<<
+
+User: In fact, Google claimed to have achieved quantum supremacy in 2019, performing a calculation that would be practically impossible for classical computers. However, there's still a long way to go before we see widespread practical applications. |SILENCE >
+Speaker 1: Wow, it sounds like an exciting field with a lot of potential. Thanks for explaining it so clearly! |SILENCE >
+User: You're welcome! It's definitely an area worth keeping an eye on as it continues to develop.

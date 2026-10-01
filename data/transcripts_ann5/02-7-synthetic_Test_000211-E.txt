@@ -1,0 +1,47 @@
+CONVERSATION 2 of 28, VERSION 7 of 7   (item synthetic_Test_000211-E, 6 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: So, you won't believe what happened at the Uffizi Gallery last week! I was there for this special access program, and we were working on this incredible 16th-century painting. |SILENCE > The colors were just... |SILENCE >
+Speaker 1: Oh wow, that sounds amazing! What was it like being so close to such an old masterpiece? |SILENCE >
+User: It was absolutely surreal. I mean, being face-to-face with a piece of art that's survived for centuries |SILENCE > it's just... |SILENCE >
+    >>> WHISPER 1: Mention technique <<<
+
+User: ...breathtaking. The amount of detail you can see up close is incredible. And the restoration process itself is fascinating. |SILENCE >
+Speaker 1: I can imagine! Did you learn any interesting techniques? |SILENCE >
+User: Oh, absolutely! We used these specialized |SILENCE > tools to... |SILENCE >
+    >>> WHISPER 2: Brush cleaning <<<
+ |SILENCE >
+User: ...UV light to examine the layers of paint. It's amazing how much you can discover about the artist's process and the painting's history just by looking at it under different conditions. |SILENCE >
+Speaker 1: That's fascinating! I had no idea they used UV light in art restoration. Did you get to do any hands-on work? |SILENCE >
+User: Yes, actually! Under supervision, of course. I got to help with some of the |SILENCE > cleaning... |SILENCE >
+    >>> WHISPER 3: Gentle techniques <<<
+ |SILENCE >
+User: ...delicate cleaning processes. It's incredibly meticulous work. Every tiny brush stroke matters. |SILENCE >
+Speaker 1: That must have been nerve-wracking, working on such a valuable piece of art! |SILENCE >
+User: It definitely was at first! But the professional restorers were so patient and supportive. They really helped me understand the importance of each step. |SILENCE >
+Speaker 1: That's great that you had such a good experience. How does this tie into your thesis? |SILENCE >
+User: Well, my thesis is focused on Renaissance restoration techniques, so this experience was invaluable. I got to document the entire process with |SILENCE > photos and... |SILENCE >
+    >>> WHISPER 4: Notes, sketches. <<<
+ |SILENCE >
+User: ...sketches. It's going to form a significant part of my research. |SILENCE >
+Speaker 1: That's awesome! Speaking of your photography, didn't you recently have an exhibition? How did that go? |SILENCE >
+User: Oh, yes! It was at this charming little |SILENCE > trattoria in the... |SILENCE >
+    >>> WHISPER 5: Rome district <<<
+ |SILENCE >
+User: ...historic district. I called it "Taste of Florence" - it was a collection of my food photography featuring traditional Tuscan dishes. |SILENCE >
+Speaker 1: That sounds delicious and beautiful! How was the reception? |SILENCE >
+User: It was incredible! The response was so positive. In fact, it led to me getting commissioned to shoot for |SILENCE > three other... |SILENCE >
+    >>> WHISPER 6: Restaurants <<<
+ |SILENCE >
+User: ...restaurants in the area. It's really exciting to see my passion for art history and food coming together like this. |SILENCE >
+Speaker 1: That's fantastic! It sounds like you're really making the most of your time in Florence. |SILENCE >
+User: Absolutely! Between the art restoration work and the food photography, I feel like I'm really immersing myself in the culture here. It's been an amazing experience.

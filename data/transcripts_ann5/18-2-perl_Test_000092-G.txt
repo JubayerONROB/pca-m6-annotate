@@ -1,0 +1,39 @@
+CONVERSATION 18 of 28, VERSION 2 of 7   (item perl_Test_000092-G, 4 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Good afternoon, everyone. Thank you for joining me today for this presentation on security measures in the gaming industry. |SILENCE >
+Speaker 1: Thank you for having us, we're excited to learn more about this topic. |SILENCE >
+User: I'm glad to hear that. Today, I'll be focusing on a case study of security measures implemented in a high-profile game called |SILENCE > Xenoblade Chronicles 2. |SILENCE >
+    >>> WHISPER 1: Wang Yu <<<
+ |SILENCE >
+User: This game, developed by Monolith Soft, has taken significant steps to ensure player safety and data protection. |SILENCE > Speaker 2: That sounds interesting. Can you tell us more about the specific measures they've taken? |SILENCE >
+User: Certainly. One of the primary measures they've implemented is strengthening the game's network security. They've partnered with |SILENCE > leading network security companies to develop a robust anti-hacking system. |SILENCE >
+    >>> WHISPER 2: World's leading <<<
+ |SILENCE >
+User: This system is designed to prevent hacker attacks and malware intrusions, ensuring a safer gaming environment for players. |SILENCE >
+Speaker 1: That's impressive. Are there any other security features they've implemented? |SILENCE >
+User: Yes, indeed. Another crucial aspect of their security strategy is the use of advanced encryption technology. They've employed a system called |SILENCE > Datum Security to protect players' personal information and important data. |SILENCE >
+    >>> WHISPER 3: Real-name authentication <<<
+ |SILENCE >
+User: This encryption method ensures that sensitive information remains confidential and inaccessible to unauthorized parties. |SILENCE > Speaker 2: How do they ensure that only legitimate players are accessing the game? |SILENCE >
+User: That's an excellent question. Monolith Soft has introduced a real-name authentication system. They've partnered with |SILENCE > renowned real-name authentication agencies to verify each player's identity. |SILENCE >
+    >>> WHISPER 4: World-known agencies <<<
+ |SILENCE >
+User: Only players who have been authenticated through this system can access the full game experience, including online multiplayer battles. |SILENCE >
+Speaker 1: That's quite thorough. Is there an ongoing process to maintain security? |SILENCE >
+User: Absolutely. Monolith Soft has established a professional game security team. This team is responsible for continuously monitoring and responding to potential security issues. |SILENCE > Speaker 2: Do they work in isolation, or do they collaborate with others in the industry? |SILENCE >
+User: They actually have a collaborative approach. The security team has established partnerships with other game developers and gaming communities. This allows them to share security experiences and best practices, creating a more robust security ecosystem. |SILENCE >
+Speaker 1: That's fascinating. How often do they update their security measures? |SILENCE >
+User: The team conducts regular security testing and vulnerability fixes on the game system. This proactive approach helps them stay ahead of potential threats and ensures that the security measures remain effective over time. |SILENCE > Speaker 2: It sounds like they've really prioritized player safety. What's the overall goal of these measures? |SILENCE >
+User: The ultimate aim of all these security measures is to provide players with a safe and reliable gaming environment. By implementing these comprehensive security strategies, Monolith Soft allows players to fully enjoy the experience of Xenoblade Chronicles 2 without worrying about their personal data or game integrity being compromised. |SILENCE >
+Speaker 1: Thank you for this detailed overview. It's clear that game security is a complex and evolving field. |SILENCE >
+User: You're welcome. Indeed, as the gaming industry continues to grow and evolve, so too must our approaches to security. Are there any questions about the specific measures we've discussed today?

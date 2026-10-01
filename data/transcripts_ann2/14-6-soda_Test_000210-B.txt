@@ -1,0 +1,41 @@
+CONVERSATION 14 of 28, VERSION 6 of 7   (item soda_Test_000210-B, 4 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Dad, I know you're worried about my move to New York, but I really think this is the best decision for my career and personal growth. |SILENCE >
+Speaker 1: Hanan, I understand you want to spread your wings, but New York is just so expensive and dangerous. Wouldn't you rather stay closer to home? |SILENCE >
+User: I appreciate your concern, but I've done my research. The city offers so many opportunities in marketing that I can't find here. Plus, I've already found a great |SILENCE > apartment in... |SILENCE >
+    >>> WHISPER 1: Brooklyn <<<
+
+User: Chelsea! It's a small studio, but it's in a safe neighborhood and within my budget. |SILENCE >
+Speaker 1: A studio apartment? Hanan, that's barely enough space to live in. And the cost of living in New York is outrageous. How will you manage? |SILENCE >
+User: Dad, I've calculated my expenses carefully. My new job at the |SILENCE > marketing firm pays well enough for me to cover rent and living costs. |SILENCE >
+    >>> WHISPER 2: $3,200 monthly salary <<<
+
+User: And it's a prestigious firm, which will open up so many doors for my future. |SILENCE >
+Speaker 1: I just don't see why you can't pursue your career here in New Jersey. There are plenty of good companies, and you'd save so much money living at home. |SILENCE >
+User: I understand that, but living at home won't give me the independence I need to grow. Remember how you always told me about your experiences when you first moved out? How it shaped you? |SILENCE >
+Speaker 1: That was a different time, Hanan. The world is much more complicated now. |SILENCE >
+User: I know it's different, but the principle is the same. I need to learn to navigate the world on my own. Plus, I've already proven I can handle it. Remember last |SILENCE > week when I... |SILENCE >
+    >>> WHISPER 3: Interviewed at the firm <<<
+
+User: led that big client presentation? My supervisor was really impressed. It showed me I'm on the right track. |SILENCE >
+Speaker 1: One presentation doesn't mean you're ready for all the challenges of living alone in a big city, Hanan. |SILENCE >
+User: I know it's just a start, Dad, but it's a good one. I've been preparing for this move for months. I've researched the city, networked with people in my industry, and even found ways to save money on everyday expenses. |SILENCE >
+Speaker 1: I still think you're rushing into this. What if something goes wrong? You'll be all alone up there. |SILENCE >
+User: I won't be alone, Dad. I've already made some friends through |SILENCE > work and... |SILENCE >
+    >>> WHISPER 4: online communities <<<
+
+User: networking events. Plus, I'm only a train ride away if I really need you and Mom. |SILENCE >
+Speaker 1: I just want what's best for you, Hanan. I don't want to see you struggle or get hurt. |SILENCE >
+User: I know you do, Dad, and I love you for that. But part of growing up is taking risks and learning from them. This move to New York is my chance to do that. I promise I'll be careful and stay in touch regularly. |SILENCE >
+Speaker 1: |SILENCE > I suppose you're right. You've always been responsible. Just promise me you'll call if you need anything, okay? |SILENCE >
+User: Of course, Dad. I promise. And thank you for understanding. This means a lot to me.

@@ -1,0 +1,44 @@
+CONVERSATION 2 of 28, VERSION 7 of 7   (item soda_Test_000011-E, 4 whispers -- rate each, in order, in sheet_ann4.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Sarah, I'm so sorry about what happened. It was all my fault and I feel terrible. |SILENCE >
+Speaker 1: What are you talking about? It wasn't your fault. |SILENCE >
+User: Yes, it was. If I hadn't been so stubborn, none of this would have happened. |SILENCE >
+Speaker 1: Emrie, you're being too hard on yourself. We both made mistakes. |SILENCE >
+User: But I |SILENCE > I should have listened to you when you tried to warn me. |SILENCE >
+    >>> WHISPER 1: Acknowledge both sides <<<
+
+Speaker 1: Look, it's not about placing blame. We're friends, and sometimes friends disagree. |SILENCE >
+User: I guess you're right. It's just that I feel like I always end up in these situations where I can't back down. |SILENCE >
+Speaker 1: That's not necessarily a bad thing. Your strong will is one of your best qualities. |SILENCE >
+User: Maybe, but it seems to get me into trouble more often than not. Like with my English teacher last week, or my parents the other day. |SILENCE >
+    >>> WHISPER 2: Essay dispute <<<
+ |SILENCE >
+Speaker 1: Those situations were different. This time, you're actually reflecting on what happened. That's growth, Emrie. |SILENCE >
+User: I suppose you're right. I am trying to see things from a different perspective. It's just |SILENCE > not easy for me. |SILENCE >
+Speaker 1: Nobody said it would be easy. But recognizing the need for change is a big step. |SILENCE >
+User: Thanks, Sarah. I appreciate your patience with me. I know I can be |SILENCE > difficult sometimes. |SILENCE >
+    >>> WHISPER 3: Debate team success <<<
+
+Speaker 1: That's what friends are for. We stick together, even when things get tough. |SILENCE >
+User: I'm grateful for that. You know, this conversation has made me realize that maybe I should try to be more open to feedback, even when it's hard to hear. |SILENCE >
+Speaker 1: That's a great attitude, Emrie. It takes courage to admit when we need to improve. |SILENCE >
+User: Yeah, I guess it does. I'm going to try to apply this to other areas of my life too. Maybe I can start by apologizing to my English teacher and my parents. |SILENCE >
+    >>> WHISPER 4: Express remorse <<<
+ |SILENCE >
+Speaker 1: That sounds like a mature decision. How do you think you'll approach those conversations? |SILENCE >
+User: I'm not entirely sure. I think I'll start by acknowledging that I overreacted and then listen to their side without getting defensive. It won't be easy, but it's necessary. |SILENCE >
+Speaker 1: That's a great plan, Emrie. I'm proud of you for taking this step. |SILENCE >
+User: Thanks, Sarah. Your support means a lot to me. I'm glad we had this talk. |SILENCE >
+Speaker 1: Me too, Emrie. Remember, I'm always here if you need to talk things through. |SILENCE >
+User: I appreciate that. I'll keep it in mind. Now, how about we grab some ice cream to celebrate this moment of personal growth? |SILENCE >
+Speaker 1: That sounds perfect! Let's go.

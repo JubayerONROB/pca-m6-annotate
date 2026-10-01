@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.tmp
+.venv/
+.streamlit/secrets.toml
+# local runs write here; on Streamlit Cloud the app commits these through the API
+annotations/

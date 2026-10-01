@@ -1,0 +1,41 @@
+CONVERSATION 24 of 28, VERSION 6 of 7   (item soda_Test_000100-A, 6 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Good afternoon, everyone. Today, I'd like to talk about the importance of community resources in crisis management. |SILENCE > As social workers, we often encounter situations where our clients need immediate assistance. |SILENCE >
+Speaker 1: Excuse me, could you speak up a bit? It's hard to hear in the back. |SILENCE >
+User: Oh, certainly. Is this better? |SILENCE >
+Speaker 1: Much better, thank you. |SILENCE >
+User: Great. As I was saying, community resources play a crucial role in crisis management. |SILENCE > These resources can range from emergency shelters to |SILENCE > counseling services. |SILENCE >
+    >>> WHISPER 1: Crisis hotline <<<
+ |SILENCE >
+User: Food banks are another vital resource that we shouldn't overlook. Now, I'd like to share a recent experience that highlights the significance of having a comprehensive database of these resources. |SILENCE > Speaker 2: That sounds interesting. Can you elaborate on that? |SILENCE >
+User: Certainly. Recently, I had the opportunity to create a database for our workplace. This database includes various community resources, making it easier for us to quickly find and connect our clients with the help they need. |SILENCE >
+    >>> WHISPER 2: Three evenings <<<
+ |SILENCE > |SILENCE >
+User: To illustrate the impact of this database, let me share a personal example. A friend of mine was going through a family crisis, trying to locate his father. |SILENCE > Using the database I had created for work, I was able to help him navigate through various resources and eventually reconnect with his father. |SILENCE > Speaker 3: That's impressive. How long did it take you to compile all that information? |SILENCE >
+User: It took about three months to gather and organize all the information. But the time investment was well worth it, considering how useful it's been both professionally and personally. |SILENCE >
+    >>> WHISPER 3: Community support <<<
+ |SILENCE > |SILENCE >
+User: Of course, maintaining and updating the database is an ongoing process. We regularly check and update the information to ensure its accuracy and relevance. |SILENCE >
+Speaker 1: How do you decide which resources to include in the database? |SILENCE > |SILENCE >
+User: That's a great question. We prioritize resources based on |SILENCE > frequency of need and reliability. We also consider feedback from both our colleagues and clients to continually improve and expand the database. |SILENCE >
+    >>> WHISPER 4: Community outreach <<<
+ |SILENCE > |SILENCE >
+User: Accessibility is another key factor we consider when including resources. We ensure that the services are easily accessible to our clients, taking into account factors like location, operating hours, and any potential barriers to access. |SILENCE > Speaker 2: This sounds like a valuable tool. Is there any plan to share this database with other social work offices? |SILENCE >
+User: Currently, we're focusing on perfecting the database for our office. However, sharing it with other offices is definitely something we're considering for the future. It could greatly benefit our profession as a whole. |SILENCE >
+    >>> WHISPER 5: Community involvement <<<
+ |SILENCE > |SILENCE >
+User: In fact, collaboration with other offices could be an excellent way to expand and improve the database. Each office might have unique insights or resources to contribute. |SILENCE > Speaker 3: That's a great point. Collaboration could really enhance the effectiveness of this tool. |SILENCE >
+User: Absolutely. As social workers, we understand the power of community and collaboration. By working together, we can create an even more comprehensive and effective resource for crisis management. |SILENCE >
+    >>> WHISPER 6: Conclusion <<<
+ |SILENCE > |SILENCE >
+User: To conclude, I'd like to emphasize that having a well-organized, comprehensive database of community resources is invaluable in our field. It not only helps us work more efficiently but also allows us to provide better support to those in need. Thank you for your attention. Are there any questions?

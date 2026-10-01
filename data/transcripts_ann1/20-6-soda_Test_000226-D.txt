@@ -1,0 +1,51 @@
+CONVERSATION 20 of 28, VERSION 6 of 7   (item soda_Test_000226-D, 6 whispers -- rate each, in order, in sheet_ann1.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, thanks for meeting me for coffee. I know I've been a bit out of touch lately. |SILENCE > It's been a rough week. |SILENCE >
+Speaker 1: No worries, I'm just glad we could catch up. What's been going on? You don't look your usual self. |SILENCE >
+User: Yeah, I've been fighting this nasty |SILENCE > headache and sore throat. It's really been dragging me down.
+Speaker 1: Oh no, that sounds awful. Have you been able to rest at all? |SILENCE >
+User: Well, I've been trying, but you know how it is with work and the kids. I can't just stop everything. |SILENCE >
+Speaker 1: I get it, but you really should prioritize your health. Have you seen a doctor? |SILENCE >
+User: Yeah, I did. They prescribed some medication, which I've been taking. It's helping a bit, but |SILENCE > I can't remember the name of it right now. |SILENCE >
+    >>> WHISPER 1: Throat lozenges <<<
+ |SILENCE >
+User: Oh right, it's the prescribed medication. I've been pretty diligent about taking it. |SILENCE >
+Speaker 1: That's good. How are you managing with work? It must be tough to focus when you're not feeling well. |SILENCE >
+User: It's been challenging, for sure. But I actually had a big |SILENCE > presentation this week that I couldn't reschedule. |SILENCE >
+Speaker 1: Wow, how did that go? |SILENCE >
+User: Surprisingly well, actually. I prepared as much as I could and |SILENCE > timed my medication just right. |SILENCE >
+    >>> WHISPER 2: Throat lozenges <<<
+ |SILENCE >
+User: It was a 45-minute presentation, which felt like an eternity with my sore throat, but I made it through. |SILENCE >
+Speaker 1: That's impressive! Did you use any tricks to get through it? |SILENCE >
+User: Yeah, I had |SILENCE > some things to help me. |SILENCE >
+    >>> WHISPER 3: Throat lozenges <<<
+ |SILENCE >
+User: I kept throat lozenges and water nearby. It really helped me push through. |SILENCE >
+Speaker 1: Smart thinking. I'm glad it worked out. Did you get any feedback? |SILENCE >
+User: Actually, yes. My |SILENCE > supervisor was really pleased. |SILENCE >
+    >>> WHISPER 4: Professionalism <<<
+ |SILENCE > |SILENCE >
+User: They praised my professionalism, which was a relief considering how awful I felt. |SILENCE >
+Speaker 1: That's fantastic! You should be proud of yourself. But please tell me you're taking it easy this weekend? |SILENCE >
+User: Well, we had to change our plans. We were supposed to |SILENCE > go somewhere, but I just couldn't manage it. |SILENCE >
+    >>> WHISPER 5: Movie day <<<
+ |SILENCE >
+User: Right, we were planning to go to the amusement park. Instead, we're having a quiet movie day at home. |SILENCE >
+Speaker 1: That sounds like a much better idea. I'm sure your kids understand. |SILENCE >
+User: They've been great, actually. I've been using this as an opportunity to teach them about |SILENCE > taking care of themselves. |SILENCE >
+    >>> WHISPER 6: Self-care <<<
+ |SILENCE > |SILENCE >
+User: You know, about self-care and the importance of listening to your body. |SILENCE >
+Speaker 1: That's a valuable lesson. You're turning this into a positive experience for them. |SILENCE >
+User: Thanks, I'm trying. It's not easy, but we're making it work.

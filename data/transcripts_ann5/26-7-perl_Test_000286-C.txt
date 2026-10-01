@@ -1,0 +1,56 @@
+CONVERSATION 26 of 28, VERSION 7 of 7   (item perl_Test_000286-C, 5 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, Wang Lei! It's great to see you again. How have you been since our last workout session? |SILENCE >
+Speaker 1: Wu Xiuying! I'm doing well, thanks for asking. That last session was quite intense, wasn't it? I've been keeping up with my routine. How about you? |SILENCE >
+User: Oh, definitely! I've been trying to maintain my fitness routine too. |SILENCE > Speaking of which, I recently participated in this really interesting |SILENCE > environmental event. It reminded me of our college days. |SILENCE >
+    >>> WHISPER 1: Environmental Protection Association <<<
+ |SILENCE >
+Speaker 1: An environmental event? That sounds fascinating. What was it about? |SILENCE >
+User: It was a conference focused on sustainable urban development. You know how passionate I am about environmental issues. It brought back memories of our time in the |SILENCE > Environmental Protection Association back in college. Remember those days? |SILENCE >
+Speaker 1: Of course! Those were some great times. We were so enthusiastic about making a difference. I'm glad to see you're still involved in environmental work. |SILENCE >
+User: Absolutely! It's become such a big part of my life. At the conference, I met this brilliant scientist who presented some groundbreaking research on urban air quality. It was truly eye-opening. |SILENCE >
+Speaker 1: That sounds really interesting. Did you get a chance to talk to the scientist after the presentation? |SILENCE >
+User: Yes, I did! We had a great conversation about |SILENCE > data analysis techniques. I shared some of my work experiences, and |SILENCE > I can't remember his name now, but he was really impressed with the project I'm currently working on. |SILENCE >
+    >>> WHISPER 2: Wang Lei <<<
+ |SILENCE >
+Speaker 1: That's awesome! It must have been validating to have your work recognized by an expert in the field. What project were you talking about? |SILENCE >
+User: It's a project analyzing the impact of green spaces on air quality in urban areas. I mentioned the data collection methods we're using, and he thought our approach was innovative. |SILENCE >
+Speaker 1: That does sound innovative! You've always had a knack for data analysis. Remember how you used to help me with those tricky statistics assignments in college? |SILENCE >
+User: Oh yes, those were challenging times! But you know, it's funny how things work out. That love for data analysis led me to my current career. And speaking of recognition, I actually received an award recently for my contributions to environmental protection. |SILENCE >
+    >>> WHISPER 3: EPA award <<<
+ |SILENCE > |SILENCE >
+Speaker 1: Wow, congratulations! That's a huge achievement. What award was it? |SILENCE >
+User: Thank you! It was the Environmental Protection Agency's Annual Giving Award. I was really honored to receive it. It's nice to know that the work we do is making a difference. |SILENCE >
+Speaker 1: That's incredible, Wu Xiuying! You should be really proud of yourself. It's inspiring to see how you've turned your passion into such a meaningful career. |SILENCE >
+User: Thanks, Wang Lei. That means a lot coming from you. You know, sometimes I wonder what would have happened if we had both stayed in the environmental field. But I'm glad we've both found paths that we're passionate about. How's your work in education going? |SILENCE >
+    >>> WHISPER 4: Fitness competition <<<
+ |SILENCE >
+Speaker 1: Education? Oh, I think you might be mixing me up with someone else. I'm still in the fitness industry, remember? I was telling you about that competition I participated in recently. |SILENCE >
+User: Oh, I'm so sorry! You're absolutely right. I got confused for a moment there. Of course, the fitness competition! How did that go? |SILENCE >
+Speaker 1: No worries at all! It happens. The competition went really well, actually. I placed second in my category, which I'm pretty happy about. |SILENCE >
+User: That's fantastic, Wang Lei! Second place is a great achievement. You must have trained really hard for that. |SILENCE >
+Speaker 1: Thanks! Yes, it took months of preparation. But it was worth it. It's always rewarding to see hard work pay off, whether it's in fitness or environmental protection. |SILENCE >
+User: Absolutely. It's all about dedication and passion, isn't it? Whether we're analyzing data or competing in fitness, it's that drive that pushes us forward. |SILENCE >
+Speaker 1: Couldn't agree more. Hey, speaking of pushing forward, are you up for another workout session soon? We could celebrate your award and my competition results! |SILENCE >
+User: That sounds like a great idea! Let's plan for it. Maybe we can try that new |SILENCE > class they've introduced at the gym. |SILENCE >
+    >>> WHISPER 5: HIIT training <<<
+ |SILENCE >
+Speaker 1: Sure, I'm up for trying something new. What class did you have in mind? |SILENCE >
+User: I was thinking about the new aerobics class. I heard it's quite challenging but also a lot of fun. What do you think? |SILENCE >
+Speaker 1: Aerobics sounds perfect! I've been wanting to mix up my routine a bit. When should we go? |SILENCE >
+User: How about next Wednesday evening? I think that's when they usually hold the class. |SILENCE >
+Speaker 1: Wednesday works for me. Let's do it! It'll be great to work out together again. |SILENCE >
+User: Fantastic! I'm looking forward to it. It's always more fun and motivating to exercise with a friend. |SILENCE >
+Speaker 1: Absolutely! Well, I should get going now, but it was great catching up with you, Wu Xiuying. Congrats again on your award! |SILENCE >
+User: Thanks, Wang Lei! And congrats to you too on your competition results. See you next Wednesday! |SILENCE >
+Speaker 1: See you then! Take care!

@@ -1,0 +1,43 @@
+CONVERSATION 22 of 28, VERSION 7 of 7   (item soda_Test_000086-E, 2 whispers -- rate each, in order, in sheet_ann1.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, thanks for coming over to see my new place! I'm really excited to show you around. |SILENCE >
+Speaker 1: Of course! I've been looking forward to seeing it. And I hear you've got a new roommate too? |SILENCE >
+User: Yes! I adopted a cat |SILENCE > about two weeks ago. Her name is Nori and she's absolutely adorable. |SILENCE >
+Speaker 1: Aw, that's wonderful! How's it been going with her so far? |SILENCE >
+User: It's been great! She's adjusting really well. I've been working on creating a |SILENCE > routine that works for both of us. |SILENCE >
+Speaker 1: That's smart. What kind of routine have you come up with? |SILENCE >
+User: Well, I've set up a |SILENCE > feeding schedule, and I make sure to play with her in the mornings and evenings. |SILENCE >
+    >>> WHISPER 1: Vertical spaces <<<
+
+User: Oh, and I took her to the vet recently for her first check-up. They gave me some great advice on cat care and nutrition. |SILENCE >
+Speaker 1: That's great that you're being so proactive! How's it been balancing work with taking care of Nori? |SILENCE >
+User: It's been an adjustment, but I think we're finding our groove. I've actually |SILENCE > made some changes to my home office to make it more cat-friendly. |SILENCE >
+Speaker 1: Oh really? What kind of changes? |SILENCE >
+User: Well, I've set up a comfortable bed near my desk for her, and I've also |SILENCE > created some vertical spaces for her to climb and explore. |SILENCE >
+    >>> WHISPER 2: Work routine <<<
+
+User: I spent a whole weekend reorganizing everything to make it work. |SILENCE >
+Speaker 1: Wow, that's dedication! It sounds like you've really thought this through. |SILENCE >
+User: Thanks! I wanted to make sure Nori felt comfortable and that I could still be productive while working from home. |SILENCE >
+Speaker 1: That's really impressive. How has it been affecting your work so far? |SILENCE >
+User: It's actually been great. Having Nori around has made working from home feel less |SILENCE > isolating. |SILENCE >
+Speaker 1: I can imagine! It must be nice to have a little companion around during the day. |SILENCE >
+User: Definitely! And you know, I was a bit worried at first about how it would all work out, but |SILENCE > I think we've developed a really nice routine together. |SILENCE >
+Speaker 1: That's fantastic. It sounds like you're both adjusting well. Do you have any funny stories about Nori yet? |SILENCE >
+User: Oh, plenty! Just the other day, she |SILENCE > decided to "help" me during a video call by jumping on my desk and walking across my keyboard. |SILENCE >
+Speaker 1: Oh no! How did that go over? |SILENCE >
+User: Luckily, my coworkers thought it was hilarious. They've all been really supportive of my new pet parent status. |SILENCE >
+Speaker 1: That's great that your work is so understanding. It really seems like adopting Nori has been a positive change for you. |SILENCE >
+User: It really has. I feel like my home life is so much more |SILENCE > fulfilling now. |SILENCE >
+Speaker 1: I'm so happy for you. It sounds like you've found a great balance between work and home life. |SILENCE >
+User: Thanks! I'm really glad I took the plunge and adopted her. It's been a learning experience, but definitely worth it.

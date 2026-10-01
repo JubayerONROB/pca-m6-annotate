@@ -1,0 +1,43 @@
+CONVERSATION 18 of 28, VERSION 7 of 7   (item soda_Test_000123-A, 3 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Good morning, Mr. Thompson. Thank you for joining us today. Can you tell us a bit about yourself and your background? |SILENCE >
+User: Good morning! I'm happy to be here. I'm an IT Project Manager with about 10 years of experience in the field. |SILENCE > I recently moved into a new home with my wife and our two rescue dogs. |SILENCE >
+Speaker 1: That sounds lovely. How has the move been treating you? |SILENCE >
+User: It's been great, thanks for asking. We've been settling in nicely, and I've been keeping busy with various home improvement projects. |SILENCE >
+Speaker 1: Oh, that's interesting. What kind of projects have you been working on? |SILENCE >
+User: Well, I recently completed a major deck renovation. It took about |SILENCE > three weekends, I think. I replaced old boards and added some built-in seating. |SILENCE >
+    >>> WHISPER 1: Two weekends <<<
+
+User: Actually, now that I think about it, I finished that project last month. It was quite an undertaking, but it really boosted my confidence in my DIY skills. |SILENCE >
+Speaker 1: That's impressive! Have you always been interested in DIY projects? |SILENCE >
+User: I've always enjoyed working with my hands, but I'd say my interest in DIY has really grown since we bought this house. There's always something to improve or fix. |SILENCE >
+Speaker 1: I can imagine. Are you working on any projects currently? |SILENCE >
+User: Yes, actually. I'm in the middle of building a custom doghouse for our pets. |SILENCE >
+Speaker 1: A doghouse? That sounds like a fun project. What inspired you to take that on? |SILENCE >
+User: Well, we recently adopted a new rescue dog, and I thought it would be nice to give both our pets a comfortable outdoor shelter. Our new dog is a |SILENCE > German Shepherd mix, I believe. |SILENCE >
+    >>> WHISPER 2: German Shepherd mix <<<
+
+User: He's about six months old, and full of energy. We named him Max. |SILENCE >
+Speaker 1: That's wonderful that you're providing a home for rescue dogs. How long ago did you adopt Max? |SILENCE >
+User: We brought Max home |SILENCE > recently, but I'm not sure exactly when. |SILENCE >
+    >>> WHISPER 3: Last month <<<
+ |SILENCE >
+User: Oh, that's right. We adopted Max two weeks ago. It's been a whirlwind since then, with training and getting him settled in. |SILENCE >
+Speaker 1: I bet it has! How is Max getting along with your other dog? |SILENCE >
+User: They're doing great together. Our older dog, Snickers, has been very patient with Max's puppy energy. Building this doghouse has actually been a nice way to create a space for both of them. |SILENCE >
+Speaker 1: That's fantastic. It sounds like you're really passionate about both your DIY projects and your pets. How do you balance your time between work, home improvements, and spending time with your dogs? |SILENCE >
+User: It can be challenging, but I try to make the most of my weekends. I usually split my time between working on projects around the house and spending quality time with the dogs. Lately, a lot of that time has been dedicated to training Max and working on the doghouse. |SILENCE >
+Speaker 1: It sounds like you've found a great balance. Thank you for sharing your experiences with us today, Mr. Thompson. Is there anything else you'd like to add about your recent projects or your new family member? |SILENCE >
+User: Thank you for having me. I'd just like to say that while DIY projects can be challenging, they're incredibly rewarding. And adopting rescue dogs has brought so much joy into our lives. I encourage anyone considering either to give it a try! |SILENCE >
+Speaker 1: That's a wonderful message to end on. Thank you again for your time, Mr. Thompson. |SILENCE >
+User: My pleasure. Thank you for the opportunity to share my experiences.

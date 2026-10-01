@@ -1,0 +1,43 @@
+CONVERSATION 20 of 28, VERSION 7 of 7   (item synthetic_Test_000252-E, 4 whispers -- rate each, in order, in sheet_ann3.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, thanks for meeting up with me today. I've been wanting to tell you about this amazing event I organized recently. |SILENCE >
+Speaker 1: Oh, that sounds interesting! What kind of event was it? |SILENCE >
+User: It was a beach cleanup |SILENCE > that I put together. You know how passionate I am about the ocean and surfing, right? |SILENCE >
+Speaker 1: Yeah, absolutely! You're always talking about catching waves. So, how did the cleanup go? |SILENCE >
+User: It went really well! I managed to get a bunch of |SILENCE > developers from my network to join in. |SILENCE >
+    >>> WHISPER 1: 15 developers <<<
+ |SILENCE >
+User: Actually, now that I think about it, we had about twenty-five developers show up. It was great to see so many tech people caring about the environment. |SILENCE >
+Speaker 1: Wow, that's a good turnout! How did you convince all those developers to spend their weekend picking up trash? |SILENCE >
+User: Well, I pitched it as a combination of environmental action and networking. You know, kill two birds with one stone. |SILENCE >
+Speaker 1: That's clever! Did people actually get to network, or were they too busy cleaning? |SILENCE >
+User: Oh, we made sure there was time for both. In fact, after the cleanup, we all went to a |SILENCE > local place to hang out. |SILENCE >
+    >>> WHISPER 2: Beachside café <<<
+ |SILENCE >
+User: Right, we went to a local craft brewery for a sunset social. It was the perfect way to wind down and chat more casually. |SILENCE >
+Speaker 1: That sounds like a blast! I'm impressed you managed to organize all of that. Did this have anything to do with that tech project you were working on? |SILENCE >
+User: Not directly, no. The beach cleanup was more about combining my love for the ocean with community building. But speaking of tech projects, I did present my VR surfing simulator at a meetup |SILENCE > recently. |SILENCE >
+    >>> WHISPER 3: Last week <<<
+ |SILENCE >
+User: Actually, it was just last week that I presented it at the San Diego Tech Hub's monthly meetup. |SILENCE >
+Speaker 1: Oh, cool! How did that go? Did people like your simulator? |SILENCE >
+User: It went really well! There was a lot of enthusiasm from the attendees. I got some great feedback and even met some potential collaborators. |SILENCE >
+Speaker 1: That's awesome! How many people were there? |SILENCE >
+User: There were quite a few people there, I think around |SILENCE > thirty or so. |SILENCE >
+    >>> WHISPER 4: 35 attendees <<<
+ |SILENCE >
+User: Actually, now that I recall, it was more than thirty attendees. It was a great turnout. |SILENCE >
+Speaker 1: Sounds like you've been keeping busy with all these events! Do you think you'll organize more things like this in the future? |SILENCE >
+User: Definitely! I really enjoy bringing people together, especially when it involves technology and environmental causes. I'm already brainstorming ideas for the next event. |SILENCE >
+Speaker 1: Well, count me in for the next one. It all sounds really cool! |SILENCE >
+User: Thanks! I'll make sure to let you know when I have something planned. It's been great sharing these experiences with you.

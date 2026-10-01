@@ -1,0 +1,33 @@
+CONVERSATION 19 of 28, VERSION 1 of 7   (item soda_Test_000208-G, 4 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Good afternoon, everyone. Thank you for joining me today for this presentation on the power of art in emotional healing. |SILENCE > As some of you may know, I've recently been on a personal journey of growth and recovery. |SILENCE >
+Speaker 1: We're glad you're here to share with us, Kensie. |SILENCE >
+User: Thank you. I appreciate that. Now, let's dive into how art can be a powerful tool for processing complex emotions. |SILENCE > In my experience, art therapy has been instrumental in helping me navigate through difficult times. |SILENCE >
+    >>> WHISPER 1: Abstract piece CLIIIK <<<
+ |SILENCE >
+User: In fact, just last week, I had a significant breakthrough during a therapy session where I created an abstract piece that really helped me visualize my emotional journey. |SILENCE > Speaker 2: That sounds fascinating. Can you tell us more about that piece? |SILENCE >
+User: Of course. The piece I created was a swirl of colors, representing the various emotions I've been experiencing. |SILENCE > The dark blues and greys represented the pain and confusion I initially felt, while the brighter colors, like yellows and oranges, symbolized hope and healing. |SILENCE >
+    >>> WHISPER 2: Forgiveness capacity <<<
+ |SILENCE >
+User: What was particularly powerful about this exercise was the moment of clarity it provided. As I stepped back and looked at the completed work, I realized that even amidst the darker colors, there were always streaks of light. This visual representation helped me understand my own capacity for resilience and growth. |SILENCE >
+Speaker 1: That's really powerful, Kensie. How has this realization affected your day-to-day life? |SILENCE >
+User: Great question. It's had a profound impact on my daily life. |SILENCE > I've found myself more open to the healing process, more willing to confront difficult emotions head-on. |SILENCE >
+    >>> WHISPER 3: New communication boundaries <<<
+ |SILENCE >
+User: In addition to art therapy, I've also incorporated regular meditation into my routine. This combination has been incredibly effective in helping me process complex emotions and maintain a sense of balance. |SILENCE > Speaker 2: That's inspiring. Do you have any advice for others who might be going through similar experiences? |SILENCE >
+User: Absolutely. My main piece of advice would be to find a creative outlet that resonates with you. It doesn't have to be traditional art - it could be music, writing, dance, or any form of expression that allows you to externalize your internal experiences. |SILENCE > The key is to find something that helps you visualize and process your emotions in a tangible way. |SILENCE >
+    >>> WHISPER 4: Personal growth CLIIIK <<<
+ |SILENCE >
+User: Another important aspect I've learned is the value of establishing clear communication boundaries. This has been crucial in my personal relationships and has significantly contributed to my healing process. |SILENCE >
+Speaker 1: Thank you for sharing that, Kensie. Your journey is truly inspiring. |SILENCE >
+User: Thank you, I appreciate your kind words. To conclude, I want to emphasize that healing is a journey, not a destination. It's okay to take the time you need to process, grow, and rebuild. Art therapy, meditation, and open communication have been my tools, but each person's path may look different. The most important thing is to keep moving forward, one step at a time. Thank you all for listening.

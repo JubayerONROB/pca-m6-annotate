@@ -1,0 +1,46 @@
+CONVERSATION 7 of 28, VERSION 1 of 7   (item soda_Test_000234-F, 6 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Good afternoon, everyone. Thank you for coming to this presentation on the importance of investigative journalism in our community. |SILENCE >
+Speaker 1: Thank you for having us, we're excited to hear about your work. |SILENCE >
+User: I'm glad you're here. Today, I'd like to share some insights from my recent investigations and discuss how they've impacted our community. |SILENCE >
+User: Let's start with a case I worked on last month. It involved |SILENCE > a local manufacturing plant that was engaging in illegal chemical dumping. |SILENCE >
+    >>> WHISPER 1: Environmental review <<<
+ |SILENCE >
+User: This investigation led to a comprehensive environmental review and cleanup effort, which has significantly improved the health and safety of our local ecosystem. |SILENCE > Speaker 2: That's impressive. How long did it take you to uncover this? |SILENCE >
+User: It took several weeks of meticulous work. I spent time gathering evidence, conducting interviews, and |SILENCE > documenting everything thoroughly. |SILENCE >
+    >>> WHISPER 2: Thorough research <<<
+ |SILENCE >
+User: Despite facing some pressure from local officials, I remained committed to uncovering the truth. |SILENCE >
+Speaker 1: That must have been challenging. How did you manage to stay focused under that kind of pressure? |SILENCE >
+User: Well, it's all about staying true to your principles. As an investigative journalist, my job is to |SILENCE > give voice to underrepresented stories in our community. |SILENCE >
+    >>> WHISPER 3: Worker exploitation <<<
+ |SILENCE >
+User: That's actually one of the reasons why I recently established my own independent news platform. It allows me to pursue stories that truly matter to our community without external constraints. |SILENCE > Speaker 2: That's admirable. Can you tell us about any other significant investigations you've conducted recently? |SILENCE >
+User: Certainly. Another important story I worked on recently involved |SILENCE > worker exploitation by some local businesses. |SILENCE >
+    >>> WHISPER 4: Exposé <<<
+ |SILENCE >
+User: This investigation led to significant workplace reforms and ultimately earned me a regional journalism award. |SILENCE >
+Speaker 1: Congratulations on the award! How did you approach that particular investigation? |SILENCE >
+User: Thank you. It was a challenging process. I faced considerable pressure from powerful local business interests to drop the story. |SILENCE >
+User: However, I stood firm in my commitment to the truth. I spent weeks |SILENCE > gathering evidence and conducting interviews with affected workers. |SILENCE >
+    >>> WHISPER 5: Exposé <<<
+ |SILENCE >
+User: In the end, I published a well-documented exposé that brought these issues to light and catalyzed the reforms. |SILENCE > Speaker 2: Your work is truly making a difference. What drives you to take on these challenging investigations? |SILENCE >
+User: It's really about my passion for uncovering the truth and my belief in the power of journalism to effect change. |SILENCE >
+User: My natural curiosity drives me to dig deeper into local issues, and I'm committed to spending as much time as necessary to get the full story. |SILENCE >
+Speaker 1: That's inspiring. Do you have any advice for aspiring investigative journalists? |SILENCE >
+User: Absolutely. I'd say the most important things are to stay curious, be persistent, and always |SILENCE > maintain your integrity. |SILENCE >
+    >>> WHISPER 6: Community engagement <<<
+ |SILENCE >
+User: Also, never underestimate the importance of focusing on your community. Local stories can have a profound impact. |SILENCE >
+User: Thank you all for your attention. Are there any questions?

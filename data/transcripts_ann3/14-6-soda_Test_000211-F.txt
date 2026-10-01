@@ -1,0 +1,47 @@
+CONVERSATION 14 of 28, VERSION 6 of 7   (item soda_Test_000211-F, 4 whispers -- rate each, in order, in sheet_ann3.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, Dad. |SILENCE >
+Speaker 1: Hey, kiddo. How's it going? |SILENCE >
+User: Oh, you know, same old |SILENCE > stuff. School's been keeping me pretty busy. |SILENCE >
+Speaker 1: I bet. How are your classes going? Keeping up with everything okay? |SILENCE >
+User: Yeah, I mean, |SILENCE > mostly. Some classes are tougher than others, but I'm managing. |SILENCE >
+Speaker 1: That's good to hear. Any subjects giving you particular trouble? |SILENCE >
+User: Well, |SILENCE > Math's been a bit challenging lately. And English too, I guess. |SILENCE >
+    >>> WHISPER 1: Science project <<<
+
+Speaker 1: I see. Are you keeping up with all the assignments? |SILENCE >
+User: Um, |SILENCE > mostly. I think I might be behind on a couple things. |SILENCE >
+    >>> WHISPER 2: Homework planner <<<
+ |SILENCE >
+User: Actually, now that I think about it, I might be behind on more than a couple. I think there are five assignments I need to catch up on in both Math and English. |SILENCE >
+Speaker 1: Five assignments in each class? That's quite a lot, Adelyn. Why didn't you mention this earlier? |SILENCE >
+User: I guess I |SILENCE > didn't realize it had gotten that bad. I've been trying to keep up, but sometimes it just feels overwhelming. |SILENCE >
+Speaker 1: I understand it can be overwhelming, but letting assignments pile up like this isn't the solution. Remember, we talked about this at the parent-teacher conference last week? |SILENCE >
+User: Oh, right. The conference. I |SILENCE > forgot about that. |SILENCE >
+    >>> WHISPER 3: Study schedule <<<
+ |SILENCE >
+User: That's when you and Mom set up that after-school homework monitoring thing, right? |SILENCE >
+Speaker 1: Exactly. We're trying to help you stay on track. Speaking of which, how's your room looking? Have you been keeping it tidy? |SILENCE >
+User: My room? It's |SILENCE > okay, I guess. |SILENCE >
+    >>> WHISPER 4: Messy desk <<<
+ |SILENCE >
+User: Oh wait, you guys did that room inspection yesterday, didn't you? |SILENCE >
+Speaker 1: We did. And what did we find? |SILENCE >
+User: |SILENCE >
+User: A bunch of dirty clothes and some old homework under my bed. I'm sorry about that, Dad. I know I should've cleaned up better. |SILENCE >
+Speaker 1: I appreciate you owning up to it, Adelyn. But you understand why we had to take away your gaming console, right? |SILENCE >
+User: Yeah, I get it. I need to be more responsible with my schoolwork and keeping my room clean. |SILENCE >
+Speaker 1: That's right. We're not trying to punish you, we just want to help you develop better habits. How about we sit down together and make a plan to get you caught up on those assignments? |SILENCE >
+User: That would be really helpful, actually. Thanks, Dad. I'll try to do better. |SILENCE >
+Speaker 1: That's all we ask, kiddo. We're here to support you. Let's start fresh tomorrow, okay? |SILENCE >
+User: Okay, Dad. I appreciate it.

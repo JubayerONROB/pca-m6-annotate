@@ -1,0 +1,49 @@
+CONVERSATION 23 of 28, VERSION 7 of 7   (item synthetic_Test_000228-E, 4 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, thanks for meeting up! I've been wanting to catch up and share some exciting news. |SILENCE >
+Speaker 1: Of course! I'm always up for hearing good news. What's going on? |SILENCE >
+User: Well, you know how I've been playing in that city volleyball league, right? |SILENCE >
+Speaker 1: Yeah, you've mentioned it before. How's that been going? |SILENCE >
+User: It's been amazing! Actually, last weekend, our team |SILENCE > won the championship!
+Speaker 1: Wow, congratulations! That's fantastic news! |SILENCE >
+User: Thanks! It was such an intense match. We played three sets and |SILENCE > the final one was so close. |SILENCE >
+Speaker 1: That sounds thrilling! How did you guys celebrate? |SILENCE >
+User: We went out for dinner afterward. It was at this great |SILENCE > pizza place we all love. |SILENCE >
+    >>> WHISPER 1: Local pizzeria <<<
+
+User: Oh right, it was that pizzeria we always go to after our games. The one with the amazing garlic knots. |SILENCE >
+Speaker 1: That sounds perfect for a post-game celebration. Did you do anything else special? |SILENCE >
+User: We mostly just hung out, shared stories about the season, and started planning for next year. It was a great bonding experience. |SILENCE >
+Speaker 1: That's awesome. It's great that you have such a close-knit team. Speaking of celebrations, didn't you have a birthday recently? |SILENCE >
+User: Yes, I did! It was a couple of weeks ago. I decided to do something a bit different this year. |SILENCE >
+Speaker 1: Oh? What did you end up doing? |SILENCE >
+User: I organized what I called a "fitness-to-food" day. It was really fun! We started with a morning workout class, and then |SILENCE > we went on a kind of food tour. |SILENCE >
+Speaker 1: That sounds like a perfect day for you! How many people joined? |SILENCE >
+User: It was me and |SILENCE > some friends. I can't remember exactly how many. |SILENCE >
+    >>> WHISPER 2: Six friends <<<
+
+User: Oh, that's right, it was six of my friends. So seven of us in total. |SILENCE >
+Speaker 1: Nice! And you said you did a food tour? What kind of places did you visit? |SILENCE >
+User: We went to |SILENCE > a few new restaurants in the city. I wanted to try out some places I hadn't been to before. |SILENCE >
+    >>> WHISPER 3: Four restaurants <<<
+
+User: Actually, now that I think about it, we hit up four different restaurants. It was like a progressive dinner. |SILENCE >
+Speaker 1: That sounds amazing! What a great way to celebrate. Did you do anything after all that eating? |SILENCE >
+User: Yes! We ended the night with some bowling at this really cool |SILENCE > place. |SILENCE >
+    >>> WHISPER 4: Trendy alley-lounge <<<
+
+User: It was this trendy alley-lounge. You know, one of those upscale bowling alleys with a bar and lounge area. It was the perfect way to wrap up the day. |SILENCE >
+Speaker 1: That sounds like such a fun and unique birthday celebration! I love how you combined fitness, food, and fun. It's so you! |SILENCE >
+User: Thanks! I really enjoyed it. It was a great way to spend time with friends and indulge in some of my favorite things. |SILENCE >
+Speaker 1: I'm glad you had such a great time. You'll have to let me know next time you're planning something like that! |SILENCE >
+User: Definitely! I'm always up for planning fun group activities. Maybe we can do something similar soon!

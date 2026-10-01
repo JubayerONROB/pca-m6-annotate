@@ -1,0 +1,43 @@
+CONVERSATION 9 of 28, VERSION 5 of 7   (item soda_Test_000031-D, 3 whispers -- rate each, in order, in sheet_ann4.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: So, Edmund, tell me about your experience transitioning back to home life after your first semester at college. How has it been? |SILENCE >
+User: It's been |SILENCE > interesting, for sure. There have been some challenges, but also some really nice moments. |SILENCE >
+Speaker 1: Can you elaborate on some of those nice moments? |SILENCE >
+User: Well, I've really come to appreciate family dinners more. They've become much more meaningful to me now that I've been away. |SILENCE >
+Speaker 1: That's wonderful to hear. Can you tell me about a specific family dinner that stands out to you? |SILENCE >
+User: Yeah, actually, on my first night back |SILENCE > |SILENCE >
+    >>> WHISPER 1: Thanksgiving dinner <<<
+
+User: my family prepared this amazing homemade lasagna. It was my favorite childhood meal, and we all sat around our dining table, sharing stories about my college experiences and catching up on family news. It really made me realize how much I'd missed those moments. |SILENCE >
+Speaker 1: That sounds like a special evening. How has your relationship with your family changed since you've been away at college? |SILENCE >
+User: I think it's grown stronger in some ways. I've started to see my parents more as |SILENCE > adults, I guess? And I've been spending more quality time with them. |SILENCE >
+Speaker 1: Can you give me an example of the quality time you've been spending with your family? |SILENCE >
+User: Well, I've been learning some traditional family recipes from my mom. It's been really fun and |SILENCE > |SILENCE >
+    >>> WHISPER 2: bonding experience <<<
+
+User: meaningful. Like last weekend, I spent Sunday afternoon learning my grandmother's secret dumpling recipe. It turned into this impromptu three-generation cooking session, with both my mom and grandmother sharing stories and techniques. |SILENCE >
+Speaker 1: That sounds like a beautiful bonding experience. How do you think these moments at home will impact your return to college? |SILENCE >
+User: I think they'll make me more appreciative of my family and our traditions. It's also made me realize the importance of staying connected, even when I'm away at school. |SILENCE >
+Speaker 1: That's a great perspective. Now, shifting gears a bit, how has the transition been in terms of independence? Have you found it challenging to adjust to home rules after being on your own at college? |SILENCE > |SILENCE >
+User: Yeah, that's been a bit of an adjustment. At college, I was making all my own decisions, but back home, I have to consider my parents' expectations more. It's not always easy, but I'm trying to find a balance. |SILENCE >
+Speaker 1: Can you give me an example of a situation where you've had to navigate this balance? |SILENCE >
+User: Sure, um |SILENCE > |SILENCE >
+    >>> WHISPER 3: Study schedule <<<
+
+User: there was a situation with curfew. In college, I could stay out as late as I wanted, but at home, my parents expect me to be back by a certain time. We had to have a conversation about it and come to a compromise. |SILENCE >
+Speaker 1: That's a common challenge for many students. How did you approach that conversation with your parents? |SILENCE >
+User: I tried to be respectful of their concerns while also explaining my perspective. We ended up agreeing on a later curfew than they initially wanted, but earlier than what I was used to at college. It felt like a good compromise. |SILENCE >
+Speaker 1: That sounds like a mature way to handle the situation. Last question: What's one thing you've learned about yourself during this transition period? |SILENCE >
+User: I think I've learned that I'm more adaptable than I thought. And also, that it's okay to need and want family support, even as I'm becoming more independent. It's not a weakness, it's actually making me stronger. |SILENCE >
+Speaker 1: That's a wonderful insight, Edmund. Thank you for sharing your experiences with us today. |SILENCE >
+User: Thank you for having me. It's been great to reflect on all of this.

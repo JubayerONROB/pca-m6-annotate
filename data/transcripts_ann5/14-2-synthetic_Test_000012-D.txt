@@ -1,0 +1,39 @@
+CONVERSATION 14 of 28, VERSION 2 of 7   (item synthetic_Test_000012-D, 3 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Good afternoon and welcome to "Coastal Creatives," our podcast that spotlights innovative individuals in San Diego. Today, we're excited to have Sarah, a graphic designer who's made quite a splash in the local community. Sarah, thanks for joining us! |SILENCE >
+User: Thank you so much for having me! I'm really excited to be here and share a bit about what I've been up to lately. |SILENCE >
+Speaker 1: Let's dive right in. I hear you've recently taken up surfing. How has that experience been for you? |SILENCE >
+User: Oh, it's been absolutely incredible! I moved to San Diego two years ago, and I immediately fell in love with the ocean. Surfing was |SILENCE > something I'd always wanted to try, and once I started, I was hooked. |SILENCE >
+Speaker 1: That's fantastic! I understand you've even participated in a competition recently. Can you tell us more about that? |SILENCE >
+User: Yes, I did! It was my first local surf competition, and it was such an exhilarating experience. I competed in the |SILENCE > beginner division after training for... |SILENCE >
+    >>> WHISPER 1: Four months <<<
+
+User: ...four months with a local instructor. The competition was held at Ocean Beach, and I was thrilled to place third in my division. |SILENCE >
+Speaker 1: Wow, third place in your first competition after just four months of training? That's impressive! How did that achievement make you feel? |SILENCE >
+User: Thank you! It was incredibly validating. The experience really boosted my confidence and introduced me to this amazing community of fellow surf enthusiasts. It's been great to connect with people who share the same passion. |SILENCE >
+Speaker 1: It sounds like you've found a real sense of belonging in the surfing community. Now, I'm curious about another interesting activity you've started. Can you tell us about your "sunset dance hikes"? |SILENCE >
+User: Absolutely! The sunset dance hikes are a concept I came up with to combine my love for the outdoors and my passion for dance. Essentially, we hike to scenic viewpoints and then do |SILENCE > choreographed movement sessions as the sun sets. It's a unique way to experience nature and express creativity at the same time. |SILENCE >
+Speaker 1: That sounds like a truly innovative idea. How long have you been organizing these hikes? |SILENCE >
+User: I started the group... |SILENCE > |SILENCE >
+    >>> WHISPER 2: Last month <<<
+
+User: Last month, actually. It's still quite new, but we've been gaining traction. We do it on a weekly basis, and it's been amazing to see how it's resonated with people. |SILENCE >
+Speaker 1: That's wonderful! Have you managed to attract many regular participants? |SILENCE >
+User: Yes, we have! We've got a core group of |SILENCE > regular participants who come almost every week. |SILENCE >
+    >>> WHISPER 3: Fifteen <<<
+
+User: There are fifteen regulars now, which is fantastic. It's really heartening to see others who share my enthusiasm for both outdoor activities and creative expression. |SILENCE >
+Speaker 1: Fifteen regular participants in just a month is quite an achievement! It seems like you've tapped into something special here. Sarah, your story is truly inspiring. You've embraced the San Diego lifestyle and created something unique. Thank you for sharing your experiences with us today. |SILENCE >
+User: Thank you so much for having me. It's been a pleasure to share my journey, and I hope it inspires others to explore new passions and combine different interests in creative ways. |SILENCE >
+Speaker 1: I'm sure it will. Thanks again, Sarah, and best of luck with your future endeavors, both on the waves and on the hiking trails! |SILENCE >
+User: Thank you! I really appreciate it.

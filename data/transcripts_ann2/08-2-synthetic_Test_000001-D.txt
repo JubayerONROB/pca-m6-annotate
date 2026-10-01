@@ -1,0 +1,38 @@
+CONVERSATION 8 of 28, VERSION 2 of 7   (item synthetic_Test_000001-D, 3 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Good afternoon, and welcome to our "Local Artists Spotlight" segment. Today, we're joined by a promising graphic designer who's making waves in our community. Thank you for being here with us today. |SILENCE >
+User: Thank you so much for having me. I'm excited to be here and share a bit about my work. |SILENCE >
+Speaker 1: Let's start with your recent artistic endeavors. I understand you've been working on a special series. Can you tell us about that? |SILENCE >
+User: Yes, absolutely. I've been working on a watercolor series that I'm really proud of. It's called |SILENCE > "Morning Light" and it's inspired by my daily routines and the way light plays a role in our everyday lives. |SILENCE >
+    >>> WHISPER 1: Dawn series <<<
+
+Speaker 1: That sounds fascinating. Have you had the chance to showcase this series anywhere? |SILENCE >
+User: Actually, yes! I recently submitted the series to a local gallery for their emerging artists exhibition. It was my first time submitting to a gallery, so it was both exciting and nerve-wracking. |SILENCE >
+Speaker 1: Congratulations on taking that step! Can you share more about the themes in your "Morning Light" series? What inspired you to focus on daily routines? |SILENCE >
+User: Thank you! Well, the series is really a reflection of the quiet moments we often overlook. I found myself drawn to the way light changes throughout my morning routine, especially during my |SILENCE > skincare ritual. There's something almost meditative about those moments, and I wanted to capture that in my art. |SILENCE >
+Speaker 1: That's a beautiful concept. It's interesting how our daily habits can inspire creativity. Speaking of daily life, I heard you're also involved in some outdoor activities. Can you tell us about that? |SILENCE >
+User: Yes, I've always loved being outdoors and recently I've been trying to combine that with my professional life. I actually |SILENCE > started a group that meets monthly for... |SILENCE >
+    >>> WHISPER 2: Nature sketching sessions <<<
+
+User: ...hiking. It's called "Creative Trails," and it's a way for artistic professionals to network while enjoying nature. |SILENCE >
+Speaker 1: That sounds like a wonderful initiative. How long ago did you start this group? |SILENCE >
+User: I started it |SILENCE > recently, actually. It's been... |SILENCE >
+    >>> WHISPER 3: Three months ago <<<
+
+User: ...about two weeks now. We've only had one meeting so far, but the response has been really positive. |SILENCE >
+Speaker 1: It's great to see you combining your passions like this. How do you balance your time between your graphic design work, your personal art projects, and these outdoor activities? |SILENCE >
+User: It can be challenging at times, but I've found that having a structured routine really helps. I dedicate my mornings to my personal care and preparation for work, focus on my graphic design projects during the day, and then use my evenings for painting or reading. The hiking group is a monthly commitment, so it fits in nicely without overwhelming my schedule. |SILENCE >
+Speaker 1: That's impressive time management. It seems like you've found a great balance. Before we wrap up, is there anything else you'd like to share about your upcoming projects or exhibitions? |SILENCE >
+User: Thank you! Well, I'm continuing to work on new pieces for my watercolor series, and I'm hoping to expand on the themes of light and daily rituals. As for exhibitions, I'm eagerly waiting to hear back from the gallery about my submission, and I'm also exploring other local venues to showcase my work. |SILENCE >
+Speaker 1: That's wonderful. We'll certainly be keeping an eye out for your exhibitions. Thank you so much for joining us today and sharing your artistic journey. |SILENCE >
+User: Thank you for having me. It's been a pleasure to share my experiences and projects with you and your audience.

@@ -1,0 +1,37 @@
+CONVERSATION 15 of 28, VERSION 3 of 7   (item synthetic_Test_000150-A, 3 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Welcome to our podcast on innovative research in psychology. Today, we're joined by a graduate student who's been making waves with her unique approach to studying gaming behavior and its connections to nutrition and mental health. Could you please introduce yourself and tell us a bit about your background? |SILENCE >
+User: Thank you for having me. I'm a psychology graduate student |SILENCE > currently focusing on the intersection of gaming behavior, nutrition, and mental well-being. My research aims to understand how these factors interact and impact college students. |SILENCE >
+Speaker 1: That's fascinating! What inspired you to pursue this particular area of study? |SILENCE >
+User: Well, I've always been interested in the psychological aspects of gaming, and as I progressed in my studies, I realized there was a gap in research regarding how gaming habits might be related to other aspects of students' lives, particularly their nutrition and overall well-being. |SILENCE >
+Speaker 1: Could you tell us more about your recent research study? What were some of your key findings? |SILENCE >
+User: Certainly. My recent study examined the relationship between gaming habits, nutrition, and mental well-being among college students. We found that |SILENCE > there was a significant correlation between... |SILENCE >
+    >>> WHISPER 1: Academic performance <<<
+
+User: ...gaming habits and academic performance, which was one of our most interesting discoveries. We also observed patterns in nutritional choices among frequent gamers. |SILENCE >
+Speaker 1: That's really intriguing. How do you think these findings could be applied in real-world settings? |SILENCE >
+User: I believe these findings could be valuable for university wellness programs. By understanding the connections between gaming, nutrition, and academic performance, we can develop targeted interventions to support students' overall well-being. |SILENCE >
+Speaker 1: Absolutely. Now, I understand you're not just focused on research. Could you tell us about any practical applications or initiatives you've been involved with? |SILENCE >
+User: Yes, actually, I recently organized an event on campus that combined |SILENCE > gaming with environmental awareness. It was called the... |SILENCE >
+    >>> WHISPER 2: Green Gaming Challenge <<<
+ |SILENCE >
+User: ...Green Gaming Challenge. We incorporated water conservation pledges into a gaming tournament, which was a fun way to promote sustainability while engaging students in competitive gaming. |SILENCE >
+Speaker 1: That sounds like an innovative approach to raising awareness. How did the students respond to this initiative? |SILENCE >
+User: The response was overwhelmingly positive. Students were excited to participate in something that combined their love for gaming with environmental causes. We saw a significant increase in awareness about water conservation and climate issues among participants. |SILENCE >
+Speaker 1: That's wonderful to hear. It seems like you're really passionate about both your research and practical applications. What's next on your agenda? |SILENCE >
+User: Well, I'm currently working on expanding my research to include a broader range of |SILENCE > environmental factors and their impact on gaming behavior and mental health. I'm also planning to present my findings at... |SILENCE >
+    >>> WHISPER 3: Psychology Conference <<<
+ |SILENCE >
+User: ...an upcoming conference. I'm excited to share my work with peers and professors in the field and get their feedback. |SILENCE >
+Speaker 1: That sounds like an exciting opportunity. We'll definitely be keeping an eye out for your future work. Thank you so much for joining us today and sharing your insights. |SILENCE >
+User: Thank you for having me. It's been a pleasure discussing my research and initiatives with you.

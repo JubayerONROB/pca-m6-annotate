@@ -1,0 +1,35 @@
+CONVERSATION 4 of 28, VERSION 4 of 7   (item perl_Test_000238-C, 2 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: I completely disagree with your stance on the FinTrack case. The company clearly violated user privacy and should be held accountable. |SILENCE >
+Speaker 1: But Shi Shi, you're overlooking the fact that users agreed to the terms of service. The company was operating within those guidelines. |SILENCE >
+User: That's not entirely true. The terms were |SILENCE > vague and misleading. We found several instances where the app collected data beyond what was specified. |SILENCE >
+Speaker 1: I understand your point, but don't you think you're being too harsh? FinTrack has been a valuable tool for many users. |SILENCE >
+User: Valuable or not, it doesn't excuse their actions. Remember, we uncovered that they were |SILENCE > selling user data to third parties without explicit consent. |SILENCE >
+    >>> WHISPER 1: Compromise <<<
+
+Speaker 1: Shi Shi, I think you're letting your personal feelings cloud your judgment. We need to look at this objectively. |SILENCE >
+User: I am being objective. Partner Wang Wei and I spent weeks investigating this case. We found clear evidence of misconduct. |SILENCE >
+Speaker 1: But wasn't there a clause in the user agreement that allowed for data sharing? |SILENCE >
+User: Yes, but it was buried in legal jargon. The average user couldn't be expected to understand it. We argued that this was intentionally misleading. |SILENCE >
+Speaker 1: I see your point, but don't you think you're setting a dangerous precedent? This could affect how many apps operate. |SILENCE >
+User: That's exactly the point. We need to set a precedent to protect user privacy. The current system is too lax. |SILENCE >
+Speaker 1: But Shi Shi, what about the |SILENCE > economic impact? FinTrack employs hundreds of people. |SILENCE >
+User: I understand the concern, but we can't prioritize profits over user rights. Besides, the settlement we negotiated was fair. It allows FinTrack to |SILENCE > improve their practices without shutting down. |SILENCE >
+    >>> WHISPER 2: User experience <<<
+ |SILENCE >
+Speaker 1: Fair? From what I heard, the compensation was quite substantial. |SILENCE >
+User: It was proportional to the violation. The company agreed to pay a significant amount to affected users and committed to improving their data security measures. This balance protects both users and the company's future. |SILENCE >
+Speaker 1: I still think you're being too idealistic. In today's digital age, privacy is becoming an outdated concept. |SILENCE >
+User: That's where we fundamentally disagree. Privacy is a right, not a privilege. As lawyers, it's our duty to protect it. The FinTrack case sets an important precedent for future disputes in this area. |SILENCE >
+Speaker 1: Well, I can see you're passionate about this. I suppose time will tell if this approach is sustainable in the long run. |SILENCE >
+User: I believe it is. And I'm proud of the work we did on this case. It's exactly the kind of impact I hoped to make when I became a lawyer.

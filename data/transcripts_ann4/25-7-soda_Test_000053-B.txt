@@ -1,0 +1,38 @@
+CONVERSATION 25 of 28, VERSION 7 of 7   (item soda_Test_000053-B, 3 whispers -- rate each, in order, in sheet_ann4.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: I've been thinking about getting back into my personal art projects, but every time I try, I just freeze up. It's like I can't even pick up a brush anymore. |SILENCE >
+Speaker 1: That must be really frustrating. Have you considered trying a different medium or style to ease back into it? |SILENCE >
+User: I've thought about it, but |SILENCE > I'm not sure where to start. Everything just reminds me of... you know. |SILENCE >
+    >>> WHISPER 1: Exhibition <<<
+ |SILENCE >
+Speaker 1: I understand. It's a difficult process. Maybe you could start with something completely new to you? |SILENCE >
+User: That's not a bad idea. I've been thinking about trying mixed media actually. It might be a good way to |SILENCE > express some of the complicated emotions I've been dealing with. |SILENCE >
+Speaker 1: Mixed media sounds perfect for that. It allows for so much creativity and expression. Have you ever worked with it before? |SILENCE >
+User: Not really, but I did try it once in a |SILENCE > group setting. I can't quite remember when though. |SILENCE >
+    >>> WHISPER 2: Art therapy <<<
+ |SILENCE >
+User: Oh, that's right. It was during a therapy session last week. I actually managed to create a complete piece for the first time in over a year. |SILENCE >
+Speaker 1: That's fantastic! It sounds like a really significant moment for you. What was the piece about? |SILENCE >
+User: It was a |SILENCE > mixed media piece incorporating some old photographs and letters. It was challenging emotionally, but it felt like a step forward. |SILENCE >
+Speaker 1: That sounds incredibly powerful. Do you think you might continue exploring that theme in your work? |SILENCE > |SILENCE >
+User: I'm considering it. It's still difficult to confront those memories, but I think it might be helping me process things. |SILENCE >
+Speaker 1: That's understandable. Art can be a great way to work through complex emotions. Have you thought about showcasing your work again? |SILENCE > |SILENCE >
+User: I'm not sure I'm ready for that yet. The last time I tried to host an exhibition, it |SILENCE > didn't go well. |SILENCE >
+    >>> WHISPER 3: Gallery visitor <<<
+ |SILENCE >
+User: I had a panic attack during the opening reception and had to leave early. It was pretty embarrassing. |SILENCE >
+Speaker 1: I'm so sorry that happened to you. That must have been really difficult. But remember, that was then, and you've made progress since. Maybe a small, private showing could be a good next step? |SILENCE >
+User: That's not a bad idea. I could invite a few close friends and see how it goes. It might help me build up my confidence again. |SILENCE >
+Speaker 1: Exactly. And remember, there's no rush. You can take it one step at a time, at your own pace. |SILENCE >
+User: You're right. I think I'll start by focusing on creating more mixed media pieces and see where that leads me. Thank you for listening and for the suggestions. |SILENCE >
+Speaker 1: Anytime. I'm here to support you, and I'm excited to see where your art takes you next.

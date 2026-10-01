@@ -1,0 +1,50 @@
+CONVERSATION 2 of 28, VERSION 2 of 7   (item synthetic_Test_000152-E, 6 whispers -- rate each, in order, in sheet_ann1.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Hey Sarah, I heard your recent exhibition was a huge success! How did it go? |SILENCE >
+User: Oh, thank you! Yes, the "Wine Through Ages" exhibition exceeded our expectations. We had record-breaking attendance numbers. |SILENCE >
+Speaker 1: That's fantastic! What do you think contributed to its success? |SILENCE >
+User: Well, I think one of the key factors was our approach to |SILENCE > combining historical artifacts with interactive experiences. |SILENCE >
+    >>> WHISPER 1: Evening wine tastings <<<
+ |SILENCE >
+User: We also organized evening wine tasting events that really brought the exhibition to life. |SILENCE >
+Speaker 1: That sounds amazing! Did you partner with any local businesses for those tastings? |SILENCE >
+User: Yes, we did! We collaborated with several |SILENCE > prestigious London restaurants and sommeliers. |SILENCE >
+    >>> WHISPER 2: London restaurants <<<
+ |SILENCE >
+User: The partnerships not only enhanced the experience but also helped us gain significant media coverage. |SILENCE >
+Speaker 1: I can imagine that really boosted the exhibition's profile. You must be thrilled with the outcome. |SILENCE >
+User: Absolutely! It was a lot of work, but seeing it all come together was incredibly rewarding. |SILENCE >
+Speaker 1: I also heard you organized some kind of sporting event recently. That's quite different from your usual projects, isn't it? |SILENCE >
+User: Yes, that's right! We held a |SILENCE > charity event that combined my cultural expertise with my growing interest in sports. |SILENCE >
+    >>> WHISPER 3: Cricket match <<<
+ |SILENCE >
+User: It was actually a charity cricket match we organized in the museum's courtyard. |SILENCE >
+Speaker 1: A cricket match at the museum? That's certainly unique! How did that idea come about? |SILENCE >
+User: Well, I've been getting more interested in cricket lately, and I thought it would be a fun way to bring together |SILENCE > different communities. |SILENCE >
+    >>> WHISPER 4: Local clubs <<<
+ |SILENCE >
+User: We invited local cricket clubs to participate, and they played alongside some of our museum patrons. |SILENCE >
+Speaker 1: That sounds like a great mix of people. Did you manage to raise much for charity? |SILENCE >
+User: Yes, we did! The event was quite successful. We raised |SILENCE > a significant amount for the museum's education program. |SILENCE >
+    >>> WHISPER 5: £15,000 <<<
+ |SILENCE >
+User: In fact, we managed to raise £15,000, which was beyond our initial expectations. |SILENCE >
+Speaker 1: Wow, that's impressive! Did you do anything special to wrap up the event? |SILENCE >
+User: Yes, we did! We concluded the match with a |SILENCE > special dinner for all the participants. |SILENCE >
+    >>> WHISPER 6: Gourmet dinner <<<
+ |SILENCE >
+User: It was a gourmet dinner featuring wines from my personal collection. It was a great way to blend my passion for food and wine with the sporting event. |SILENCE >
+Speaker 1: That sounds like such a well-rounded event. Are you planning to do it again? |SILENCE >
+User: Absolutely! The response was so positive that we've decided to make it an annual occurrence. It's a great way to engage with the community and support our education programs. |SILENCE >
+Speaker 1: That's wonderful, Sarah. You've really found innovative ways to bring people together and support the museum. Congratulations on all your success! |SILENCE >
+User: Thank you so much! I'm just excited to keep exploring new ideas and bringing culture to life in different ways.

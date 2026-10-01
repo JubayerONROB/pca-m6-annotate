@@ -1,0 +1,41 @@
+CONVERSATION 3 of 28, VERSION 7 of 7   (item synthetic_Test_000266-G, 4 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Hey, I've been meaning to tell you about this amazing trip I took recently for work. It was supposed to be just about historic bridges in Europe, but it turned into so much more. |SILENCE >
+Speaker 1: That sounds interesting! Where in Europe did you go? |SILENCE >
+User: Well, I covered five countries in three weeks. It was pretty intense. I started in |SILENCE > Italy, then went to France, Germany, |SILENCE > and... |SILENCE >
+    >>> WHISPER 1: Switzerland <<<
+
+User: Spain, right. And I finished up in Portugal. |SILENCE >
+Speaker 1: Wow, that's quite a journey! Did you have a favorite bridge or location? |SILENCE >
+User: Actually, the most unexpected and exciting part happened in Portugal. I was there to write about this |SILENCE > medieval bridge, and I stumbled upon this incredible, unmarked surf spot nearby. |SILENCE >
+Speaker 1: No way! That must have been an awesome surprise. Did you get a chance to surf there? |SILENCE >
+User: Absolutely! I couldn't resist. The waves were perfect, and the backdrop of this ancient |SILENCE > structure was just breathtaking. |SILENCE >
+    >>> WHISPER 2: Roman bridge <<<
+ |SILENCE >
+User: It was a Roman bridge, actually. The contrast between the ancient architecture and the modern sport was incredible. |SILENCE >
+Speaker 1: That sounds like a perfect combination of your interests. Did you write about it? |SILENCE >
+User: I did! I ended up writing an article that combined my usual infrastructure tourism focus with my love for surfing. It was a bit of a risk, mixing the two, but it paid off. |SILENCE >
+Speaker 1: That's fantastic! Where was it published? |SILENCE >
+User: It actually got featured in a |SILENCE > prominent travel magazine. I can't remember the name right now, but it was a big deal for me. |SILENCE >
+    >>> WHISPER 3: Travel & Culture Monthly <<<
+ |SILENCE >
+User: Oh, right! It was Travel & Leisure. Getting featured there was a huge boost for my blog. |SILENCE >
+Speaker 1: That's incredible! Congratulations! How did you manage to keep up with your running routine during all this travel? |SILENCE >
+User: Thanks! It was challenging, but I was determined. I was training for the |SILENCE > San Diego Half Marathon, so I couldn't slack off. |SILENCE >
+Speaker 1: The San Diego Half Marathon? When is that happening? |SILENCE >
+User: It's actually coming up soon. I think it's in |SILENCE > early May, if I remember correctly. |SILENCE >
+    >>> WHISPER 4: March 15th <<<
+ |SILENCE >
+User: Oh, wait, no. It's actually on June 4th. I'm getting my dates mixed up with all the travel! |SILENCE >
+Speaker 1: Well, it sounds like you've had an incredibly busy and exciting few months. Your job seems to perfectly blend your passions. |SILENCE >
+User: It really does. I feel incredibly lucky to be able to combine my love for writing, travel, architecture, and sports into one career. It's challenging at times, but so rewarding.

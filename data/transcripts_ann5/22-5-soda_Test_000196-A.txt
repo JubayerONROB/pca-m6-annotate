@@ -1,0 +1,49 @@
+CONVERSATION 22 of 28, VERSION 5 of 7   (item soda_Test_000196-A, 8 whispers -- rate each, in order, in sheet_ann5.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Good afternoon, everyone. Thank you for joining me today for this presentation on the importance of effective communication in relationships. |SILENCE > As someone who has recently embarked on a journey of self-improvement and relationship growth, I'm excited to share some insights with you. |SILENCE >
+    >>> WHISPER 1: Mindfulness <<<
+ |SILENCE > |SILENCE > |SILENCE >
+User: My partner and I have been attending couples counseling for the past month, and it's been an eye-opening experience. |SILENCE >
+Speaker 1: That's great! How has it been helping you? |SILENCE >
+User: It's been incredibly helpful in addressing our communication challenges. |SILENCE > One of the key things we've learned is the importance of active listening. |SILENCE >
+    >>> WHISPER 2: Third session <<<
+ |SILENCE > |SILENCE > |SILENCE >
+User: For example, we recently had a conversation about household responsibilities that could have been difficult, but by using active listening techniques, we were able to reach a peaceful resolution and better understand each other's perspectives. |SILENCE > Speaker 2: That sounds really beneficial. Can you elaborate on what active listening entails? |SILENCE >
+User: Certainly. Active listening involves fully concentrating on what the other person is saying, rather than just passively hearing their words. It's about understanding the complete message being conveyed, both through their words and their non-verbal cues. |SILENCE >
+    >>> WHISPER 3: Childhood patterns <<<
+ |SILENCE > |SILENCE >
+User: One technique we use is paraphrasing. After my partner speaks, I try to repeat back what they've said in my own words to ensure I've understood correctly. This not only helps clarify any misunderstandings but also shows that I'm truly engaged in the conversation. |SILENCE >
+Speaker 1: That's a great tip. Have you found any other techniques particularly helpful? |SILENCE >
+User: Yes, another important aspect we've learned is the value of expressing empathy. |SILENCE > It's not just about hearing the words, but also trying to understand the emotions behind them. |SILENCE >
+    >>> WHISPER 4: Mindfulness <<<
+ |SILENCE > |SILENCE >
+User: I've found that combining the communication techniques we've learned in therapy with my personal interest in mindfulness through yoga has been particularly effective. Mindfulness helps me stay present in the moment and more attuned to both my own feelings and those of my partner. |SILENCE > Speaker 2: That's fascinating. How does mindfulness specifically help with communication? |SILENCE >
+User: Great question. Mindfulness helps in several ways. First, it allows me to be more aware of my own emotional reactions during conversations, which helps me respond more thoughtfully rather than reactively. |SILENCE >
+    >>> WHISPER 5: Breathing techniques <<<
+ |SILENCE > |SILENCE >
+User: Second, techniques like deep breathing can help calm nerves and reduce stress during difficult conversations, allowing for clearer thinking and more effective communication. |SILENCE >
+Speaker 1: These all sound like valuable tools. Has implementing these techniques been challenging? |SILENCE >
+User: It definitely takes practice and commitment. |SILENCE > At first, it felt a bit unnatural and required conscious effort. |SILENCE >
+    >>> WHISPER 6: Third session <<<
+ |SILENCE > |SILENCE >
+User: But we've had some breakthroughs. For instance, during one of our therapy sessions, I realized that my tendency to withdraw during conflicts was connected to patterns from my childhood. This realization led to a meaningful discussion with my partner about our different communication styles. |SILENCE > Speaker 2: That's a powerful insight. How has this realization changed your approach to communication? |SILENCE >
+User: It's made me more aware of my reactions and helped me communicate my needs more effectively. Instead of withdrawing, I now try to express my feelings and thoughts openly, which has significantly improved our understanding of each other. |SILENCE >
+    >>> WHISPER 7: Household example <<<
+ |SILENCE > |SILENCE >
+User: These positive changes have really transformed our relationship. We're now able to address issues more constructively and support each other better. |SILENCE >
+Speaker 1: That's wonderful progress. Do you have any advice for couples who might be hesitant about trying therapy or working on their communication? |SILENCE >
+User: Absolutely. I'd say don't be afraid to take that step. I was initially hesitant about therapy, but embracing the process has been incredibly rewarding. |SILENCE >
+    >>> WHISPER 8: Mindfulness <<<
+ |SILENCE > |SILENCE >
+User: It's important to remember that improving communication is a mutual effort. Both partners need to be committed to understanding not only their own needs but also their partner's. It takes time and patience, but the results are well worth it. |SILENCE > Speaker 2: Thank you for sharing your experience. It's truly inspiring. |SILENCE >
+User: Thank you all for listening. I hope these insights prove helpful in your own relationships and communication journeys. Are there any questions?

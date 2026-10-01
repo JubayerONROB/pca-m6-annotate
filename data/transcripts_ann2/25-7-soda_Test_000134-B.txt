@@ -1,0 +1,44 @@
+CONVERSATION 25 of 28, VERSION 7 of 7   (item soda_Test_000134-B, 7 whispers -- rate each, in order, in sheet_ann2.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: Your Honor, I must object to this witness's testimony. |SILENCE > She has already demonstrated a blatant disregard for the court's time and resources. |SILENCE >
+Speaker 1: Objection, Your Honor. My client is here now and willing to testify. Her previous absence does not negate the value of her testimony. |SILENCE > Speaker 2: Overruled. The witness will be allowed to testify, but I will take her previous actions into account when considering credibility. Proceed, Counselor. |SILENCE >
+User: Thank you, Your Honor. Ms. |SILENCE > |SILENCE >
+    >>> WHISPER 1: Carissa <<<
+
+User: Ms. Carissa, you claim you were at home when you failed to appear for the originally scheduled trial date. Is that correct? |SILENCE > Speaker 3: Yes, that's correct. |SILENCE >
+User: And yet, you were served with a subpoena requiring your presence in court on that date, were you not? |SILENCE > Speaker 3: Yes, I was. |SILENCE >
+User: So, you willfully chose to ignore a legal document demanding your presence in this courtroom?
+Speaker 1: Objection, Your Honor. Counsel is badgering the witness. |SILENCE > Speaker 2: Sustained. Mr. |SILENCE > rephrase your question. |SILENCE >
+    >>> WHISPER 2: Witness's response <<<
+
+User: My apologies, Your Honor. Ms. Carissa, can you explain why you chose not to appear in court despite being legally required to do so? |SILENCE > Speaker 3: I... I was scared. I didn't want to testify. |SILENCE >
+User: Scared of what, exactly? |SILENCE > Speaker 3: Of the consequences. Of what might happen if I spoke up. |SILENCE >
+User: And yet, you didn't think to inform the court or my office of these concerns? Instead, you simply decided not to show up, causing a significant delay in these proceedings and wasting valuable |SILENCE > |SILENCE >
+    >>> WHISPER 3: Time and resources <<<
+
+User: time and effort from all parties involved. |SILENCE >
+Speaker 1: Objection, Your Honor. Counsel is making a statement, not asking a question. |SILENCE > Speaker 2: Sustained. Mr. |SILENCE > please stick to questions for the witness. |SILENCE >
+    >>> WHISPER 4: Witness's name <<<
+ |SILENCE >
+User: Of course, Your Honor. Ms. Carissa, were you aware that by not appearing, you were risking |SILENCE > |SILENCE >
+    >>> WHISPER 5: Legal consequences <<<
+
+User: legal consequences, including potential fines or even jail time? |SILENCE > Speaker 3: No, I... I didn't know that. |SILENCE >
+User: Your Honor, given the witness's admission of willfully ignoring a subpoena and her apparent lack of understanding of the seriousness of her actions, I move to have her testimony |SILENCE > |SILENCE >
+    >>> WHISPER 6: Exhibit warrant <<<
+
+User: considered with extreme caution. |SILENCE >
+Speaker 1: Objection, Your Honor! This is an attempt to discredit my client before she's even had a chance to provide her full testimony. |SILENCE > Speaker 2: I'll take your motion under advisement, Mr. |SILENCE > As for the objection, overruled. The witness's credibility is certainly at issue given her actions. However, we will proceed with her testimony. |SILENCE >
+    >>> WHISPER 7: Witness's demeanor <<<
+ |SILENCE >
+User: Thank you, Your Honor. Now, Ms. Carissa, let's discuss the events of the night in question...

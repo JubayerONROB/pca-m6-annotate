@@ -1,0 +1,39 @@
+CONVERSATION 8 of 28, VERSION 3 of 7   (item perl_Test_000269-B, 3 whispers -- rate each, in order, in sheet_ann3.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+User: So, Chen, I've been meaning to ask you about the company Family Day event. How did your family enjoy it? |SILENCE >
+Speaker 1: Oh, it was fantastic! My wife and son had a great time. The activities were really well-planned, and it was nice to see everyone outside of work. |SILENCE >
+User: That's wonderful to hear. I remember your son was particularly excited about |SILENCE > the outdoor sports, right? |SILENCE >
+Speaker 1: Yes, he was! He couldn't stop talking about the relay races for days after. By the way, I wanted to thank you for inviting us. It really meant a lot to my family. |SILENCE >
+User: Oh, it was my pleasure. I'm glad you all could make it. It was great to see our families interacting and |SILENCE > getting to know each other better. |SILENCE >
+    >>> WHISPER 1: Chen Xiaoming <<<
+
+Speaker 1: Absolutely! And it wasn't just the kids who had fun. I saw you and your husband really getting into those team-building exercises. |SILENCE >
+User: Yes, we did have a lot of fun with those. And the parent-child games were a hit too. It was nice to see everyone letting loose and enjoying themselves. |SILENCE >
+Speaker 1: I couldn't agree more. It's events like these that really bring the team together. Speaking of which, I've been meaning to ask you about the upcoming project. Do you think we could apply some of that team spirit to our work? |SILENCE >
+User: That's an excellent point, Chen. I think we definitely could. The Family Day showed us how well we can work together in a more relaxed setting. Maybe we could |SILENCE > incorporate some team-building exercises into our project kickoff? |SILENCE >
+Speaker 1: That's a great idea! It could help break the ice and get everyone more comfortable working together. |SILENCE >
+User: Exactly. And it might help us identify each team member's strengths more quickly. You know, like how we discovered your |SILENCE > son's talent for sprinting during the relay races. |SILENCE >
+    >>> WHISPER 2: Chen Xiaoming <<<
+
+Speaker 1: Ha! Yes, he definitely surprised us there. And speaking of surprises, I was impressed by how well your husband got along with everyone. He seemed to really hit it off with my wife. |SILENCE >
+User: Oh, yes. He's always been good at socializing. Your wife is quite cheerful and warm, which made it easy for everyone to feel comfortable around her. |SILENCE >
+Speaker 1: That's kind of you to say. She really enjoyed meeting your family too. In fact, she suggested we should try to organize more informal get-togethers outside of work events. What do you think about that? |SILENCE >
+User: That sounds like a wonderful idea. It would be great to |SILENCE > continue building these relationships outside of work. Maybe we could plan something for next month? |SILENCE >
+    >>> WHISPER 3: Family day <<<
+
+Speaker 1: Absolutely! We could start with a small gathering, perhaps a picnic in the park? And we should definitely take lots of photos, just like we did at the Family Day. That group photo of all of us is such a nice memento. |SILENCE >
+User: You're right, that group photo turned out really well. It's a great reminder of the day. Let's make sure we do that again at our next get-together. |SILENCE >
+Speaker 1: Agreed! Well, I should get back to my desk. But let's touch base later this week about both the project kickoff and planning that picnic, okay? |SILENCE >
+User: Sounds perfect, Chen. Thanks for the chat, and I'm looking forward to working on these ideas with you. |SILENCE >
+Speaker 1: Likewise, Wu Juan. Have a great rest of your day! |SILENCE >
+User: You too, Chen. Take care!

@@ -1,0 +1,38 @@
+CONVERSATION 22 of 28, VERSION 7 of 7   (item perl_Test_000224-D, 4 whispers -- rate each, in order, in sheet_ann3.csv)
+5-point uptake rubric (LlamaPIE D.4.1), one rating per whisper:
+ 1  Not relevant / not used   -- unrelated; the user ignored it and never referenced it
+ 2  Relevant but redundant    -- made sense, but the user had already covered it
+ 3  Relevant but not acted on -- useful and on-topic, but the user did not respond to it
+ 4  Relevant, used later      -- helpful; the user acted on it only in a later turn
+ 5  Highly relevant, used now -- exactly what was needed; used in the very next turn
+Silence (0/1): would the system have done better to say NOTHING at this pause? 1 = yes.
+
+Read PAST each whisper before rating it: the scale is about whether the user went on to use it.
+
+==============================================================================
+Speaker 1: Good afternoon, Ms. Min. Thank you for joining us today. We're excited to learn more about your work in information engineering. Can you start by telling us about your background and how you got into this field? |SILENCE >
+User: Good afternoon. Thank you for having me. I'm happy to share my experience. I've always been fascinated by technology and its potential to solve complex problems. My journey in information engineering began during my undergraduate studies |SILENCE > where I was introduced to the fundamentals of the field. |SILENCE >
+    >>> WHISPER 1: Professor Yang Hua <<<
+
+User: I pursued my education in China, which has a strong focus on technological advancements. After completing my undergraduate degree, I decided to further specialize in this area by pursuing a graduate degree. |SILENCE >
+Speaker 1: That's interesting. Can you tell us more about your graduate studies? Any particular experiences or mentors that shaped your career? |SILENCE >
+User: Certainly. My graduate studies were a crucial period in my career development. I was fortunate to have a mentor who was |SILENCE > an expert in the field and had significant research accomplishments. |SILENCE >
+    >>> WHISPER 2: Professor Yang Hua <<<
+
+User: Professor Yang Hua, my supervisor, played a pivotal role in shaping my research direction and approach. He provided invaluable guidance through regular discussions, helping me navigate complex research problems and stay updated with the latest developments in the field. |SILENCE >
+Speaker 1: It sounds like Professor Yang Hua had a significant impact on your career. What specific areas of information engineering did you focus on during your graduate studies? |SILENCE >
+User: Under Professor Yang Hua's guidance, I focused on multiple areas of technological innovation within information engineering. We worked on projects involving |SILENCE > advanced data analysis techniques and cutting-edge experimental methodologies. This comprehensive approach allowed me to gain a broad understanding of the field while also developing specialized expertise. |SILENCE >
+Speaker 1: That's impressive. I understand you've received recognition for your work. Can you tell us about any awards or achievements you're particularly proud of? |SILENCE >
+User: Yes, I've been fortunate to receive recognition for my work. One achievement that I'm particularly proud of is |SILENCE > an award I received for my contributions to the field. |SILENCE >
+    >>> WHISPER 3: Outstanding Young Scientist <<<
+
+User: I was honored with the Outstanding Young Scientist Award in the field of information engineering. This recognition was a result of the innovative research we conducted and the technological advancements we achieved. It was a validation of the hard work and dedication not just from me, but from my entire research team and mentors. |SILENCE >
+Speaker 1: Congratulations on that achievement. It's clear that your work has had a significant impact. How do you see your research contributing to the broader field of information engineering? |SILENCE >
+User: Thank you. I believe our research contributes to the field in several ways. Firstly, we're pushing the boundaries of data analysis, which has applications across various industries. Secondly, our work in experimental methodologies is helping to establish new standards for research in information engineering. Lastly, I think our focus on practical applications ensures that our innovations have real-world impact, potentially improving systems and processes in numerous sectors. |SILENCE >
+Speaker 1: That's fascinating. As we wrap up, is there anyone you'd like to acknowledge who has been particularly supportive of your career? |SILENCE >
+User: Absolutely. While many people have supported me throughout my career, I'd like to particularly acknowledge my |SILENCE > brother. |SILENCE >
+    >>> WHISPER 4: Yao Jun <<<
+
+User: My brother, Yao Jun, has been an incredible source of support. He's always been there to celebrate my achievements and provide encouragement during challenging times. His support has been invaluable in my personal and professional growth. |SILENCE >
+Speaker 1: It's wonderful to hear about such a supportive family relationship. Thank you, Ms. Min, for sharing your experiences with us today. Your insights into the field of information engineering are truly inspiring. |SILENCE >
+User: Thank you for having me. It's been a pleasure to share my journey and discuss the exciting developments in our field. I'm looking forward to continuing this work and contributing further to the advancement of information engineering.
