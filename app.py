@@ -2,10 +2,18 @@
 
     streamlit run app.py
 
-One card per whisper. Each card shows the whole conversation -- including everything
-said AFTER the whisper -- with the whisper under evaluation highlighted, the five-point
-uptake rubric inline, and two ratings: uptake_1to5 and should_be_silent_0or1, plus an
-optional note.
+One card per VERSION: the whole conversation with every whisper of that version marked in
+place, and per-whisper ratings (uptake_1to5, should_be_silent_0or1, optional note) beside
+it. Versions are still met one at a time, in the sheet's pre-randomised order, under their
+A/B/C labels. The focused whisper is highlighted and the turns after it are marked, since
+levels 4-5 depend on what the user does next; a one-time acknowledgement per session
+unlocks rating.
+
+Keyboard: 1-5 uptake, 0/9 silent no/yes, <- -> previous/next whisper (crossing into the
+neighbouring version at the ends), N note, S skip. The focus advances once a whisper has
+both ratings. A script in the transcript panel forwards key presses to hidden command
+buttons, so every shortcut runs the same Python as a click and is testable headlessly.
+The sidebar shows % rated, active time (breaks over 5 min not counted) and an ETA.
 
 BLIND BY CONSTRUCTION. This app reads only data/sheet_annN.csv and
 data/transcripts_annN/. It never reads KEY_do_not_open_until_scoring.csv (the key is not
@@ -204,20 +212,29 @@ def transcript_path(ann: str, row: dict) -> Path:
     return DATA / f"transcripts_{ann}" / f"{d:02d}-{v}-{item}.txt"
 
 
-def render_html(body: str, current: int) -> str:
-    """The conversation with whisper `current` highlighted and everything after it
-    marked as the part that decides levels 4-5."""
+KEYMAP = {"1": "u1", "2": "u2", "3": "u3", "4": "u4", "5": "u5", "0": "s0", "9": "s1",
+          "ArrowLeft": "prev", "ArrowRight": "next", "n": "note", "N": "note",
+          "s": "skip", "S": "skip"}
+
+
+def render_html(body: str, focus: int, rated: set[int], scroll_top: bool) -> str:
+    """The whole conversation for one version: every whisper marked in place, the focused
+    one highlighted, the turns after it marked as what decides levels 4-5. The script
+    (a) scrolls this panel to the focused whisper, (b) on a new version scrolls the page
+    to the top, and (c) forwards keyboard shortcuts to the app's hidden command buttons.
+    Every piece of transcript text is html.escape()d; the only markup is ours."""
     parts, pos, after = [], 0, False
     for m in WHISPER_RE.finditer(body):
         parts.append(_turns(body[pos:m.start()], after))
         n, text = int(m.group(1)), html.escape(m.group(2).strip())
-        if n == current:
-            parts.append(f'<div id="cur" class="w cur">&#9658; WHISPER {n} (rate this one): '
-                         f'<b>{text}</b></div><div class="nexthdr">&#9660; what happened next '
-                         '&mdash; read this before rating</div>')
+        tick = " &#10003;" if n in rated else ""
+        if n == focus:
+            parts.append(f'<div id="cur" class="w cur">&#9658; WHISPER {n}: <b>{text}</b>{tick}'
+                         '</div><div class="nexthdr">&#9660; what happened next &mdash; read '
+                         'this before rating</div>')
             after = True
         else:
-            parts.append(f'<div class="w other">whisper {n}: {text}</div>')
+            parts.append(f'<div class="w other">whisper {n}: {text}{tick}</div>')
         pos = m.end()
     parts.append(_turns(body[pos:], after))
     css = """<style>
@@ -228,13 +245,33 @@ def render_html(body: str, current: int) -> str:
       .p{color:#aaa;font-size:12px}
       .w{margin:8px 0;padding:6px 10px;border-radius:6px}
       .cur{background:#fff3b0;border:2px solid #e0a800}
-      .other{background:#f1f1f1;color:#777;font-size:13px}
+      .other{background:#f1f1f1;color:#666;font-size:13px}
       .nexthdr{color:#4a90d9;font-size:12px;font-weight:600;margin:4px 0}
       @media (prefers-color-scheme: dark){body{background:#0e1117;color:#ddd}
-        .cur{background:#5a4b00;border-color:#e0a800}.other{background:#262730;color:#999}}
+        .cur{background:#5a4b00;border-color:#e0a800}.other{background:#262730;color:#aaa}}
     </style>"""
-    script = ("<script>const c=document.getElementById('cur');"
-              "if(c){c.scrollIntoView({block:'center'});}</script>")
+    script = """<script>
+    (function(){
+      const c=document.getElementById('cur'); if(c){c.scrollIntoView({block:'center'});}
+      let P; try{P=window.parent.document;}catch(e){return;}
+      if(%(top)s){try{const m=P.querySelector('[data-testid="stMain"]')||P.querySelector('section.main');
+        if(m){m.scrollTo({top:0});} window.parent.scrollTo(0,0);}catch(e){}}
+      const MAP=%(map)s;
+      function onKey(e){
+        if(e.ctrlKey||e.metaKey||e.altKey) return;
+        const t=e.target, tag=(t&&t.tagName||'').toLowerCase();
+        if(tag==='input'||tag==='textarea'||(t&&t.isContentEditable)) return;
+        const cmd=MAP[e.key]; if(!cmd) return;
+        const btn=[...P.querySelectorAll('.st-key-kbd button')]
+          .find(b=>b.innerText.trim()==='kbd:'+cmd);
+        if(btn){e.preventDefault(); btn.click();}
+      }
+      // one live handler at a time: every rerun replaces this iframe
+      if(window.parent.__m6kbd){P.removeEventListener('keydown',window.parent.__m6kbd);}
+      window.parent.__m6kbd=onKey; P.addEventListener('keydown',onKey);
+      document.addEventListener('keydown',onKey);
+    })();
+    </script>""" % {"top": "true" if scroll_top else "false", "map": json.dumps(KEYMAP)}
     return css + "".join(parts) + script
 
 
@@ -252,8 +289,15 @@ def _turns(chunk: str, after: bool) -> str:
 
 
 # =============================================================================
-# App
+# App state
 # =============================================================================
+#
+# A CARD is one version of one conversation: every whisper of that version, rated on one
+# page. Cards follow the sheet's own order (dialogue_order, version_order), so versions
+# are still met one at a time, in the pre-randomised sequence, under their A/B/C labels.
+# The FOCUS is the whisper the keyboard acts on.
+
+IDLE_CAP_S = 300          # a gap longer than this between ratings is a break, not work
 
 
 def done(r: dict) -> bool:
@@ -261,11 +305,19 @@ def done(r: dict) -> bool:
         r["should_be_silent_0or1"].strip() in {"0", "1"}
 
 
+def build_cards(rows: list[dict]) -> list[list[int]]:
+    cards: dict[tuple[int, int], list[int]] = {}
+    for i, r in enumerate(rows):
+        cards.setdefault((int(r["dialogue_order"]), int(r["version_order"])), []).append(i)
+    return [sorted(v, key=lambda i: int(rows[i]["whisper_index"])) for _, v in sorted(cards.items())]
+
+
 def save(ann: str, sync: bool = False) -> None:
     """Flush the sheet and progress to disk now; mirror to GitHub when asked."""
     s = st.session_state
     sheet = to_csv_text(s.fields, s.rows)
-    prog = json.dumps({"position": s.pos, "read_past": sorted(s.read_past)}, indent=1)
+    prog = json.dumps({"card": s.card, "focus": s.focus, "active_s": round(s.active_s, 1),
+                       "timed_ratings": s.timed}, indent=1)
     write_local(OUT / f"sheet_{ann}.csv", sheet)
     write_local(OUT / f"progress_{ann}.json", prog)
     if sync and s.store is not None:
@@ -293,35 +345,131 @@ def start(ann: str) -> None:
     s = st.session_state
     s.store = store_from_secrets()
     s.fields, s.rows, origin = load_work(ann, s.store)
+    s.cards = build_cards(s.rows)
     prog = load_progress(ann, s.store)
-    s.read_past = set(prog.get("read_past", [])) | {i for i, r in enumerate(s.rows) if done(r)}
-    first_open = next((i for i, r in enumerate(s.rows) if not done(r)), len(s.rows) - 1)
-    s.pos = min(int(prog.get("position", first_open)), len(s.rows) - 1)
+    first_open = next((c for c, idx in enumerate(s.cards)
+                       if not all(done(s.rows[i]) for i in idx)), len(s.cards) - 1)
+    s.card = min(int(prog.get("card", first_open)), len(s.cards) - 1)
+    s.focus = _first_open_focus(s.card)
+    s.active_s = float(prog.get("active_s", 0.0))
+    s.timed = int(prog.get("timed_ratings", 0))
+    s.last_event = None
+    s.show_note = set()
+    s.scroll_top = True
     s.ann = ann
     s.sync = ("local only -- no GitHub token configured" if s.store is None
               else f"GitHub mirror on (loaded from {origin})")
 
 
-def set_field(ann: str, i: int, col: str, key: str) -> None:
-    v = st.session_state[key]
-    st.session_state.rows[i][col] = "" if v is None else str(v)
-    save(ann)
-
-
-def set_read(ann: str, i: int, key: str) -> None:
-    (st.session_state.read_past.add if st.session_state[key]
-     else st.session_state.read_past.discard)(i)
-    save(ann)
-
-
-def go(ann: str, to: int) -> None:
+def mirror_widgets(idx: list[int]) -> None:
+    """Streamlit drops a widget's state on any run where the widget is not drawn, so
+    other cards' radios forget their values. The sheet is the truth: copy it into the
+    widget keys just before a card is drawn (no default is passed, so this is legal)."""
     s = st.session_state
-    s.pos = max(0, min(to, len(s.rows) - 1))
+    for i in idx:
+        r = s.rows[i]
+        u, v = r["uptake_1to5"].strip(), r["should_be_silent_0or1"].strip()
+        s[f"u_{i}"] = int(u) if u in {"1", "2", "3", "4", "5"} else None
+        s[f"s_{i}"] = int(v) if v in {"0", "1"} else None
+        s[f"n_{i}"] = r["note"]
+
+
+def _first_open_focus(card: int) -> int:
+    s = st.session_state
+    idx = s.cards[card]
+    return next((k for k, i in enumerate(idx) if not done(s.rows[i])), 0)
+
+
+def _tick_clock() -> None:
+    """Active time: gaps between ratings, with breaks over IDLE_CAP_S not counted."""
+    s = st.session_state
+    now = time.time()
+    if s.last_event is not None and now - s.last_event <= IDLE_CAP_S:
+        s.active_s += now - s.last_event
+    s.last_event = now
+
+
+def _rated(i: int, was_done: bool) -> None:
+    """After a rating: count it for the ETA, and auto-advance once the whisper is done."""
+    s = st.session_state
+    _tick_clock()
+    if done(s.rows[i]) and not was_done:
+        s.timed += 1
+        idx = s.cards[s.card]
+        nxt = next((k for k in range(len(idx)) if k > idx.index(i) and not done(s.rows[idx[k]])),
+                   None)
+        if nxt is None:
+            nxt = next((k for k in range(len(idx)) if not done(s.rows[idx[k]])), s.focus)
+        s.focus = nxt
+
+
+def set_rating(ann: str, i: int, col: str, value) -> None:
+    s = st.session_state
+    was = done(s.rows[i])
+    s.rows[i][col] = "" if value is None else str(value)
+    key = {"uptake_1to5": f"u_{i}", "should_be_silent_0or1": f"s_{i}"}[col]
+    s[key] = value
+    s.focus = s.cards[s.card].index(i)
+    _rated(i, was)
+    save(ann)
+
+
+def on_widget(ann: str, i: int, col: str, key: str) -> None:
+    set_rating(ann, i, col, st.session_state[key])
+
+
+def on_note(ann: str, i: int) -> None:
+    st.session_state.rows[i]["note"] = st.session_state[f"n_{i}"]
+    save(ann)
+
+
+def go_card(ann: str, card: int, focus_last: bool = False) -> None:
+    s = st.session_state
+    card = max(0, min(card, len(s.cards) - 1))
+    if card != s.card:
+        s.scroll_top = True
+    s.card = card
+    s.focus = len(s.cards[card]) - 1 if focus_last else _first_open_focus(card)
     save(ann, sync=True)
+
+
+def command(ann: str, cmd: str) -> None:
+    """Every keyboard shortcut lands here (via a hidden button), so it is testable."""
+    s = st.session_state
+    idx = s.cards[s.card]
+    i = idx[s.focus]
+    if cmd[0] in "us" and len(cmd) == 2 and cmd[1].isdigit():
+        if not s.get("ack_ok"):
+            return                               # rating is locked until acknowledged
+        col = "uptake_1to5" if cmd[0] == "u" else "should_be_silent_0or1"
+        set_rating(ann, i, col, int(cmd[1]))
+    elif cmd in ("next", "skip"):
+        if s.focus < len(idx) - 1:
+            s.focus += 1
+        elif s.card < len(s.cards) - 1:
+            go_card(ann, s.card + 1)
+    elif cmd == "prev":
+        if s.focus > 0:
+            s.focus -= 1
+        elif s.card > 0:
+            go_card(ann, s.card - 1, focus_last=True)
+    elif cmd == "note":
+        s.show_note ^= {i}
+
+
+def fmt_dur(sec: float) -> str:
+    sec = int(sec)
+    return f"{sec // 3600}h {sec % 3600 // 60:02d}m" if sec >= 3600 else f"{sec // 60}m {sec % 60:02d}s"
+
+
+# =============================================================================
+# UI
+# =============================================================================
 
 
 def main() -> None:
     st.set_page_config(page_title="M6 whisper rating", page_icon="📝", layout="wide")
+    st.markdown("<style>.st-key-kbd{display:none}</style>", unsafe_allow_html=True)
     anns = annotators()
     if not anns:
         st.error("No annotator sheets found in data/.")
@@ -330,8 +478,7 @@ def main() -> None:
     qp = st.query_params.get("annotator")
     with st.sidebar:
         st.markdown("### Who are you?")
-        default = anns.index(qp) if qp in anns else None
-        ann = st.selectbox("Annotator ID", anns, index=default,
+        ann = st.selectbox("Annotator ID", anns, index=anns.index(qp) if qp in anns else None,
                            placeholder="choose your ID", key="ann_pick")
     if not ann:
         st.title("M6 whisper rating")
@@ -341,20 +488,29 @@ def main() -> None:
     if st.session_state.get("ann") != ann:
         start(ann)
     s = st.session_state
-    rows, i = s.rows, s.pos
-    r = rows[i]
-    total = len(rows)
-    n_done = sum(map(done, rows))
-    n_conv = max(int(x["dialogue_order"]) for x in rows)
+    rows, cards = s.rows, s.cards
+    idx = cards[s.card]
+    total, n_done = len(rows), sum(map(done, rows))
 
+    # hidden command buttons: the keyboard bridge clicks these
+    with st.container(key="kbd"):
+        for cmd in sorted(set(KEYMAP.values())):
+            st.button(f"kbd:{cmd}", key=f"kbd_{cmd}", on_click=command, args=(ann, cmd))
+
+    # ---- sidebar: progress, time, ETA, tools -------------------------------------
     with st.sidebar:
-        st.progress(n_done / total, text=f"{n_done} of {total} whispers rated")
-        convs_done = sum(all(done(x) for x in rows if x["dialogue_order"] == d)
-                         for d in {x["dialogue_order"] for x in rows})
-        st.caption(f"Conversations fully rated: {convs_done} of {n_conv}")
-        nxt = next((j for j in range(total) if not done(rows[j])), None)
-        if nxt is not None and st.button("Jump to first unrated", use_container_width=True):
-            go(ann, nxt)
+        pct = 100 * n_done / total
+        st.progress(n_done / total, text=f"{pct:.0f}% rated · {n_done} of {total} whispers")
+        rate = s.active_s / s.timed if s.timed else None
+        eta = fmt_dur(rate * (total - n_done)) if rate and s.timed >= 10 else "after 10 ratings"
+        st.caption(f"Active time {fmt_dur(s.active_s)} · ETA {eta}")
+        n_conv = max(int(r["dialogue_order"]) for r in rows)
+        st.caption(f"Version {s.card + 1} of {len(cards)} · conversation "
+                   f"{rows[idx[0]]['dialogue_order']} of {n_conv}")
+        nxt = next((c for c, ix in enumerate(cards) if not all(done(rows[i]) for i in ix)), None)
+        if nxt is not None and nxt != s.card and st.button("Jump to first unrated",
+                                                          use_container_width=True):
+            go_card(ann, nxt)
             st.rerun()
         st.caption(f"Save state: {s.sync}")
         if s.store is not None and st.button("Sync now", use_container_width=True):
@@ -363,66 +519,78 @@ def main() -> None:
         st.download_button("Download my sheet (CSV)", to_csv_text(s.fields, rows),
                            file_name=f"sheet_{ann}.csv", mime="text/csv",
                            use_container_width=True)
+        with st.expander("Keyboard shortcuts", expanded=False):
+            st.markdown("`1`–`5` uptake · `0` / `9` silent no / yes · `←` `→` previous / next "
+                        "whisper · `N` note · `S` skip.\n\nThe cursor moves to the next whisper "
+                        "once both ratings are set. Shortcuts pause while you type a note.")
         with st.expander("Instructions"):
             st.markdown(
-                "- You will read each conversation several times, each time with a "
-                "different **version** of the assistant's whispers. Rate each version "
-                "on its own; do not compare versions.\n"
-                "- **Read past the whisper.** Levels 4 and 5 are about whether the user "
-                "went on to use it, which you can only judge from what comes next.\n"
-                "- *Should have stayed silent*: 1 if the assistant would have done better "
-                "to say nothing at that pause.\n"
-                "- Rate every whisper. The note is optional.")
+                "- You read each conversation several times, each time with a different "
+                "**version** of the assistant's whispers. Rate each version on its own; do "
+                "not compare versions.\n- **Read past each whisper** before rating it: "
+                "levels 4 and 5 depend on what the user says and does next.\n- *Stayed "
+                "silent*: 1 if the assistant would have done better to say nothing at that "
+                "pause.\n- Rate every whisper. Notes are optional.")
 
-    st.markdown(f"**Conversation {r['dialogue_order']} of {n_conv} · Version "
-                f"{r['version_order']} of 7 (label {r['version']}) · Whisper "
-                f"{r['whisper_index']} of {r['n_whispers']}** · card {i + 1} of {total}")
+    # ---- once per session: the read-past acknowledgement -----------------------------
+    if not s.get("ack_ok"):
+        with st.container(border=True):
+            st.markdown("#### Before you start")
+            st.markdown("Every rating depends on **what happens after** the whisper: levels 4 "
+                        "and 5 mean the user went on to use it. On every card, the turns after "
+                        "the highlighted whisper are marked in blue. **Read them before you "
+                        "rate.**")
+            st.checkbox("I understand I must read past each whisper before rating it",
+                        key="ack_box", on_change=lambda: s.__setitem__("ack_ok", s.ack_box))
+
+    card_rows = [rows[i] for i in idx]
+    head = card_rows[0]
+    st.markdown(f"**Conversation {head['dialogue_order']} of {n_conv} · Version "
+                f"{head['version_order']} of 7 (label {head['version']})** · "
+                f"{len(idx)} whisper{'s' if len(idx) > 1 else ''} on this card")
 
     left, right = st.columns([3, 2], gap="large")
     with left:
-        # Every transcript string is html.escape()d in render_html; the only markup is ours.
-        st.iframe(render_html(transcript_body(str(transcript_path(ann, r))),
-                              int(r["whisper_index"])), height=560)
+        focus_w = int(rows[idx[s.focus]]["whisper_index"])
+        rated_w = {int(rows[i]["whisper_index"]) for i in idx if done(rows[i])}
+        st.iframe(render_html(transcript_body(str(transcript_path(ann, head))), focus_w,
+                              rated_w, s.scroll_top), height=620)
+        s.scroll_top = False
     with right:
-        with st.container(border=True):
-            st.markdown("**Uptake rubric (LlamaPIE D.4.1)**")
+        with st.expander("Uptake rubric (LlamaPIE D.4.1)", expanded=s.card == 0):
             st.markdown("\n".join(f"- **{n}** {name} — {desc}" for n, name, desc in RUBRIC))
-        key_rp = f"rp_{ann}_{i}"
-        st.session_state.setdefault(key_rp, i in s.read_past)
-        st.checkbox("I have read **past** this whisper — what the user said and did next",
-                    key=key_rp, on_change=set_read, args=(ann, i, key_rp))
-        locked = i not in s.read_past
-        if locked:
-            st.caption("Read the conversation after the highlighted whisper, then tick the "
-                       "box to rate it.")
-        up = r["uptake_1to5"].strip()
-        key_u = f"u_{ann}_{i}"
-        st.radio("Uptake (1–5)", [1, 2, 3, 4, 5], key=key_u, horizontal=True,
-                 index=int(up) - 1 if up in {"1", "2", "3", "4", "5"} else None,
-                 format_func=lambda n: f"{n} · {RUBRIC[n - 1][1]}", disabled=locked,
-                 on_change=set_field, args=(ann, i, "uptake_1to5", key_u))
-        si = r["should_be_silent_0or1"].strip()
-        key_s = f"s_{ann}_{i}"
-        st.radio("Should the system have stayed silent here?", [0, 1], key=key_s,
-                 index=int(si) if si in {"0", "1"} else None,
-                 format_func=lambda n: SILENCE_LABELS[n], disabled=locked,
-                 on_change=set_field, args=(ann, i, "should_be_silent_0or1", key_s))
-        key_n = f"n_{ann}_{i}"
-        st.session_state.setdefault(key_n, r["note"])
-        st.text_input("Note (optional)", key=key_n,
-                      on_change=set_field, args=(ann, i, "note", key_n))
-        if done(r):
-            st.success("Saved.")
+        locked = not s.get("ack_ok")
+        mirror_widgets(idx)
+        for k, i in enumerate(idx):
+            r = rows[i]
+            with st.container(border=True, key=f"w_{i}"):
+                mark = "▶ " if k == s.focus else ""
+                st.markdown(f"{mark}**Whisper {r['whisper_index']}**"
+                            f"{' ✓' if done(r) else ''}")
+                st.radio("Uptake", [1, 2, 3, 4, 5], key=f"u_{i}", horizontal=True,
+                         format_func=lambda n: f"{n}", disabled=locked,
+                         on_change=on_widget, args=(ann, i, "uptake_1to5", f"u_{i}"),
+                         help=" · ".join(f"{n} {name}" for n, name, _ in RUBRIC))
+                st.radio("Should have stayed silent?", [0, 1], key=f"s_{i}", horizontal=True,
+                         format_func=lambda n: SILENCE_LABELS[n], disabled=locked,
+                         on_change=on_widget, args=(ann, i, "should_be_silent_0or1", f"s_{i}"))
+                if r["note"] or i in s.show_note:
+                    st.text_input("Note (optional)", key=f"n_{i}", on_change=on_note,
+                                  args=(ann, i))
+                elif st.button("Add note", key=f"addnote_{i}"):
+                    s.show_note.add(i)
+                    st.rerun()
         b1, b2 = st.columns(2)
-        if b1.button("◀ Previous", disabled=i == 0, use_container_width=True):
-            go(ann, i - 1)
+        if b1.button("◀ Previous version", disabled=s.card == 0, use_container_width=True):
+            go_card(ann, s.card - 1)
             st.rerun()
-        if b2.button("Next ▶", disabled=i == total - 1, use_container_width=True,
-                     type="primary" if done(r) else "secondary"):
-            go(ann, i + 1)
+        card_done = all(done(rows[i]) for i in idx)
+        if b2.button("Next version ▶", disabled=s.card == len(cards) - 1,
+                     use_container_width=True, type="primary" if card_done else "secondary"):
+            go_card(ann, s.card + 1)
             st.rerun()
-        if not done(r):
-            st.caption("This whisper is not fully rated yet — you can come back to it.")
+        if card_done and s.card < len(cards) - 1:
+            st.caption("All whispers on this version are rated — press → or *Next version*.")
         if n_done == total:
             st.success("All whispers rated. Thank you! Download your sheet from the sidebar "
                        "and send it to the study organiser.")

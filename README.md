@@ -15,19 +15,31 @@ to other annotators before they finish.
 1. Open the app link you were given (or run it locally, below).
 2. Choose **your** annotator ID (`ann1` … `ann5`) in the sidebar. You can also open
    `…/?annotator=ann3` to skip this step.
-3. For each card:
-   - Read the conversation on the left. The whisper you are rating is highlighted in
-     yellow; the turns after it are marked in blue.
-   - **Read past the whisper first.** Levels 4 and 5 depend on what the user says and does
-     *next*, so the rating buttons stay locked until you tick
-     *"I have read past this whisper"*.
-   - Choose an uptake level and a silence answer. Add a note if you want.
-   - Press **Next ▶**.
-4. You will read each conversation several times, each time with a different
-   **version** of the whispers. Rate each version on its own; do not compare versions.
+3. Once per session, tick *"I understand I must read past each whisper before rating
+   it"*. Levels 4 and 5 depend on what the user says and does **next**, so read the turns
+   after each whisper before rating it.
+4. Each card is one **version** of a conversation, with all of its whispers. The whisper
+   you are on is highlighted in yellow and the turns after it are marked in blue. Rate
+   every whisper on the card, then go to the next version.
+5. You will read each conversation several times, each time with a different version of
+   the whispers. Rate each version on its own; do not compare versions.
+
+### Keyboard shortcuts
+
+| key | action |
+|---|---|
+| `1`–`5` | uptake level for the highlighted whisper |
+| `0` / `9` | should have stayed silent: no / yes |
+| `→` / `←` | next / previous whisper (moves to the next or previous version at the ends) |
+| `N` | add or hide a note |
+| `S` | skip this whisper for now |
+
+The highlight moves to the next whisper once both ratings are set. Shortcuts pause while
+you are typing a note. Everything also works with the mouse.
 
 Everything saves the moment you click, so closing the tab or refreshing loses nothing;
-the app reopens at the card where you left off. The sidebar shows your progress, a
+the app reopens at the version where you left off. The sidebar shows % rated, active time
+and an estimated time to finish, a
 *Jump to first unrated* button, and **Download my sheet (CSV)**. When you finish,
 download your sheet and send it to the study organiser.
 
