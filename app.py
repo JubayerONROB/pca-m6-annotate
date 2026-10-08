@@ -168,11 +168,23 @@ def _identity(rows: list[dict], fields: list[str]) -> list[tuple]:
     return [tuple(r.get(f, "") for f in keep) for r in rows]
 
 
+def _n_rated(rows: list[dict]) -> int:
+    return sum(1 for r in rows if r["uptake_1to5"].strip() or r["should_be_silent_0or1"].strip())
+
+
 def load_work(ann: str, store: GitHubStore | None) -> tuple[list[str], list[dict], str]:
-    """Source sheet, overlaid with saved work (local first, then the GitHub mirror)."""
+    """Source sheet, overlaid with the saved copy that holds the MOST work.
+
+    Ratings can be added but never cleared, so the copy with more rated whispers is the
+    newer one. That matters when a sheet is restored into the GitHub mirror while a
+    container still holds an older local copy: local-first would load the stale copy and
+    then sync it back over the restore. A tie goes to local (fresher notes, unsynced).
+    """
     fields, src = read_csv_text((DATA / f"sheet_{ann}.csv").read_text(encoding="utf-8"))
-    for origin, text in (("local", _read_local(OUT / f"sheet_{ann}.csv")),
-                         ("github", _read_remote(store, f"{REMOTE_DIR}/sheet_{ann}.csv"))):
+    best: tuple[int, int, str, list[dict]] | None = None
+    for rank, (origin, text) in enumerate(
+            (("local", _read_local(OUT / f"sheet_{ann}.csv")),
+             ("github", _read_remote(store, f"{REMOTE_DIR}/sheet_{ann}.csv")))):
         if not text:
             continue
         f2, saved = read_csv_text(text)
@@ -180,8 +192,12 @@ def load_work(ann: str, store: GitHubStore | None) -> tuple[list[str], list[dict
             st.error(f"Saved work ({origin}) does not match the source sheet for {ann}; "
                      "it was NOT loaded. Contact the study organiser before rating.")
             st.stop()
-        return fields, saved, origin
-    return fields, [dict(r) for r in src], "new"
+        cand = (_n_rated(saved), -rank, origin, saved)
+        if best is None or cand[:2] > best[:2]:
+            best = cand
+    if best is None:
+        return fields, [dict(r) for r in src], "new"
+    return fields, best[3], best[2]
 
 
 def _read_local(path: Path) -> str | None:
@@ -217,45 +233,60 @@ KEYMAP = {"1": "u1", "2": "u2", "3": "u3", "4": "u4", "5": "u5", "0": "s0", "9":
           "s": "skip", "S": "skip"}
 
 
-def render_html(body: str, focus: int, rated: set[int], scroll_top: bool) -> str:
-    """The whole conversation for one version: every whisper marked in place, the focused
-    one highlighted, the turns after it marked as what decides levels 4-5. The script
-    (a) scrolls this panel to the focused whisper, (b) on a new version scrolls the page
-    to the top, and (c) forwards keyboard shortcuts to the app's hidden command buttons.
-    Every piece of transcript text is html.escape()d; the only markup is ours."""
-    parts, pos, after = [], 0, False
+def parse_blocks(body: str) -> list[tuple]:
+    """The transcript in reading order: ("turns", text) and ("whisper", n, text) blocks."""
+    out, pos = [], 0
     for m in WHISPER_RE.finditer(body):
-        parts.append(_turns(body[pos:m.start()], after))
-        n, text = int(m.group(1)), html.escape(m.group(2).strip())
-        tick = " &#10003;" if n in rated else ""
-        if n == focus:
-            parts.append(f'<div id="cur" class="w cur">&#9658; WHISPER {n}: <b>{text}</b>{tick}'
-                         '</div><div class="nexthdr">&#9660; what happened next &mdash; read '
-                         'this before rating</div>')
-            after = True
-        else:
-            parts.append(f'<div class="w other">whisper {n}: {text}{tick}</div>')
+        out.append(("turns", body[pos:m.start()]))
+        out.append(("whisper", int(m.group(1)), m.group(2).strip()))
         pos = m.end()
-    parts.append(_turns(body[pos:], after))
-    css = """<style>
-      body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:15px;line-height:1.5;
-           margin:0;padding:8px 12px;color:#222;background:#fff}
-      .t{margin:2px 0}.spk{font-weight:600}
-      .after .t{border-left:3px solid #4a90d9;padding-left:8px}
-      .p{color:#aaa;font-size:12px}
-      .w{margin:8px 0;padding:6px 10px;border-radius:6px}
-      .cur{background:#fff3b0;border:2px solid #e0a800}
-      .other{background:#f1f1f1;color:#666;font-size:13px}
-      .nexthdr{color:#4a90d9;font-size:12px;font-weight:600;margin:4px 0}
-      @media (prefers-color-scheme: dark){body{background:#0e1117;color:#ddd}
-        .cur{background:#5a4b00;border-color:#e0a800}.other{background:#262730;color:#aaa}}
-    </style>"""
-    script = """<script>
+    out.append(("turns", body[pos:]))
+    return out
+
+
+# Theme-neutral (works in light and dark): translucent fills, no fixed text colours.
+CONV_CSS = """<style>
+.m6t{margin:2px 0;line-height:1.55}.m6s{font-weight:600}.m6p{opacity:.45;font-size:12px}
+.m6after .m6t{border-left:3px solid #4a90d9;padding-left:8px}
+.m6w{padding:6px 10px;border-radius:6px;background:rgba(128,128,128,.14)}
+.m6w.cur{background:rgba(255,200,0,.25);border:2px solid #e0a800}
+.m6next{color:#4a90d9;font-size:13px;font-weight:600;margin-top:2px}
+.st-key-kbdjs{height:0;overflow:hidden}
+</style>"""
+
+
+def turns_html(chunk: str, after: bool) -> str:
+    """Dialogue turns, escaped. Turns after the focused whisper are marked: they are
+    what decides levels 4-5."""
+    out = []
+    for line in chunk.splitlines():
+        line = line.strip()
+        if not line or line == "|SILENCE >":
+            continue
+        safe = html.escape(line).replace("|SILENCE &gt;", '<span class="m6p">[pause]</span>')
+        m = re.match(r"^(User:|Speaker \d+:)(.*)$", safe)
+        safe = f'<span class="m6s">{m.group(1)}</span>{m.group(2)}' if m else safe
+        out.append(f'<div class="m6t">{safe}</div>')
+    cls = "m6after" if after else "m6before"
+    return f'<div class="{cls}">{"".join(out)}</div>' if out else ""
+
+
+def kbd_script(scroll_top: bool, scroll_key: str | None) -> str:
+    """A zero-height frame whose only job is to (a) scroll the page to the top on a new
+    version, or to the focused whisper after a key press, and (b) forward keyboard
+    shortcuts to the hidden command buttons. It holds no transcript text."""
+    return """<script>
     (function(){
-      const c=document.getElementById('cur'); if(c){c.scrollIntoView({block:'center'});}
       let P; try{P=window.parent.document;}catch(e){return;}
-      if(%(top)s){try{const m=P.querySelector('[data-testid="stMain"]')||P.querySelector('section.main');
-        if(m){m.scrollTo({top:0});} window.parent.scrollTo(0,0);}catch(e){}}
+      const top=%(top)s, key=%(key)s;
+      setTimeout(function(){
+        try{
+          if(top){const m=P.querySelector('[data-testid="stMain"]')||P.querySelector('section.main');
+                  if(m){m.scrollTo({top:0});} window.parent.scrollTo(0,0);}
+          else if(key){const el=P.querySelector('.st-key-'+key);
+                  if(el){el.scrollIntoView({block:'center',behavior:'smooth'});}}
+        }catch(e){}
+      }, 120);
       const MAP=%(map)s;
       function onKey(e){
         if(e.ctrlKey||e.metaKey||e.altKey) return;
@@ -266,26 +297,11 @@ def render_html(body: str, focus: int, rated: set[int], scroll_top: bool) -> str
           .find(b=>b.innerText.trim()==='kbd:'+cmd);
         if(btn){e.preventDefault(); btn.click();}
       }
-      // one live handler at a time: every rerun replaces this iframe
       if(window.parent.__m6kbd){P.removeEventListener('keydown',window.parent.__m6kbd);}
       window.parent.__m6kbd=onKey; P.addEventListener('keydown',onKey);
-      document.addEventListener('keydown',onKey);
     })();
-    </script>""" % {"top": "true" if scroll_top else "false", "map": json.dumps(KEYMAP)}
-    return css + "".join(parts) + script
-
-
-def _turns(chunk: str, after: bool) -> str:
-    out = []
-    for line in chunk.splitlines():
-        line = line.strip()
-        if not line or line == "|SILENCE >":
-            continue
-        safe = html.escape(line).replace("|SILENCE &gt;", '<span class="p">[pause]</span>')
-        m = re.match(r"^(User:|Speaker \d+:)(.*)$", safe)
-        safe = f'<span class="spk">{m.group(1)}</span>{m.group(2)}' if m else safe
-        out.append(f'<div class="t">{safe}</div>')
-    return f'<div class="{"after" if after else "before"}">{"".join(out)}</div>'
+    </script>""" % {"top": "true" if scroll_top else "false",
+                    "key": json.dumps(scroll_key), "map": json.dumps(KEYMAP)}
 
 
 # =============================================================================
@@ -322,6 +338,16 @@ def save(ann: str, sync: bool = False) -> None:
     write_local(OUT / f"progress_{ann}.json", prog)
     if sync and s.store is not None:
         try:
+            # Never overwrite a remote copy that holds MORE work than this session: a
+            # restore, or another tab, got there first. Reload it instead of clobbering it.
+            remote = s.store.read_text(f"{REMOTE_DIR}/sheet_{ann}.csv")
+            if remote is not None:
+                _, rrows = read_csv_text(remote)
+                if _n_rated(rrows) > _n_rated(s.rows):
+                    s.notice = ("A newer copy of your sheet was found and loaded. Your place "
+                                "may have moved -- please check it before continuing.")
+                    s.ann = None                   # main() calls start() on the next run
+                    return
             sha = s.store.write_text(f"{REMOTE_DIR}/sheet_{ann}.csv", sheet,
                                      f"{ann}: {sum(map(done, s.rows))}/{len(s.rows)} rated")
             s.store.write_text(f"{REMOTE_DIR}/progress_{ann}.json", prog, f"{ann}: progress")
@@ -330,14 +356,17 @@ def save(ann: str, sync: bool = False) -> None:
             s.sync = f"GitHub sync FAILED ({type(exc).__name__}); saved locally only"
 
 
-def load_progress(ann: str, store: GitHubStore | None) -> dict:
-    for text in (_read_local(OUT / f"progress_{ann}.json"),
-                 _read_remote(store, f"{REMOTE_DIR}/progress_{ann}.json")):
-        if text:
-            try:
-                return json.loads(text)
-            except json.JSONDecodeError:
-                pass
+def load_progress(ann: str, store: GitHubStore | None, origin: str) -> dict:
+    """Progress from the SAME copy the sheet was loaded from, so the resume position can
+    never point into a different (older) sheet."""
+    text = (_read_local(OUT / f"progress_{ann}.json") if origin == "local" else
+            _read_remote(store, f"{REMOTE_DIR}/progress_{ann}.json") if origin == "github"
+            else None)
+    if text:
+        try:
+            return json.loads(text)
+        except json.JSONDecodeError:
+            pass
     return {}
 
 
@@ -346,7 +375,7 @@ def start(ann: str) -> None:
     s.store = store_from_secrets()
     s.fields, s.rows, origin = load_work(ann, s.store)
     s.cards = build_cards(s.rows)
-    prog = load_progress(ann, s.store)
+    prog = load_progress(ann, s.store, origin)
     first_open = next((c for c, idx in enumerate(s.cards)
                        if not all(done(s.rows[i]) for i in idx)), len(s.cards) - 1)
     s.card = min(int(prog.get("card", first_open)), len(s.cards) - 1)
@@ -436,6 +465,7 @@ def go_card(ann: str, card: int, focus_last: bool = False) -> None:
 def command(ann: str, cmd: str) -> None:
     """Every keyboard shortcut lands here (via a hidden button), so it is testable."""
     s = st.session_state
+    s.scroll_focus = True
     idx = s.cards[s.card]
     i = idx[s.focus]
     if cmd[0] in "us" and len(cmd) == 2 and cmd[1].isdigit():
@@ -488,6 +518,8 @@ def main() -> None:
     if st.session_state.get("ann") != ann:
         start(ann)
     s = st.session_state
+    if s.get("notice"):
+        st.warning(s.pop("notice"))
     rows, cards = s.rows, s.cards
     idx = cards[s.card]
     total, n_done = len(rows), sum(map(done, rows))
@@ -547,53 +579,71 @@ def main() -> None:
     head = card_rows[0]
     st.markdown(f"**Conversation {head['dialogue_order']} of {n_conv} · Version "
                 f"{head['version_order']} of 7 (label {head['version']})** · "
-                f"{len(idx)} whisper{'s' if len(idx) > 1 else ''} on this card")
+                f"{len(idx)} whisper{'s' if len(idx) > 1 else ''} on this version")
+    with st.expander("Uptake rubric (LlamaPIE D.4.1)", expanded=s.card == 0):
+        st.markdown("\n".join(f"- **{n}** {name} — {desc}" for n, name, desc in RUBRIC))
 
-    left, right = st.columns([3, 2], gap="large")
-    with left:
-        focus_w = int(rows[idx[s.focus]]["whisper_index"])
-        rated_w = {int(rows[i]["whisper_index"]) for i in idx if done(rows[i])}
-        st.iframe(render_html(transcript_body(str(transcript_path(ann, head))), focus_w,
-                              rated_w, s.scroll_top), height=620)
-        s.scroll_top = False
-    with right:
-        with st.expander("Uptake rubric (LlamaPIE D.4.1)", expanded=s.card == 0):
-            st.markdown("\n".join(f"- **{n}** {name} — {desc}" for n, name, desc in RUBRIC))
-        locked = not s.get("ack_ok")
-        mirror_widgets(idx)
-        for k, i in enumerate(idx):
-            r = rows[i]
-            with st.container(border=True, key=f"w_{i}"):
-                mark = "▶ " if k == s.focus else ""
-                st.markdown(f"{mark}**Whisper {r['whisper_index']}**"
-                            f"{' ✓' if done(r) else ''}")
-                st.radio("Uptake", [1, 2, 3, 4, 5], key=f"u_{i}", horizontal=True,
-                         format_func=lambda n: f"{n}", disabled=locked,
-                         on_change=on_widget, args=(ann, i, "uptake_1to5", f"u_{i}"),
-                         help=" · ".join(f"{n} {name}" for n, name, _ in RUBRIC))
-                st.radio("Should have stayed silent?", [0, 1], key=f"s_{i}", horizontal=True,
-                         format_func=lambda n: SILENCE_LABELS[n], disabled=locked,
-                         on_change=on_widget, args=(ann, i, "should_be_silent_0or1", f"s_{i}"))
-                if r["note"] or i in s.show_note:
-                    st.text_input("Note (optional)", key=f"n_{i}", on_change=on_note,
-                                  args=(ann, i))
-                elif st.button("Add note", key=f"addnote_{i}"):
-                    s.show_note.add(i)
-                    st.rerun()
-        b1, b2 = st.columns(2)
-        if b1.button("◀ Previous version", disabled=s.card == 0, use_container_width=True):
-            go_card(ann, s.card - 1)
-            st.rerun()
-        card_done = all(done(rows[i]) for i in idx)
-        if b2.button("Next version ▶", disabled=s.card == len(cards) - 1,
-                     use_container_width=True, type="primary" if card_done else "secondary"):
-            go_card(ann, s.card + 1)
-            st.rerun()
-        if card_done and s.card < len(cards) - 1:
-            st.caption("All whispers on this version are rated — press → or *Next version*.")
-        if n_done == total:
-            st.success("All whispers rated. Thank you! Download your sheet from the sidebar "
-                       "and send it to the study organiser.")
+    locked = not s.get("ack_ok")
+    mirror_widgets(idx)
+    by_w = {int(rows[i]["whisper_index"]): i for i in idx}
+    focus_i = idx[s.focus]
+    st.html(CONV_CSS + f"<style>.st-key-w_{focus_i}{{border-color:#e0a800 !important}}</style>")
+    body = transcript_body(str(transcript_path(ann, head)))
+    after = False
+    for block in parse_blocks(body):
+        if block[0] == "turns":
+            h = turns_html(block[1], after)
+            if h:
+                st.html(h)
+            continue
+        n, text = block[1], block[2]
+        i = by_w.get(n)
+        if i is None:                      # a whisper with no sheet row: show, don't rate
+            st.html(f'<div class="m6w">whisper {n}: {html.escape(text)}</div>')
+            continue
+        r, cur = rows[i], i == focus_i
+        with st.container(border=True, key=f"w_{i}"):
+            tail = ('</div><div class="m6next">&#9660; read what the user does next (below) '
+                    'before rating</div>') if cur else "</div>"
+            st.html(f'<div class="m6w{" cur" if cur else ""}">{"&#9658; " if cur else ""}'
+                    f'WHISPER {n}: <b>{html.escape(text)}</b>{" &#10003;" if done(r) else ""}'
+                    + tail)
+            c1, c2 = st.columns([3, 2])
+            c1.radio("Uptake", [1, 2, 3, 4, 5], key=f"u_{i}", horizontal=True,
+                     disabled=locked, on_change=on_widget,
+                     args=(ann, i, "uptake_1to5", f"u_{i}"),
+                     help=" · ".join(f"{k} {name}" for k, name, _ in RUBRIC))
+            c2.radio("Should have stayed silent?", [0, 1], key=f"s_{i}", horizontal=True,
+                     format_func=lambda v: SILENCE_LABELS[v], disabled=locked,
+                     on_change=on_widget, args=(ann, i, "should_be_silent_0or1", f"s_{i}"))
+            if r["note"] or i in s.show_note:
+                st.text_input("Note (optional)", key=f"n_{i}", on_change=on_note, args=(ann, i))
+            elif st.button("Add note", key=f"addnote_{i}"):
+                s.show_note.add(i)
+                st.rerun()
+        if cur:
+            after = True
+
+    with st.container(key="kbdjs"):
+        st.iframe(kbd_script(s.scroll_top, f"w_{focus_i}" if s.get("scroll_focus") else None),
+                  height=1)
+    s.scroll_top = False
+    s.scroll_focus = False
+
+    b1, b2 = st.columns(2)
+    if b1.button("◀ Previous version", disabled=s.card == 0, use_container_width=True):
+        go_card(ann, s.card - 1)
+        st.rerun()
+    card_done = all(done(rows[i]) for i in idx)
+    if b2.button("Next version ▶", disabled=s.card == len(cards) - 1,
+                 use_container_width=True, type="primary" if card_done else "secondary"):
+        go_card(ann, s.card + 1)
+        st.rerun()
+    if card_done and s.card < len(cards) - 1:
+        st.caption("All whispers on this version are rated — press → or *Next version*.")
+    if n_done == total:
+        st.success("All whispers rated. Thank you! Download your sheet from the sidebar "
+                   "and send it to the study organiser.")
 
 
 if __name__ == "__main__":
